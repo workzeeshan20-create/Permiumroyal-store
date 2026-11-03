@@ -6,507 +6,774 @@
     <title>Premium Royal Cell Store - Muzaffarabad</title>
     <style>
         :root {
-            --bg-color: #000000;
-            --card-bg: #111112;
+            --bg-color: #050505;
+            --card-bg: #121214;
+            --card-border: #232326;
             --accent-gold: #f5a623;
+            --accent-gold-glow: rgba(245, 166, 35, 0.15);
             --text-primary: #f5f5f7;
             --text-secondary: #86868b;
-            --border-color: #262629;
+            --whatsapp-green: #25d366;
+            --tag-bg: #f5f5f7;
+            --tag-text: #1d1d1f;
+            --badge-yellow: #ffc107;
+            --sale-red: #d93025;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
-            line-height: 1.6;
-            padding-bottom: 60px;
+            line-height: 1.5;
+            padding-bottom: 70px;
         }
+
+        /* Top Header Navigation */
         header {
-            background: rgba(17, 17, 18, 0.85);
+            background: rgba(18, 18, 20, 0.85);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            padding: 15px 20px;
+            border-bottom: 1px solid var(--card-border);
+            padding: 12px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo-area {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .logo-icon {
-            font-size: 22px;
+            background: var(--accent-gold);
+            color: #000;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
         }
+
+        .store-details {
+            display: flex;
+            flex-direction: column;
+        }
+
         .store-name {
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 14px;
+            font-weight: 800;
             color: var(--accent-gold);
             letter-spacing: 0.5px;
+            line-height: 1.2;
         }
-        .whatsapp-top-btn {
-            background-color: #25d366;
-            color: white;
-            padding: 7px 14px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-        }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #111112 0%, var(--bg-color) 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .hero h1 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-        .hero p {
+
+        .store-loc {
+            font-size: 10px;
             color: var(--text-secondary);
-            font-size: 13px;
-            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .container {
-            max-width: 1100px;
+
+        .whatsapp-top-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        /* Hero Call to Action Buttons */
+        .hero-actions {
+            padding: 15px 16px 5px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
         }
-        
-        /* Catalog Navigation Pills (Amazon/Apple Style) */
+
+        .btn-gold {
+            background: linear-gradient(180deg, #f7b731 0%, #f5a623 100%);
+            color: #000;
+            font-weight: 700;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            box-shadow: 0 4px 15px var(--accent-gold-glow);
+        }
+
+        .btn-dark {
+            background: #18181b;
+            color: #fff;
+            border: 1px solid var(--card-border);
+            font-weight: 600;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+        }
+
+        /* Category Grid (Matching Image 1) */
+        .category-wrapper {
+            padding: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .category-box {
+            background: linear-gradient(145deg, #161618 0%, #0d0d0e 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .cat-card {
+            background: #111113;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s;
+        }
+
+        .cat-card:active {
+            transform: scale(0.97);
+        }
+
+        .cat-icon-wrap {
+            background: rgba(245, 166, 35, 0.1);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--accent-gold);
+        }
+
+        .cat-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .cat-desc {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.2;
+        }
+
+        /* Horizontal Scroll Navigation Pills */
         .catalog-nav {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             overflow-x: auto;
-            padding: 15px 0;
-            margin-bottom: 20px;
+            padding: 10px 16px;
             scrollbar-width: none;
+            position: sticky;
+            top: 62px;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 900;
+            border-bottom: 1px solid var(--card-border);
         }
+
         .catalog-nav::-webkit-scrollbar {
             display: none;
         }
+
         .catalog-pill {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--card-border);
             color: var(--text-primary);
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 20px;
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
             white-space: nowrap;
-            transition: all 0.2s;
-        }
-        .catalog-pill:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
         }
 
-        .section-title {
+        .catalog-pill.active {
+            background-color: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
+        }
+
+        /* Main Grid & Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .section-header {
             font-size: 18px;
-            font-weight: 600;
-            margin: 30px 0 15px 0;
-            color: var(--accent-gold);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 20px;
-        }
-        .card h3 {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #fff;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            font-weight: 600;
-        }
-        .product-box {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 12px;
-        }
-        .product-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #fff;
-        }
-        .product-specs {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin: 4px 0 8px 0;
-        }
-        .product-price {
-            font-size: 15px;
             font-weight: 700;
-            color: var(--accent-gold);
+            margin: 25px 0 15px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .whatsapp-btn {
-            display: block;
-            width: 100%;
+
+        .section-header::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        /* E-commerce Grid Layout (Matching Image 4) */
+        .ecommerce-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .ecommerce-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+        }
+
+        /* Premium Product Card UI */
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-feature-tag {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-primary);
             text-align: center;
-            background: #25d366;
-            color: white;
+            padding: 2px 0;
+            margin-bottom: 8px;
+        }
+
+        .product-img-wrapper {
+            background: #fff;
+            border-radius: 12px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 10px;
             padding: 10px;
+        }
+
+        .product-img-placeholder {
+            font-size: 45px;
+        }
+
+        .stock-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .promo-banner {
+            background: var(--badge-yellow);
+            color: #000;
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            padding: 4px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .rating-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .star-icon {
+            color: var(--badge-yellow);
+        }
+
+        .p-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .p-specs {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            height: 32px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .curr-price {
+            font-size: 14px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .old-price {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+        }
+
+        .discount-tag {
+            font-size: 9px;
+            background: var(--sale-red);
+            color: #fff;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .meta-tags {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        .m-tag {
+            background: #1c1c1e;
+            color: var(--text-secondary);
+            font-size: 9px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--card-border);
+        }
+
+        .view-btn {
+            background: #1f1f22;
+            color: #fff;
+            border: 1px solid var(--card-border);
+            text-align: center;
+            padding: 8px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            font-size: 13px;
+            font-size: 12px;
+            font-weight: 700;
+            display: block;
+            transition: background 0.2s;
         }
+
+        .view-btn:active {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 16px;
             color: var(--text-secondary);
-            font-size: 12px;
-            border-top: 1px solid var(--border-color);
+            font-size: 11px;
+            border-top: 1px solid var(--card-border);
             margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="logo-area">
-            <span class="logo-icon">👑</span>
-            <span class="store-name">ROYAL CELL STORE</span>
+            <div class="logo-icon">👑</div>
+            <div class="store-details">
+                <span class="store-name">ROYAL CELL STORE</span>
+                <span class="store-loc">Muzaffarabad, Azad Kashmir</span>
+            </div>
         </div>
-        <a href="https://wa.me/92348884288?text=Hello%20Royal%20Cell%20Store,%20I%20want%20to%20order..." class="whatsapp-top-btn" target="_blank">
-            Contact on WhatsApp
+        <a href="https://wa.me/923488847288?text=Hello%20Royal%20Cell%20Store,%20I%20have%20an%20inquiry..." class="whatsapp-top-btn" target="_blank" aria-label="WhatsApp">
+            💬
         </a>
     </header>
 
-    <div class="hero">
-        <h1>Premium Mobiles & Branded Accessories</h1>
-        <p>Muzaffarabad, Azad Kashmir | Cash Only & Original Warranty Products</p>
-        <p style="color: var(--accent-gold); font-size: 12px; margin-top: 5px;">📞 0348-8847288 | 0355-8770290</p>
+    <!-- Top Call to Action Buttons -->
+    <div class="hero-actions">
+        <a href="#accessories" class="btn-gold">Explore Collection</a>
+        <a href="https://wa.me/923488847288?text=Hello%20Royal%20Cell%20Store,%20I%20want%20to%20order" class="btn-dark" target="_blank">Contact on WhatsApp</a>
+    </div>
+
+    <!-- Category Grid UI (Recreated from Image 1) -->
+    <div class="category-wrapper">
+        <div class="category-box">
+            <a href="#covers" class="cat-card">
+                <div class="cat-icon-wrap">📱</div>
+                <div class="cat-title">Protective Covers</div>
+                <div class="cat-desc">All Phone Models Available</div>
+            </a>
+            <a href="#accessories" class="cat-card">
+                <div class="cat-icon-wrap">🎧</div>
+                <div class="cat-title">Audio Gears</div>
+                <div class="cat-desc">Earbuds & Headphones</div>
+            </a>
+            <a href="#covers" class="cat-card">
+                <div class="cat-icon-wrap">🛡️</div>
+                <div class="cat-title">Protected Glass</div>
+                <div class="cat-desc">100% Original Quality</div>
+            </a>
+            <a href="#accessories" class="cat-card">
+                <div class="cat-icon-wrap">⚡</div>
+                <div class="cat-title">Fast Chargers</div>
+                <div class="cat-desc">Cables & Power Bricks</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Horizontal Category Scroll Pills -->
+    <div class="catalog-nav">
+        <a href="#accessories" class="catalog-pill active">🎧 Audio & Accessories</a>
+        <a href="#covers" class="catalog-pill">📱 Covers & Glass</a>
+        <a href="#infinix" class="catalog-pill">Infinix</a>
+        <a href="#tecno" class="catalog-pill">Tecno</a>
+        <a href="#vivo" class="catalog-pill">Vivo</a>
+        <a href="#samsung" class="catalog-pill">Samsung</a>
+        <a href="#redmi" class="catalog-pill">Redmi</a>
+        <a href="#opporealme" class="catalog-pill">Oppo & Realme</a>
+        <a href="#nubia" class="catalog-pill">ZTE & Nubia</a>
     </div>
 
     <div class="container">
 
-        <!-- Catalog Navigation Menu -->
-        <div class="catalog-nav">
-            <a href="#accessories" class="catalog-pill">🎧 Branded Accessories</a>
-            <a href="#covers" class="catalog-pill">📱 Covers & Protectors</a>
-            <a href="#infinix" class="catalog-pill">Infinix</a>
-            <a href="#tecno" class="catalog-pill">Tecno</a>
-            <a href="#vivo" class="catalog-pill">Vivo</a>
-            <a href="#samsung" class="catalog-pill">Samsung</a>
-            <a href="#redmi" class="catalog-pill">Redmi</a>
-            <a href="#opporealme" class="catalog-pill">Oppo & Realme</a>
-            <a href="#nubia" class="catalog-pill">ZTE & Nubia</a>
+        <!-- Branded Accessories Section -->
+        <div id="accessories" class="section-header">Branded Audio & Accessories</div>
+        <div class="ecommerce-grid">
+            
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Triple Mic ANC</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🎧</span>
+                    </div>
+                    <div class="promo-banner">11.11 Special</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.8 | 230</div>
+                    <div class="p-title">Audionic AirBuds Max</div>
+                    <div class="p-specs">Wireless TWS, Active Noise Cancellation</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 5,999</span>
+                        <span class="old-price">Rs. 8,999</span>
+                        <span class="discount-tag">33% OFF</span>
+                    </div>
+                    <div class="meta-tags">
+                        <span class="m-tag">Restocked</span>
+                        <span class="m-tag">7k+ Sold</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Audionic%20AirBuds%20Max" class="view-btn" target="_blank">Order Product</a>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Surround Sense™</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🎧</span>
+                        <span class="stock-badge">Out of Stock</span>
+                    </div>
+                    <div class="promo-banner">Extra Rs. 1,000 OFF</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.9 | 29</div>
+                    <div class="p-title">Ronin R-Series Earbuds</div>
+                    <div class="p-specs">HD Sound, Low Latency Gaming Mode</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 6,999</span>
+                        <span class="old-price">Rs. 9,999</span>
+                        <span class="discount-tag">30% OFF</span>
+                    </div>
+                    <div class="meta-tags">
+                        <span class="m-tag">New</span>
+                        <span class="m-tag">2k+ Sold</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Ronin%20R-Series%20Earbuds" class="view-btn" target="_blank">Order Product</a>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">40 Hrs Playtime</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🎧</span>
+                    </div>
+                    <div class="promo-banner">Trending Item</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.7 | 185</div>
+                    <div class="p-title">Audionic / Ronin Neckband</div>
+                    <div class="p-specs">Flexible Neckband, Magnetic Earbuds</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 3,500</span>
+                        <span class="old-price">Rs. 5,500</span>
+                        <span class="discount-tag">36% OFF</span>
+                    </div>
+                    <div class="meta-tags">
+                        <span class="m-tag">Popular</span>
+                        <span class="m-tag">5k+ Sold</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Audionic%20Ronin%20Neckband" class="view-btn" target="_blank">Order Product</a>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Fast Charging</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🔋</span>
+                    </div>
+                    <div class="promo-banner">Best Seller</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.9 | 520</div>
+                    <div class="p-title">Ronin 10,000mAh PowerBank</div>
+                    <div class="p-specs">Dual USB Output, High Speed Charging</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 5,500</span>
+                        <span class="old-price">Rs. 8,500</span>
+                        <span class="discount-tag">35% OFF</span>
+                    </div>
+                    <div class="meta-tags">
+                        <span class="m-tag">Top Rated</span>
+                        <span class="m-tag">10k+ Sold</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Ronin%20PowerBank" class="view-btn" target="_blank">Order Product</a>
+            </div>
+
         </div>
 
-        <!-- Branded Accessories Section -->
-        <div id="accessories" class="section-title">Branded Accessories (Audionic, Ronin, Faster, Zero, Interlink)</div>
-        <div class="grid">
-            <div class="card">
-                <h3>Audionic & Ronin Audio</h3>
-                <div class="product-box">
-                    <div class="product-title">Audionic AirBuds Max</div>
-                    <div class="product-specs">Wireless TWS, ENC, Deep Bass</div>
-                    <div class="product-price">Rs. 3,500 - 7,500</div>
+        <!-- Covers & Glass Section -->
+        <div id="covers" class="section-header">Covers & Screen Protectors</div>
+        <div class="ecommerce-grid">
+            
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Shockproof Build</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">📱</span>
+                    </div>
+                    <div class="promo-banner">All Models Available</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.8 | 940</div>
+                    <div class="p-title">Silicon / Matte Covers</div>
+                    <div class="p-specs">Premium Grip & Camera Protection</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 999</span>
+                        <span class="old-price">Rs. 1,500</span>
+                        <span class="discount-tag">33% OFF</span>
+                    </div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Ronin R-Series Wireless Earbuds</div>
-                    <div class="product-specs">HD Sound, Gaming Mode, Long Battery</div>
-                    <div class="product-price">Rs. 4,000 - 9,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Audionic / Ronin Neckbands</div>
-                    <div class="product-specs">Flexible Band, Magnetic Earbuds</div>
-                    <div class="product-price">Rs. 2,500 - 5,500</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Ronin Fast Power Bank 10,000mAh</div>
-                    <div class="product-specs">Fast Charging, Dual USB Output</div>
-                    <div class="product-price">Rs. 4,500 - 8,500</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20to%20buy%20Audionic%20Ronin%20Accessories" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Silicon%20Matte%20Cover" class="view-btn" target="_blank">Order Product</a>
             </div>
 
-            <div class="card">
-                <h3>Faster, Zero & Interlink</h3>
-                <div class="product-box">
-                    <div class="product-title">Faster TWS Earbuds</div>
-                    <div class="product-specs">Bluetooth 5.3, Touch Control</div>
-                    <div class="product-price">Rs. 3,000 - 6,500</div>
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">9H Hardness</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🛡️</span>
+                    </div>
+                    <div class="promo-banner">100% Original</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.9 | 1.2k</div>
+                    <div class="p-title">Tempered Glass Protector</div>
+                    <div class="p-specs">HD Clear, Anti-Scratch Protection</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 699</span>
+                        <span class="old-price">Rs. 1,200</span>
+                        <span class="discount-tag">41% OFF</span>
+                    </div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Zero Lifestyle Wireless Pods</div>
-                    <div class="product-specs">Premium Build, Active Noise Cancellation</div>
-                    <div class="product-price">Rs. 3,500 - 8,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Interlink Handsfree & Headphones</div>
-                    <div class="product-specs">Original Quality, Clear Audio</div>
-                    <div class="product-price">Rs. 500 - 1,800</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Faster / Interlink Fast Chargers</div>
-                    <div class="product-specs">33W / Type-C Power Brick & Cable</div>
-                    <div class="product-price">Rs. 1,500 - 3,800</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20to%20buy%20Faster%20Zero%20Interlink" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Tempered%20Glass" class="view-btn" target="_blank">Order Product</a>
             </div>
 
-            <div id="covers" class="card">
-                <h3>Covers, Glass & Protectors</h3>
-                <div class="product-box">
-                    <div class="product-title">Silicon / Matte Covers</div>
-                    <div class="product-specs">All Phone Models Available (Shockproof)</div>
-                    <div class="product-price">Rs. 500 - 1,500</div>
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Edge-to-Edge Fit</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">💎</span>
+                    </div>
+                    <div class="promo-banner">For Curved Screens</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.7 | 310</div>
+                    <div class="p-title">UV Curved Glass</div>
+                    <div class="p-specs">Full Glue Fit for Flagship Mobiles</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 1,800</span>
+                        <span class="old-price">Rs. 2,500</span>
+                        <span class="discount-tag">28% OFF</span>
+                    </div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">100% Original Tempered Glass</div>
-                    <div class="product-specs">HD Clear, Scratch Resistant Protector</div>
-                    <div class="product-price">Rs. 400 - 1,200</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">UV Curved Glass</div>
-                    <div class="product-specs">For Edge & Curved Display Phones</div>
-                    <div class="product-price">Rs. 1,200 - 2,500</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Type-C & Lightning Data Cables</div>
-                    <div class="product-specs">Fast Charging & Data Sync</div>
-                    <div class="product-price">Rs. 400 - 1,500</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20to%20buy%20Covers%20and%20Protectors" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20UV%20Curved%20Glass" class="view-btn" target="_blank">Order Product</a>
             </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Fast Data Sync</div>
+                    <div class="product-img-wrapper">
+                        <span class="product-img-placeholder">🔌</span>
+                    </div>
+                    <div class="promo-banner">Durable Cable</div>
+                    <div class="rating-row"><span class="star-icon">★</span> 4.8 | 650</div>
+                    <div class="p-title">Type-C & Lightning Cables</div>
+                    <div class="p-specs">Braided Wire, High Power Support</div>
+                    <div class="price-row">
+                        <span class="curr-price">Rs. 850</span>
+                        <span class="old-price">Rs. 1,500</span>
+                        <span class="discount-tag">43% OFF</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Data%20Cable" class="view-btn" target="_blank">Order Product</a>
+            </div>
+
         </div>
 
         <!-- Mobile Phones Section -->
-        <div class="section-title">Mobile Phone Prices (Muzaffarabad Stock)</div>
-        <div class="grid">
-            <!-- Infinix -->
-            <div id="infinix" class="card">
-                <h3>Infinix Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Infinix Smart 10</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 40,000</div>
+        <div id="infinix" class="section-header">Infinix Mobiles</div>
+        <div class="ecommerce-grid">
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">New Arrival</div>
+                    <div class="p-title">Infinix Smart 10</div>
+                    <div class="p-specs">4GB RAM | 64GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 40,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Infinix Smart 20</div>
-                    <div class="product-specs">4GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 47,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Infinix Hot 60i</div>
-                    <div class="product-specs">6GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 59,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Infinix Hot 70 Pro</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 87,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Infinix Note 60</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 110,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Infinix%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Smart%2010" class="view-btn" target="_blank">Order Phone</a>
             </div>
-
-            <!-- Tecno -->
-            <div id="tecno" class="card">
-                <h3>Tecno Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Tecno Spark Go 3</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 40,000</div>
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">Best Value</div>
+                    <div class="p-title">Infinix Hot 70 Pro</div>
+                    <div class="p-specs">8GB RAM | 128GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 87,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Tecno Spark 30</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 60,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Tecno Spark 50 Pro</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 75,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Tecno Camon 50</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 100,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Tecno Camon 50 Pro</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 110,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Tecno%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Hot%2070%20Pro" class="view-btn" target="_blank">Order Phone</a>
             </div>
+        </div>
 
-            <!-- Vivo -->
-            <div id="vivo" class="card">
-                <h3>Vivo Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Vivo Y04</div>
-                    <div class="product-specs">4GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 51,000</div>
+        <div id="tecno" class="section-header">Tecno Mobiles</div>
+        <div class="ecommerce-grid">
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">Trending</div>
+                    <div class="p-title">Tecno Spark 50 Pro</div>
+                    <div class="p-specs">8GB RAM | 128GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 75,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Vivo Y31D</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 83,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Vivo Y400</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 100,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Vivo V70 FE</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 135,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Vivo%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Spark%2050%20Pro" class="view-btn" target="_blank">Order Phone</a>
             </div>
-
-            <!-- Samsung -->
-            <div id="samsung" class="card">
-                <h3>Samsung Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Samsung Galaxy A07</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 46,000</div>
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">Flagship Cam</div>
+                    <div class="p-title">Tecno Camon 50 Pro</div>
+                    <div class="p-specs">8GB RAM | 256GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 110,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Samsung Galaxy A07</div>
-                    <div class="product-specs">6GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 68,500</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Samsung Galaxy A17</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 95,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Samsung Galaxy A57</div>
-                    <div class="product-specs">12GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 185,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Samsung%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Camon%2050%20Pro" class="view-btn" target="_blank">Order Phone</a>
             </div>
+        </div>
 
-            <!-- Xiaomi / Redmi -->
-            <div id="redmi" class="card">
-                <h3>Redmi Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Redmi A5</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 37,000</div>
+        <div id="samsung" class="section-header">Samsung Galaxy</div>
+        <div class="ecommerce-grid">
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">Popular Choice</div>
+                    <div class="p-title">Samsung Galaxy A17</div>
+                    <div class="p-specs">8GB RAM | 256GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 95,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Redmi 15</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 59,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Redmi Note 15</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 76,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Redmi Note 15 Pro</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 101,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Redmi Note 15 Pro</div>
-                    <div class="product-specs">12GB RAM | 512GB Storage</div>
-                    <div class="product-price">Rs. 121,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Redmi%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Samsung%20Galaxy%20A17" class="view-btn" target="_blank">Order Phone</a>
             </div>
-
-            <!-- Oppo & Realme -->
-            <div id="opporealme" class="card">
-                <h3>Oppo & Realme Series</h3>
-                <div class="product-box">
-                    <div class="product-title">Oppo A5i</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 43,000</div>
+            <div class="product-card">
+                <div>
+                    <div class="top-feature-tag">Official Warranty</div>
+                    <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                    <div class="promo-banner">Premium Performance</div>
+                    <div class="p-title">Samsung Galaxy A57</div>
+                    <div class="p-specs">12GB RAM | 256GB Storage</div>
+                    <div class="price-row"><span class="curr-price">Rs. 185,000</span></div>
                 </div>
-                <div class="product-box">
-                    <div class="product-title">Oppo Reno 16</div>
-                    <div class="product-specs">12GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 210,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Realme 60X</div>
-                    <div class="product-specs">4GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 34,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Realme Note 70</div>
-                    <div class="product-specs">6GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 55,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Realme C75X</div>
-                    <div class="product-specs">8GB RAM | 128GB Storage</div>
-                    <div class="product-price">Rs. 70,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Oppo%20Realme%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
-            </div>
-
-            <!-- ZTE / Nubia -->
-            <div id="nubia" class="card">
-                <h3>ZTE & Nubia Gaming</h3>
-                <div class="product-box">
-                    <div class="product-title">Nubia Air Pro</div>
-                    <div class="product-specs">8GB RAM | 256GB | 120Hz Screen</div>
-                    <div class="product-price">Rs. 109,999</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Nubia Neo 3</div>
-                    <div class="product-specs">8GB RAM | 256GB | Gaming Edition</div>
-                    <div class="product-price">Rs. 69,999</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">Nubia A35e</div>
-                    <div class="product-specs">2GB RAM | 64GB Storage</div>
-                    <div class="product-price">Rs. 26,000</div>
-                </div>
-                <div class="product-box">
-                    <div class="product-title">ZTE V80 Pro</div>
-                    <div class="product-specs">8GB RAM | 256GB Storage</div>
-                    <div class="product-price">Rs. 56,000</div>
-                </div>
-                <a href="https://wa.me/92348884288?text=I%20want%20Nubia%20Phone" class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+                <a href="https://wa.me/923488847288?text=I%20want%20Samsung%20Galaxy%20A57" class="view-btn" target="_blank">Order Phone</a>
             </div>
         </div>
 
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>📍 Location: Muzaffarabad, Azad Kashmir | Contact: 0348-8847288 / 0355-8770290</p>
-        <p>© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
+        <p>📍 Location: Muzaffarabad, Azad Kashmir</p>
+        <p>📞 Contact: 0348-8847288 | 0355-8770290</p>
+        <p style="margin-top: 8px; color: var(--text-secondary);">© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
     </footer>
 
 </body>
