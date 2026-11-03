@@ -163,6 +163,7 @@
             text-align: center;
             text-decoration: none;
             color: var(--text-primary);
+            cursor: pointer;
         }
 
         .cat-icon-wrap {
@@ -191,6 +192,7 @@
             line-height: 1.2;
         }
 
+        /* Active Yellow Pill Design matching Image */
         .catalog-nav {
             display: flex;
             gap: 8px;
@@ -219,6 +221,7 @@
             font-size: 13px;
             font-weight: 600;
             white-space: nowrap;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
 
@@ -324,9 +327,8 @@
             object-fit: contain;
         }
 
-        /* Admin Upload Section - Hidden by default from regular customers */
         .admin-upload-area {
-            display: none; /* yahan 'block' kar ke aap admin mode on kar sakte hain */
+            display: none;
             margin-bottom: 8px;
         }
 
@@ -395,6 +397,14 @@
             color: #000;
         }
 
+        /* Section visibility toggle for single view behavior */
+        .store-section {
+            display: block;
+        }
+        .store-section.hidden {
+            display: none;
+        }
+
         footer {
             text-align: center;
             padding: 30px 16px;
@@ -419,216 +429,371 @@
     </header>
 
     <div class="hero-actions">
-        <a href="#accessories" class="btn-gold">Explore Collection</a>
+        <a href="#catalog-area" class="btn-gold" onclick="showSection('all')">Explore Collection</a>
         <a href="https://wa.me/923488847288?text=Hello%20Royal%20Cell%20Store,%20I%20want%20to%20order" class="btn-dark" target="_blank">Contact on WhatsApp</a>
     </div>
 
     <!-- Category Boxes -->
-    <div class="category-wrapper">
+    <div class="category-wrapper" id="catalog-area">
         <div class="category-box">
-            <a href="#accessories" class="cat-card">
+            <div class="cat-card" onclick="showSection('accessories')">
                 <div class="cat-icon-wrap">🎧</div>
                 <div class="cat-title">Audio Gears</div>
                 <div class="cat-desc">Earbuds, Headphones & Speakers</div>
-            </a>
-            <a href="#covers" class="cat-card">
+            </div>
+            <div class="cat-card" onclick="showSection('covers')">
                 <div class="cat-icon-wrap">📱</div>
                 <div class="cat-title">Covers & Glass</div>
                 <div class="cat-desc">Protection Accessories</div>
-            </a>
-            <a href="#infinix" class="cat-card">
+            </div>
+            <div class="cat-card" onclick="showSection('infinix')">
                 <div class="cat-icon-wrap">💳</div>
                 <div class="cat-title">Installment Plan</div>
                 <div class="cat-desc">Infinix, Tecno & itel</div>
-            </a>
-            <a href="#samsung" class="cat-card">
+            </div>
+            <div class="cat-card" onclick="showSection('samsung')">
                 <div class="cat-icon-wrap">👑</div>
                 <div class="cat-title">Branded Mobiles</div>
                 <div class="cat-desc">Original Warranty Stock</div>
-            </a>
+            </div>
         </div>
     </div>
 
-    <!-- Catalog Nav -->
+    <!-- Catalog Nav with single view switching -->
     <div class="catalog-nav">
-        <a href="#accessories" class="catalog-pill active">🎧 Audio & Accessories</a>
-        <a href="#covers" class="catalog-pill">📱 Covers & Protectors</a>
-        <a href="#infinix" class="catalog-pill">Infinix</a>
-        <a href="#tecno" class="catalog-pill">Tecno</a>
-        <a href="#vivo" class="catalog-pill">Vivo</a>
-        <a href="#redmi" class="catalog-pill">Redmi</a>
-        <a href="#samsung" class="catalog-pill">Samsung</a>
-        <a href="#itel" class="catalog-pill">itel</a>
-        <a href="#oppo" class="catalog-pill">Oppo</a>
-        <a href="#realme" class="catalog-pill">Realme</a>
-        <a href="#honor" class="catalog-pill">Honor</a>
-        <a href="#villaon" class="catalog-pill">Villaon / Sparx</a>
+        <span class="catalog-pill active" onclick="showSection('all')">All Products</span>
+        <span class="catalog-pill" onclick="showSection('accessories')">🎧 Audio & Acc</span>
+        <span class="catalog-pill" onclick="showSection('nubia')">Nubia</span>
+        <span class="catalog-pill" onclick="showSection('honor')">Honor</span>
+        <span class="catalog-pill" onclick="showSection('infinix')">Infinix</span>
+        <span class="catalog-pill" onclick="showSection('tecno')">Tecno</span>
+        <span class="catalog-pill" onclick="showSection('sego')">Sego</span>
+        <span class="catalog-pill" onclick="showSection('realme')">Realme</span>
     </div>
 
     <div class="container">
 
-        <!-- BRANDED ACCESSORIES & AUDIO SECTION -->
-        <div id="accessories" class="section-header">
-            <div class="section-title-left">Branded Audio, Chargers & Accessories</div>
-        </div>
-        <div class="ecommerce-grid">
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Audionic / iDeonic</div>
-                    <div class="product-img-wrapper" id="img-box-1">
-                        <span class="product-img-placeholder">🎧</span>
-                    </div>
-                    <!-- Admin upload option hidden from customers -->
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-1">📷 Upload Image</label>
-                        <input type="file" id="file-1" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-1')">
-                    </div>
-                    
-                    <div class="p-title">Audionic AirBuds Max / TWS</div>
-                    <div class="p-specs">Wireless Earbuds, ENC, Deep Bass</div>
-                    <div class="price-row"><span class="curr-price">Rs. 3,500 - 7,500</span></div>
-                </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Audionic%20Earbuds" class="view-btn" target="_blank">Order on WhatsApp</a>
+        <!-- NUBIA SECTION -->
+        <div id="sec-nubia" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Nubia Gaming & Smartphones</div>
             </div>
-
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Ronin Brand</div>
-                    <div class="product-img-wrapper" id="img-box-2">
-                        <span class="product-img-placeholder">🎧</span>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Flagship Beast</div>
+                        <div class="product-img-wrapper" id="img-n1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Redmagic 11 Pro</div>
+                        <div class="p-specs">16+12GB | 512GB Storage</div>
+                        <div class="price-row"><span class="curr-price">Rs. 309,999</span></div>
                     </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-2">📷 Upload Image</label>
-                        <input type="file" id="file-2" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-2')">
-                    </div>
-                    
-                    <div class="p-title">Ronin R-Series Earbuds</div>
-                    <div class="p-specs">HD Sound, Gaming Mode, Long Battery</div>
-                    <div class="price-row"><span class="curr-price">Rs. 4,000 - 9,000</span></div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Redmagic%2011%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
                 </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20to%20buy%20Ronin%20Accessories" class="view-btn" target="_blank">Order on WhatsApp</a>
-            </div>
-
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Faster & Interlink</div>
-                    <div class="product-img-wrapper" id="img-box-3">
-                        <span class="product-img-placeholder">🔌</span>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">New Model[span_6](start_span)[span_6](end_span)</div>
+                        <div class="product-img-wrapper" id="img-n2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Nubia V80 Pro[span_7](start_span)[span_7](end_span)</div>
+                        <div class="p-specs">8+12GB | 256GB Storage[span_8](start_span)[span_8](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 55,999[span_9](start_span)[span_9](end_span)</span></div>
                     </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-3">📷 Upload Image</label>
-                        <input type="file" id="file-3" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-3')">
-                    </div>
-                    
-                    <div class="p-title">Faster / Interlink Chargers</div>
-                    <div class="p-specs">33W / Type-C Power Brick & Fast Cables</div>
-                    <div class="price-row"><span class="curr-price">Rs. 1,500 - 3,800</span></div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Nubia%20V80%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
                 </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Faster%20Interlink%20Charger" class="view-btn" target="_blank">Order on WhatsApp</a>
-            </div>
-
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Zero Lifestyle</div>
-                    <div class="product-img-wrapper" id="img-box-4">
-                        <span class="product-img-placeholder">🎧</span>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">New Model[span_10](start_span)[span_10](end_span)</div>
+                        <div class="product-img-wrapper" id="img-n3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Nubia V80 MAX[span_11](start_span)[span_11](end_span)</div>
+                        <div class="p-specs">8+12GB | 256GB Storage[span_12](start_span)[span_12](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 50,999[span_13](start_span)[span_13](end_span)</span></div>
                     </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-4">📷 Upload Image</label>
-                        <input type="file" id="file-4" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-4')">
-                    </div>
-                    
-                    <div class="p-title">Zero Lifestyle Wireless Pods</div>
-                    <div class="p-specs">Premium Build, Active Noise Cancellation</div>
-                    <div class="price-row"><span class="curr-price">Rs. 3,500 - 8,000</span></div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Nubia%20V80%20MAX" class="view-btn" target="_blank">Order on WhatsApp</a>
                 </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Zero%20Lifestyle%20Pods" class="view-btn" target="_blank">Order on WhatsApp</a>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty</div>
+                        <div class="product-img-wrapper" id="img-n4"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Nubia V60 Design[span_14](start_span)[span_14](end_span)</div>
+                        <div class="p-specs">8+12GB | 256GB Storage[span_15](start_span)[span_15](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 41,999[span_16](start_span)[span_16](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Nubia%20V60%20Design" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
             </div>
         </div>
 
-        <!-- INFINIX MOBILES -->
-        <div id="infinix" class="section-header">
-            <div class="section-title-left">Infinix Mobiles</div>
-            <span class="installment-badge">Available on Installment</span>
-        </div>
-        <div class="ecommerce-grid">
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Official Warranty</div>
-                    <div class="product-img-wrapper" id="img-box-5">
-                        <span class="product-img-placeholder">📱</span>
-                    </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-5">📷 Upload Image</label>
-                        <input type="file" id="file-5" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-5')">
-                    </div>
-                    
-                    <div class="p-title">Infinix Smart 10</div>
-                    <div class="p-specs">4GB RAM | 64GB Storage</div>
-                    <div class="price-row"><span class="curr-price">Rs. 40,000</span></div>
-                </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Smart%2010" class="view-btn" target="_blank">Order on WhatsApp</a>
+        <!-- HONOR SECTION -->
+        <div id="sec-honor" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Honor Mobiles</div>
             </div>
-
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Official Warranty</div>
-                    <div class="product-img-wrapper" id="img-box-6">
-                        <span class="product-img-placeholder">📱</span>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_17](start_span)[span_17](end_span)</div>
+                        <div class="product-img-wrapper" id="img-h1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Honor T10[span_18](start_span)[span_18](end_span)</div>
+                        <div class="p-specs">4GB | 64GB Storage[span_19](start_span)[span_19](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 32,999[span_20](start_span)[span_20](end_span)</span></div>
                     </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-6">📷 Upload Image</label>
-                        <input type="file" id="file-6" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-6')">
-                    </div>
-                    
-                    <div class="p-title">Infinix Hot 70 Pro</div>
-                    <div class="p-specs">8GB RAM | 128GB Storage</div>
-                    <div class="price-row"><span class="curr-price">Rs. 87,000</span></div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Honor%20T10" class="view-btn" target="_blank">Order on WhatsApp</a>
                 </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Hot%2070%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_21](start_span)[span_21](end_span)</div>
+                        <div class="product-img-wrapper" id="img-h2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Honor Play 20c[span_22](start_span)[span_22](end_span)</div>
+                        <div class="p-specs">4GB | 64GB Storage[span_23](start_span)[span_23](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 34,499[span_24](start_span)[span_24](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Honor%20Play%2020c" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_25](start_span)[span_25](end_span)</div>
+                        <div class="product-img-wrapper" id="img-h3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Honor X6c (128GB)[span_26](start_span)[span_26](end_span)</div>
+                        <div class="p-specs">6GB | 128GB Storage[span_27](start_span)[span_27](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 49,999[span_28](start_span)[span_28](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Honor%20X6c%20128GB" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Flagship Device[span_29](start_span)[span_29](end_span)</div>
+                        <div class="product-img-wrapper" id="img-h4"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Honor X9d 5G[span_30](start_span)[span_30](end_span)</div>
+                        <div class="p-specs">12GB | 256GB Storage[span_31](start_span)[span_31](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 154,999[span_32](start_span)[span_32](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Honor%20X9d%205G" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
             </div>
         </div>
 
-        <!-- TECNO MOBILES -->
-        <div id="tecno" class="section-header">
-            <div class="section-title-left">Tecno Mobiles</div>
-            <span class="installment-badge">Available on Installment</span>
-        </div>
-        <div class="ecommerce-grid">
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Official Warranty</div>
-                    <div class="product-img-wrapper" id="img-box-7">
-                        <span class="product-img-placeholder">📱</span>
-                    </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-7">📷 Upload Image</label>
-                        <input type="file" id="file-7" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-7')">
-                    </div>
-                    
-                    <div class="p-title">Tecno Spark 50 Pro</div>
-                    <div class="p-specs">8GB RAM | 128GB Storage</div>
-                    <div class="price-row"><span class="curr-price">Rs. 75,000</span></div>
-                </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Spark%2050%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+        <!-- SEGO SECTION -->
+        <div id="sec-sego" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Sego Smartphones[span_33](start_span)[span_33](end_span)</div>
             </div>
-
-            <div class="product-card">
-                <div>
-                    <div class="top-feature-tag">Official Warranty</div>
-                    <div class="product-img-wrapper" id="img-box-8">
-                        <span class="product-img-placeholder">📱</span>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Budget Phone[span_34](start_span)[span_34](end_span)</div>
+                        <div class="product-img-wrapper" id="img-s1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Sego Smart 20[span_35](start_span)[span_35](end_span)</div>
+                        <div class="p-specs">4+8GB | 64GB Storage[span_36](start_span)[span_36](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 29,999[span_37](start_span)[span_37](end_span)</span></div>
                     </div>
-                    <div class="admin-upload-area">
-                        <label class="upload-btn-label" for="file-8">📷 Upload Image</label>
-                        <input type="file" id="file-8" class="file-input" accept="image/*" onchange="previewImage(event, 'img-box-8')">
-                    </div>
-                    
-                    <div class="p-title">Tecno Camon 50 Pro</div>
-                    <div class="p-specs">8GB RAM | 256GB Storage</div>
-                    <div class="price-row"><span class="curr-price">Rs. 110,000</span></div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Sego%20Smart%2020" class="view-btn" target="_blank">Order on WhatsApp</a>
                 </div>
-                <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Camon%2050%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Popular[span_38](start_span)[span_38](end_span)</div>
+                        <div class="product-img-wrapper" id="img-s2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Sego Hot 100[span_39](start_span)[span_39](end_span)</div>
+                        <div class="p-specs">4+8GB | 128GB Storage[span_40](start_span)[span_40](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 32,999[span_41](start_span)[span_41](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Sego%20Hot%20100" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Epic Series[span_42](start_span)[span_42](end_span)</div>
+                        <div class="product-img-wrapper" id="img-s3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Sego Epicx[span_43](start_span)[span_43](end_span)</div>
+                        <div class="p-specs">4+8GB | 128GB Storage[span_44](start_span)[span_44](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 36,999[span_45](start_span)[span_45](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Sego%20Epicx" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFINIX SECTION -->
+        <div id="sec-infinix" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Infinix Mobiles</div>
+                <span class="installment-badge">Available on Installment</span>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_46](start_span)[span_46](end_span)</div>
+                        <div class="product-img-wrapper" id="img-inf1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix Smart 20[span_47](start_span)[span_47](end_span)</div>
+                        <div class="p-specs">4GB | 64GB Storage[span_48](start_span)[span_48](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 41,999[span_49](start_span)[span_49](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Smart%2020" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Hot Series[span_50](start_span)[span_50](end_span)</div>
+                        <div class="product-img-wrapper" id="img-inf2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix Hot 70 Pro (5G)[span_51](start_span)[span_51](end_span)</div>
+                        <div class="p-specs">8GB | 128GB Storage[span_52](start_span)[span_52](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 89,999[span_53](start_span)[span_53](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Hot%2070%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Note Series[span_54](start_span)[span_54](end_span)</div>
+                        <div class="product-img-wrapper" id="img-inf3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix Note 60 (5G)[span_55](start_span)[span_55](end_span)</div>
+                        <div class="p-specs">8GB | 256GB Storage[span_56](start_span)[span_56](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 109,999[span_57](start_span)[span_57](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20Note%2060" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Ultra Gaming[span_58](start_span)[span_58](end_span)</div>
+                        <div class="product-img-wrapper" id="img-inf4"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix GT 50 Pro[span_59](start_span)[span_59](end_span)</div>
+                        <div class="p-specs">12GB | 256GB Storage[span_60](start_span)[span_60](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 189,999[span_61](start_span)[span_61](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Infinix%20GT%2050%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TECNO SECTION -->
+        <div id="sec-tecno" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Tecno Mobiles</div>
+                <span class="installment-badge">Available on Installment</span>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_62](start_span)[span_62](end_span)</div>
+                        <div class="product-img-wrapper" id="img-tec1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Spark Go 3 (KN3)[span_63](start_span)[span_63](end_span)</div>
+                        <div class="p-specs">4GB | 64GB Storage[span_64](start_span)[span_64](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 41,999[span_65](start_span)[span_65](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Spark%20Go%203" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Spark Series[span_66](start_span)[span_66](end_span)</div>
+                        <div class="product-img-wrapper" id="img-tec2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Tecno Spark 50 (KN4)[span_67](start_span)[span_67](end_span)</div>
+                        <div class="p-specs">6GB | 128GB Storage[span_68](start_span)[span_68](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 64,999[span_69](start_span)[span_69](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Spark%2050" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Pro Plus Edition[span_70](start_span)[span_70](end_span)</div>
+                        <div class="product-img-wrapper" id="img-tec3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Spark 40 Pro+ (KM7)[span_71](start_span)[span_71](end_span)</div>
+                        <div class="p-specs">8GB | 256GB Storage[span_72](start_span)[span_72](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 84,999[span_73](start_span)[span_73](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Tecno%20Spark%2040%20Pro%20Plus" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- REALME SECTION -->
+        <div id="sec-realme" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Realme Mobiles</div>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Official Warranty[span_74](start_span)[span_74](end_span)</div>
+                        <div class="product-img-wrapper" id="img-r1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Realme Note 60x[span_75](start_span)[span_75](end_span)</div>
+                        <div class="p-specs">3GB | 64GB Storage[span_76](start_span)[span_76](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 33,999[span_77](start_span)[span_77](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Realme%20Note%2060x" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">C-Series[span_78](start_span)[span_78](end_span)</div>
+                        <div class="product-img-wrapper" id="img-r2"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Realme C100i[span_79](start_span)[span_79](end_span)</div>
+                        <div class="p-specs">6GB | 128GB Storage[span_80](start_span)[span_80](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 64,999[span_81](start_span)[span_81](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Realme%20C100i" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Flagship Realme[span_82](start_span)[span_82](end_span)</div>
+                        <div class="product-img-wrapper" id="img-r3"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Realme C100x[span_83](start_span)[span_83](end_span)</div>
+                        <div class="p-specs">8GB | 256GB Storage[span_84](start_span)[span_84](end_span)</div>
+                        <div class="price-row"><span class="curr-price">Rs. 79,999[span_85](start_span)[span_85](end_span)</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Realme%20C100x" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUDIO & ACCESSORIES SECTION -->
+        <div id="sec-accessories" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Branded Audio & Accessories</div>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Audionic / iDeonic</div>
+                        <div class="product-img-wrapper" id="img-acc1"><span class="product-img-placeholder">🎧</span></div>
+                        <div class="p-title">AirBuds Max / TWS</div>
+                        <div class="p-specs">Wireless Earbuds, ENC, Deep Bass</div>
+                        <div class="price-row"><span class="curr-price">Rs. 3,500 - 7,500</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Audionic%20Earbuds" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Ronin Brand</div>
+                        <div class="product-img-wrapper" id="img-acc2"><span class="product-img-placeholder">🎧</span></div>
+                        <div class="p-title">Ronin R-Series Earbuds</div>
+                        <div class="p-specs">HD Sound, Gaming Mode</div>
+                        <div class="price-row"><span class="curr-price">Rs. 4,000 - 9,000</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Ronin%20Earbuds" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COVERS & PROTECTORS SECTION -->
+        <div id="sec-covers" class="store-section">
+            <div class="section-header">
+                <div class="section-title-left">Covers & Protectors</div>
+            </div>
+            <div class="ecommerce-grid">
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">Shockproof</div>
+                        <div class="product-img-wrapper" id="img-cov1"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Silicon / Matte Covers</div>
+                        <div class="p-specs">All Phone Models Available</div>
+                        <div class="price-row"><span class="curr-price">Rs. 500 - 1,500</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Mobile%20Cover" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <div class="top-feature-tag">9H Hardness</div>
+                        <div class="product-img-wrapper" id="img-cov2"><span class="product-img-placeholder">🛡️</span></div>
+                        <div class="p-title">Tempered Glass Protector</div>
+                        <div class="p-specs">HD Clear & Scratch Resistant</div>
+                        <div class="price-row"><span class="curr-price">Rs. 400 - 1,200</span></div>
+                    </div>
+                    <a href="https://wa.me/923488847288?text=I%20want%20Tempered%20Glass" class="view-btn" target="_blank">Order on WhatsApp</a>
+                </div>
             </div>
         </div>
 
@@ -640,8 +805,29 @@
         <p style="margin-top: 8px; color: var(--text-secondary);">© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript function to handle image uploads dynamically -->
+    <!-- JavaScript for Single View & Dynamic Upload -->
     <script>
+        function showSection(sectionKey) {
+            const sections = document.querySelectorAll('.store-section');
+            const pills = document.querySelectorAll('.catalog-pill');
+
+            // Handle pill highlights
+            pills.forEach(pill => pill.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (sectionKey === 'all') {
+                sections.forEach(sec => sec.classList.remove('hidden'));
+            } else {
+                sections.forEach(sec => {
+                    if (sec.id === 'sec-' + sectionKey) {
+                        sec.classList.remove('hidden');
+                    } else {
+                        sec.classList.add('hidden');
+                    }
+                });
+            }
+        }
+
         function previewImage(event, containerId) {
             const file = event.target.files[0];
             if (file) {
