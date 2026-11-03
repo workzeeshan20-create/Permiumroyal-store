@@ -1,3 +1,289 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Royal Cell Store - Muzaffarabad</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0c;
+            --card-bg: #161617;
+            --accent-gold: #f5a623;
+            --text-primary: #f5f5f7;
+            --text-secondary: #86868b;
+            --border-color: #333336;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+        header {
+            background: rgba(22, 22, 23, 0.85);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            font-size: 24px;
+        }
+        .store-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 0.5px;
+        }
+        .whatsapp-top-btn {
+            background-color: #25d366;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #161617 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 14px;
+        }
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        .model-name {
+            color: var(--text-secondary);
+        }
+        .model-price {
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #25d366;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <span class="logo-icon">👑</span>
+            <span class="store-name">PREMIUM ROYAL CELL STORE</span>
+        </div>
+        <a href="https://wa.me/923009558050?text=Hello%20Royal%20Cell%20Store,%20I%20want%20to%20order..." class="whatsapp-top-btn" target="_blank">
+            WhatsApp رابطہ
+        </a>
+    </header>
+
+    <div class="hero">
+        <h1>مظفرآباد کا سب سے معتبر موبائل اور ایسیسریز اسٹور</h1>
+        <p>صرف کیش | اورجنل اور وارنٹی پروڈکٹس | آسان اقساط کی سہولت بھی دستیاب</p>
+    </div>
+
+    <div class="container">
+
+        <!-- Accessories & Essentials Section -->
+        <div class="section-title">🛡️ موبائل ایسیسریز اور پروٹیکٹرز (موجودہ ریٹس)</div>
+        <div class="grid">
+            <div class="card">
+                <h3>پروٹیکٹیو کورز & گلاس</h3>
+                <div class="price-item"><span class="model-name">آل فون ماڈلز کور (Silicon/Matte)</span><span class="model-price">Rs. 500 - 1,500</span></div>
+                <div class="price-item"><span class="model-name">100% اورجنل پروٹیکٹڈ گلاس (Tempered)</span><span class="model-price">Rs. 400 - 1,200</span></div>
+                <div class="price-item"><span class="model-name">یووی گلاس (Curved Screens)</span><span class="model-price">Rs. 1,200 - 2,500</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Covers%20and%20Glass" class="whatsapp-btn" target="_blank">آرڈر کریں via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <h3>چارجرز اور کیبلز (Fast Chargers)</h3>
+                <div class="price-item"><span class="model-name">20W / 33W فاسٹ چارجر برک (Power Brick)</span><span class="model-price">Rs. 1,500 - 3,500</span></div>
+                <div class="price-item"><span class="model-name">67W / 120W الٹرا فاسٹ چارجر</span><span class="model-price">Rs. 4,000 - 7,500</span></div>
+                <div class="price-item"><span class="model-name">ٹائپ-सी اور آئی فون ڈیٹا کیبل (Type-C / Lightning)</span><span class="model-price">Rs. 500 - 1,500</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Chargers%20and%20Cables" class="whatsapp-btn" target="_blank">آرڈر کریں via WhatsApp</a>
+            </div>
+
+            <div class="card">
+                <h3>آڈیو گیئرز (Earbuds & Headphones)</h3>
+                <div class="price-item"><span class="model-name">پریمیم وائرلیس ایئر بڈز (Wireless Earbuds)</span><span class="model-price">Rs. 2,500 - 6,000</span></div>
+                <div class="price-item"><span class="model-name">بلوٹوتھ نیک بینڈ / ہیڈ فونز</span><span class="model-price">Rs. 2,000 - 4,500</span></div>
+                <div class="price-item"><span class="model-name">ہینڈ فری (Handsfree - Original Quality)</span><span class="model-price">Rs. 500 - 1,500</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Audio%20Gears" class="whatsapp-btn" target="_blank">آرڈر کریں via WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Mobile Phones Section -->
+        <div class="section-title">📱 موبائل فونز کی قیمتیں (Latest Stock)</div>
+        <div class="grid">
+            <!-- Infinix -->
+            <div class="card">
+                <h3>Infinix Smart & Hot Series</h3>
+                <div class="price-item"><span class="model-name">Smart 10 (4+64)</span><span class="model-price">Rs. 40,000</span></div>
+                <div class="price-item"><span class="model-name">Hot 60i (6+128)</span><span class="model-price">Rs. 59,000</span></div>
+                <div class="price-item"><span class="model-name">Hot 70 Pro (8+128)</span><span class="model-price">Rs. 87,000</span></div>
+                <div class="price-item"><span class="model-name">Note 60 (8+256)</span><span class="model-price">Rs. 110,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Infinix%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- Tecno -->
+            <div class="card">
+                <h3>Tecno Spark & Camon Series</h3>
+                <div class="price-item"><span class="model-name">Spark Go 3 (4+64)</span><span class="model-price">Rs. 40,000</span></div>
+                <div class="price-item"><span class="model-name">Spark 30 (8+128)</span><span class="model-price">Rs. 60,000</span></div>
+                <div class="price-item"><span class="model-name">Spark 50 Pro (8+128)</span><span class="model-price">Rs. 75,000</span></div>
+                <div class="price-item"><span class="model-name">Camon 50 Pro (8+256)</span><span class="model-price">Rs. 110,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Tecno%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- Vivo -->
+            <div class="card">
+                <h3>Vivo Y & V Series</h3>
+                <div class="price-item"><span class="model-name">Y04 (4+128)</span><span class="model-price">Rs. 51,000</span></div>
+                <div class="price-item"><span class="model-name">Y31D (8+128)</span><span class="model-price">Rs. 83,000</span></div>
+                <div class="price-item"><span class="model-name">Y400 (8+256)</span><span class="model-price">Rs. 100,000</span></div>
+                <div class="price-item"><span class="model-name">V70 FE (8+256)</span><span class="model-price">Rs. 135,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Vivo%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- Samsung -->
+            <div class="card">
+                <h3>Samsung Galaxy Series</h3>
+                <div class="price-item"><span class="model-name">A07 (4+64)</span><span class="model-price">Rs. 46,000</span></div>
+                <div class="price-item"><span class="model-name">A07 (4+128)</span><span class="model-price">Rs. 56,500</span></div>
+                <div class="price-item"><span class="model-name">A17 (8+256)</span><span class="model-price">Rs. 95,000</span></div>
+                <div class="price-item"><span class="model-name">A57 (12+256)</span><span class="model-price">Rs. 185,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Samsung%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- Xiaomi / Redmi -->
+            <div class="card">
+                <h3>Xiaomi Redmi Series</h3>
+                <div class="price-item"><span class="model-name">A5 (4+64)</span><span class="model-price">Rs. 37,000</span></div>
+                <div class="price-item"><span class="model-name">Redmi 15 (8+128)</span><span class="model-price">Rs. 59,000</span></div>
+                <div class="price-item"><span class="model-name">Note 15 (8+256)</span><span class="model-price">Rs. 81,000</span></div>
+                <div class="price-item"><span class="model-name">Note 15 Pro (12+512)</span><span class="model-price">Rs. 121,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Redmi%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- Realme & Oppo -->
+            <div class="card">
+                <h3>Oppo & Realme Series</h3>
+                <div class="price-item"><span class="model-name">Oppo A5i (4+64)</span><span class="model-price">Rs. 43,000</span></div>
+                <div class="price-item"><span class="model-name">Oppo Reno 16 (12+256)</span><span class="model-price">Rs. 210,000</span></div>
+                <div class="price-item"><span class="model-name">Realme 60X (4+64)</span><span class="model-price">Rs. 39,000</span></div>
+                <div class="price-item"><span class="model-name">Realme C75X (8+128)</span><span class="model-price">Rs. 70,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20Oppo%20Realme%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+
+            <!-- ZTE / Nubia (New Arrivals) -->
+            <div class="card">
+                <h3>ZTE & Nubia Gaming Phones</h3>
+                <div class="price-item"><span class="model-name">Nubia Air Pro (8+256)</span><span class="model-price">Rs. 109,999</span></div>
+                <div class="price-item"><span class="model-name">Nubia Neo 3 (8+256)</span><span class="model-price">Rs. 69,999</span></div>
+                <div class="price-item"><span class="model-name">Nubia A35e (2+64)</span><span class="model-price">Rs. 26,000</span></div>
+                <div class="price-item"><span class="model-name">V80 Pro (8+256)</span><span class="model-price">Rs. 56,000</span></div>
+                <a href="https://wa.me/923009558050?text=I%20want%20to%20buy%20ZTE%20Nubia%20Phone" class="whatsapp-btn" target="_blank">واٹس ایپ پر رابطہ کریں</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>📍 پتہ: مظفرآباد، آزاد کشمیر | رابط نمبر: 0300-9558050 / 0335-9558050 / 0347-5064764[span_4](start_span)[span_4](end_span)</p>
+        <p>© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en" class="dark">
