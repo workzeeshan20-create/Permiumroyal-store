@@ -33,28 +33,29 @@
             padding-bottom: 80px;
         }
 
-        /* Dark Premium Header Banner */
+        /* Fixed Full-Width Header */
         .store-hero {
             background: linear-gradient(135deg, #0f0f11 0%, #1d1b18 100%);
             border-bottom: 2px solid var(--accent-gold);
-            padding: 25px 16px 15px 16px;
+            padding: 30px 20px 20px 20px;
             text-align: center;
             color: #fff;
+            width: 100%;
         }
 
         .store-banner-title {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
             color: var(--accent-gold);
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .profile-3d-container {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 8px auto;
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 10px auto;
             border-radius: 50%;
             background: radial-gradient(circle, #332711 0%, #111 80%);
             border: 2px solid var(--accent-gold);
@@ -64,15 +65,15 @@
             justify-content: center;
         }
 
-        .profile-crown-emoji { font-size: 36px; }
-        .store-main-name { font-size: 20px; font-weight: 800; color: #fff; }
-        .store-loc-sub { font-size: 11px; color: #a0aec0; margin-top: 2px; }
+        .profile-crown-emoji { font-size: 38px; }
+        .store-main-name { font-size: 22px; font-weight: 800; color: #fff; }
+        .store-loc-sub { font-size: 11px; color: #a0aec0; margin-top: 3px; }
 
         /* AI Voice & Text Bar */
         .ai-assistant-wrapper {
-            max-width: 800px;
-            margin: 10px auto;
-            padding: 0 12px;
+            max-width: 900px;
+            margin: 12px auto;
+            padding: 0 16px;
         }
 
         .ai-chat-box {
@@ -126,12 +127,12 @@
             cursor: pointer;
         }
 
-        /* Horizontal Brand Navigation */
+        /* Full Width Catalog Nav */
         .catalog-nav {
             display: flex;
             gap: 8px;
             overflow-x: auto;
-            padding: 10px 16px;
+            padding: 12px 16px;
             scrollbar-width: none;
             position: sticky;
             top: 0;
@@ -139,6 +140,7 @@
             z-index: 900;
             border-bottom: 1px solid var(--card-border);
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            width: 100%;
         }
 
         .catalog-nav::-webkit-scrollbar { display: none; }
@@ -161,12 +163,12 @@
             border-color: #000;
         }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 12px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
         .section-header {
             font-size: 16px;
             font-weight: 800;
-            margin: 20px 0 12px 0;
+            margin: 24px 0 12px 0;
             color: var(--text-dark);
             display: flex;
             align-items: center;
@@ -183,7 +185,7 @@
             .ecommerce-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
         }
 
-        /* Audionic Inspired Clean White Card Design */
+        /* Product Card UI */
         .audionic-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -321,7 +323,7 @@
             <div class="ai-header-label">✨ Royal AI Assistant (Voice & Text Input)</div>
             <div class="ai-input-row">
                 <button class="voice-btn" onclick="startVoiceInput()" title="Click to Speak">🎤</button>
-                <input type="text" id="aiInput" class="ai-input" placeholder="Ask AI about Mobiles, Accessories or Covers...">
+                <input type="text" id="aiInput" class="ai-input" placeholder="Ask AI about Mobiles, Accessories or Chinese Local...">
                 <button class="ai-send-btn" onclick="processAICommand()">Ask AI</button>
             </div>
         </div>
@@ -330,150 +332,225 @@
     <!-- Brand Filter Navigation -->
     <div class="catalog-nav">
         <span class="catalog-pill active" onclick="showSection('all', event)">All Stock</span>
+        <span class="catalog-pill" onclick="showSection('nubia', event)">Nubia 5G</span>
+        <span class="catalog-pill" onclick="showSection('infinix', event)">Infinix</span>
+        <span class="catalog-pill" onclick="showSection('tecno', event)">Tecno</span>
+        <span class="catalog-pill" onclick="showSection('vivo', event)">Vivo</span>
         <span class="catalog-pill" onclick="showSection('audionic', event)">Audionic</span>
         <span class="catalog-pill" onclick="showSection('zero', event)">Zero Lifestyle</span>
         <span class="catalog-pill" onclick="showSection('ronin', event)">Ronin</span>
-        <span class="catalog-pill" onclick="showSection('faster', event)">Faster</span>
-        <span class="catalog-pill" onclick="showSection('interlink', event)">Interlink</span>
-        <span class="catalog-pill" onclick="showSection('login', event)">Login</span>
         <span class="catalog-pill" onclick="showSection('chinese', event)">Chinese Local</span>
         <span class="catalog-pill" onclick="showSection('covers', event)">Covers & Glass</span>
     </div>
 
     <div class="container">
 
-        <!-- AUDIONIC BRAND SECTION -->
-        <div id="sec-audionic" class="store-section">
-            <div class="section-header">Audionic Official Accessories</div>
+        <!-- NUBIA 5G SMARTPHONES -->
+        <div id="sec-nubia" class="store-section">
+            <div class="section-header">Nubia 5G Smartphones</div>
             <div class="ecommerce-grid">
-
-                <!-- 5 Earbuds -->
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">Quad Mic ENC</div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="yellow-banner-tag">Official Stock</div>
-                        <div class="p-title-text">Audionic Airbud 425 TWS</div>
-                        <div class="p-specs-text">Bluetooth 5.3 | Touch Control</div>
-                        <span class="p-price-text">Rs. 3,399</span>
+                        <div class="card-top-tag">5G Flagship</div>
+                        <div class="product-img-box">📱</div>
+                        <div class="yellow-banner-tag">Hot News</div>
+                        <div class="p-title-text">Nubia Neo 5 Pro 5G</div>
+                        <div class="p-specs-text">12GB RAM | 256GB ROM</div>
+                        <span class="p-price-text">Rs. 119,999</span>
                         <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('Airbud 425')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20Airbud%20425" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Nubia Neo 5 Pro 5G')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Nubia%20Neo%205%20Pro%205G" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">ANC Wireless</div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="yellow-banner-tag">Official Stock</div>
-                        <div class="p-title-text">Audionic Airbud 550 Pro</div>
-                        <div class="p-specs-text">Active Noise Cancellation</div>
-                        <span class="p-price-text">Rs. 3,999</span>
+                        <div class="card-top-tag">5G Slim</div>
+                        <div class="product-img-box">📱</div>
+                        <div class="yellow-banner-tag">Hot News</div>
+                        <div class="p-title-text">Nubia Air Pro 5G</div>
+                        <div class="p-specs-text">8GB RAM | 256GB ROM</div>
+                        <span class="p-price-text">Rs. 109,999</span>
                         <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('Airbud 550 Pro')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20Airbud%20550%20Pro" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Nubia Air Pro 5G')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Nubia%20Air%20Pro%205G" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
-                <!-- 5 Headphones -->
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">Over-Ear Headset</div>
+                        <div class="card-top-tag">5G Max</div>
+                        <div class="product-img-box">📱</div>
+                        <div class="yellow-banner-tag">Hot News</div>
+                        <div class="p-title-text">Nubia Neo 5 Max 5G</div>
+                        <div class="p-specs-text">8GB RAM | 256GB ROM</div>
+                        <span class="p-price-text">Rs. 99,999</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
+                        <input type="text" class="comment-input" placeholder="Write a comment...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Nubia Neo 5 Max 5G')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Nubia%20Neo%205%20Max%205G" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFINIX SECTION -->
+        <div id="sec-infinix" class="store-section">
+            <div class="section-header">Infinix Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="audionic-card">
+                    <div>
+                        <div class="card-top-tag">Official Warranty</div>
+                        <div class="product-img-box">📱</div>
+                        <div class="yellow-banner-tag">Stock Available</div>
+                        <div class="p-title-text">Infinix Smart 20</div>
+                        <div class="p-specs-text">4GB RAM | 128GB ROM</div>
+                        <span class="p-price-text">Rs. 47,000</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
+                        <input type="text" class="comment-input" placeholder="Write a comment...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Infinix Smart 20')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
+                </div>
+
+                <div class="audionic-card">
+                    <div>
+                        <div class="card-top-tag">Official Warranty</div>
+                        <div class="product-img-box">📱</div>
+                        <div class="yellow-banner-tag">Stock Available</div>
+                        <div class="p-title-text">Infinix Hot 70 Pro</div>
+                        <div class="p-specs-text">8GB RAM | 128GB ROM</div>
+                        <span class="p-price-text">Rs. 87,000</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
+                        <input type="text" class="comment-input" placeholder="Write a comment...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Infinix Hot 70 Pro')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Hot%2070%20Pro" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHINESE LOCAL ACCESSORIES SECTION (Rs 1,000 - 8,000) -->
+        <div id="sec-chinese" class="store-section">
+            <div class="section-header">Chinese Local Accessories (Rs. 1,000 - 8,000)</div>
+            <div class="ecommerce-grid">
+                <div class="audionic-card">
+                    <div>
+                        <div class="card-top-tag">Budget Earbuds</div>
                         <div class="product-img-box">🎧</div>
-                        <div class="yellow-banner-tag">Official Stock</div>
-                        <div class="p-title-text">Audionic AH-770 Headphone</div>
-                        <div class="p-specs-text">Super Extra Bass | HD Mic</div>
-                        <span class="p-price-text">Rs. 4,500</span>
+                        <div class="yellow-banner-tag">Best Value</div>
+                        <div class="p-title-text">Local TWS Earbuds</div>
+                        <div class="p-specs-text">Bluetooth Stereo | Good Bass</div>
+                        <span class="p-price-text">Rs. 1,500 - 3,500</span>
                         <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('AH-770 Headphone')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20AH-770%20Headphone" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Local TWS Earbuds')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Local%20Earbuds" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
-                <!-- 5 Neckbands -->
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">40 Hrs Battery</div>
+                        <div class="card-top-tag">Headphone Section</div>
                         <div class="product-img-box">🎧</div>
-                        <div class="yellow-banner-tag">Official Stock</div>
-                        <div class="p-title-text">Audionic Drive 3 Neckband</div>
-                        <div class="p-specs-text">Flexible Silicon | Magnetic</div>
-                        <span class="p-price-text">Rs. 3,200</span>
-                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
+                        <div class="yellow-banner-tag">Budget Item</div>
+                        <div class="p-title-text">P9 Wireless Headphone</div>
+                        <div class="p-specs-text">Over-Ear Bluetooth Headset</div>
+                        <span class="p-price-text">Rs. 1,800 - 4,000</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('Drive 3 Neckband')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20Drive%203%20Neckband" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('P9 Headphone')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20P9%20Headphone" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
-                <!-- 5 Chargers & Cables -->
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">Built-in Cables</div>
-                        <div class="product-img-box">🔋</div>
-                        <div class="yellow-banner-tag">Official Stock</div>
-                        <div class="p-title-text">Audionic Spark Pro Power Bank</div>
-                        <div class="p-specs-text">20,000mAh | 22.5W Fast Charge</div>
-                        <span class="p-price-text">Rs. 5,999</span>
-                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
+                        <div class="card-top-tag">Charger & Cable Section</div>
+                        <div class="product-img-box">🔌</div>
+                        <div class="yellow-banner-tag">Fast Charge</div>
+                        <div class="p-title-text">Local Fast Charger & Cable</div>
+                        <div class="p-specs-text">Type-C / iPhone Cable Adapters</div>
+                        <span class="p-price-text">Rs. 1,000 - 3,000</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('Spark Pro Powerbank')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20Spark%20Pro%20Powerbank" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Local Fast Charger')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Charger%20Cable" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
+                <div class="audionic-card">
+                    <div>
+                        <div class="card-top-tag">Neckband & Handfree</div>
+                        <div class="product-img-box">🎧</div>
+                        <div class="yellow-banner-tag">Popular</div>
+                        <div class="p-title-text">Local Neckband & Handfree</div>
+                        <div class="p-specs-text">Magnetic Neckband & Bass Handfree</div>
+                        <span class="p-price-text">Rs. 1,200 - 3,500</span>
+                        <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star">★</span></div>
+                        <input type="text" class="comment-input" placeholder="Write a comment...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Local Neckband')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Neckband" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- COVERS & PROTECTIVE GLASS SECTION -->
+        <!-- COVERS & GLASS SECTION -->
         <div id="sec-covers" class="store-section">
             <div class="section-header">Protective Glass & Mobile Covers</div>
             <div class="ecommerce-grid">
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">9D Glass Protector</div>
+                        <div class="card-top-tag">Protective Glass</div>
                         <div class="product-img-box">🛡️</div>
-                        <div class="yellow-banner-tag">Wholesale Rate</div>
-                        <div class="p-title-text">9D/11D Curved Glass</div>
-                        <div class="p-specs-text">Available for All Models</div>
+                        <div class="yellow-banner-tag">Wholesale</div>
+                        <div class="p-title-text">9D / 11D Curved Glass</div>
+                        <div class="p-specs-text">Scratch Resistant Tempered Glass</div>
                         <span class="p-price-text">Rs. 350 - 850</span>
                         <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('9D Glass')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%209D%20Glass%20Protector" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Tempered Glass')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Glass" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
 
                 <div class="audionic-card">
                     <div>
-                        <div class="card-top-tag">Puffer & Silicone Covers</div>
+                        <div class="card-top-tag">Mobile Covers</div>
                         <div class="product-img-box">📱</div>
-                        <div class="yellow-banner-tag">Wholesale Rate</div>
-                        <div class="p-title-text">Premium Camera Protection Cover</div>
-                        <div class="p-specs-text">Soft TPU Silicone Material</div>
+                        <div class="yellow-banner-tag">Wholesale</div>
+                        <div class="p-title-text">Silicon & Camera Protection Cover</div>
+                        <div class="p-specs-text">Shockproof Puffer Cases</div>
                         <span class="p-price-text">Rs. 450 - 1,200</span>
                         <div class="rating-box" onclick="rateProduct(this)"><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span><span class="star active">★</span></div>
                         <input type="text" class="comment-input" placeholder="Write a comment...">
                     </div>
                     <div class="btn-group">
-                        <button class="cart-btn" onclick="addToCart('Camera Protection Cover')">Add to Cart</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20Mobile%20Cover" class="whatsapp-order-btn" target="_blank">Order on WhatsApp</a>
+                        <button class="cart-btn" onclick="addToCart('Mobile Cover')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20Cover" class="whatsapp-order-btn" target="_blank">Order</a>
                     </div>
                 </div>
             </div>
@@ -525,7 +602,7 @@
         function processAICommand() {
             const query = document.getElementById('aiInput').value.toLowerCase();
             if(!query) return;
-            alert('Royal AI Guide: Searching stock details for "' + query + '"...');
+            alert('Royal AI Guide: Searching stock for "' + query + '"');
             document.getElementById('aiInput').value = '';
         }
 
@@ -542,7 +619,7 @@
                     processAICommand();
                 };
             } else {
-                alert('Voice speech recognition is not supported in this browser.');
+                alert('Voice recognition is not supported in this browser.');
             }
         }
     </script>
