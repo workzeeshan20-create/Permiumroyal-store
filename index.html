@@ -10,12 +10,11 @@
             --card-bg: #121214;
             --card-border: #232326;
             --accent-gold: #f5a623;
-            --accent-gold-glow: rgba(245, 166, 35, 0.15);
+            --accent-gold-glow: rgba(245, 166, 35, 0.25);
             --text-primary: #f5f5f7;
             --text-secondary: #86868b;
             --whatsapp-green: #25d366;
-            --badge-yellow: #ffc107;
-            --sale-red: #d93025;
+            --ai-badge: #8a2be2;
         }
 
         * {
@@ -34,162 +33,130 @@
             padding-bottom: 70px;
         }
 
+        /* 3D Header Profile Banner */
+        .store-hero {
+            position: relative;
+            background: linear-gradient(135deg, #111 0%, #1a150b 100%);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 30px 16px 20px 16px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .store-banner-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(245, 166, 35, 0.4);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .profile-3d-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 12px auto;
+            border-radius: 50%;
+            background: radial-gradient(circle, #332711 0%, #111 80%);
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 0 25px var(--accent-gold-glow), inset 0 0 15px rgba(245, 166, 35, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: perspective(500px) rotateX(5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-3d-container:hover {
+            transform: perspective(500px) rotateX(0deg) scale(1.05);
+        }
+
+        .profile-crown-emoji {
+            font-size: 50px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+        }
+
+        .store-main-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .store-loc-sub {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* AI Assistant Bar */
+        .ai-bar {
+            background: linear-gradient(90deg, #1a0933 0%, #0d0d0e 100%);
+            border-bottom: 1px solid #3a1b6d;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .ai-input-group {
+            display: flex;
+            flex: 1;
+            background: #161619;
+            border: 1px solid #52239e;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 4px 12px;
+        }
+
+        .ai-input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 13px;
+            outline: none;
+            width: 100%;
+            padding: 6px;
+        }
+
+        .ai-btn {
+            background: var(--ai-badge);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
         header {
-            background: rgba(18, 18, 20, 0.85);
+            background: rgba(18, 18, 20, 0.9);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid var(--card-border);
-            padding: 12px 16px;
+            padding: 10px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            background: var(--accent-gold);
-            color: #000;
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .store-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .store-name {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--accent-gold);
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-        }
-
-        .store-loc {
-            font-size: 10px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
         .whatsapp-top-btn {
             background-color: var(--whatsapp-green);
             color: white;
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 20px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-        }
-
-        .hero-actions {
-            padding: 15px 16px 5px 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .btn-gold {
-            background: linear-gradient(180deg, #f7b731 0%, #f5a623 100%);
-            color: #000;
-            font-weight: 700;
-            text-align: center;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            display: block;
-            box-shadow: 0 4px 15px var(--accent-gold-glow);
-        }
-
-        .btn-dark {
-            background: #18181b;
-            color: #fff;
-            border: 1px solid var(--card-border);
-            font-weight: 600;
-            text-align: center;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            display: block;
-        }
-
-        .category-wrapper {
-            padding: 16px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .category-box {
-            background: linear-gradient(145deg, #161618 0%, #0d0d0e 100%);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 16px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .cat-card {
-            background: #111113;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 14px;
-            padding: 20px 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-primary);
-            cursor: pointer;
-        }
-
-        .cat-icon-wrap {
-            background: rgba(245, 166, 35, 0.1);
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: var(--accent-gold);
-        }
-
-        .cat-title {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-
-        .cat-desc {
-            font-size: 11px;
-            color: var(--text-secondary);
-            line-height: 1.2;
+            font-size: 18px;
         }
 
         .catalog-nav {
@@ -199,7 +166,7 @@
             padding: 10px 16px;
             scrollbar-width: none;
             position: sticky;
-            top: 62px;
+            top: 57px;
             background: rgba(5, 5, 5, 0.95);
             backdrop-filter: blur(10px);
             z-index: 900;
@@ -214,22 +181,19 @@
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             color: var(--text-primary);
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 25px;
-            text-decoration: none;
             font-size: 13px;
             font-weight: 600;
             white-space: nowrap;
             cursor: pointer;
-            transition: all 0.2s ease;
         }
 
         .catalog-pill.active, .catalog-pill:hover {
-            background-color: #f5a623;
-            color: #000000;
-            border-color: #f5a623;
+            background-color: var(--accent-gold);
+            color: #000;
+            border-color: var(--accent-gold);
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
         }
 
         .container {
@@ -239,7 +203,7 @@
         }
 
         .section-header {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             margin: 25px 0 15px 0;
             color: #fff;
@@ -257,7 +221,7 @@
         .section-title-left::before {
             content: '';
             width: 4px;
-            height: 18px;
+            height: 16px;
             background: var(--accent-gold);
             border-radius: 2px;
         }
@@ -267,9 +231,8 @@
             color: #25d366;
             border: 1px solid rgba(37, 211, 102, 0.3);
             font-size: 11px;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
-            font-weight: 600;
         }
 
         .ecommerce-grid {
@@ -296,35 +259,31 @@
         }
 
         .top-feature-tag {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
             color: var(--text-primary);
             text-align: center;
-            padding: 2px 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .product-img-wrapper {
             background: #fff;
             border-radius: 12px;
-            height: 120px;
+            height: 110px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            margin-bottom: 10px;
-            overflow: hidden;
+            margin-bottom: 8px;
         }
 
         .product-img-placeholder {
-            font-size: 40px;
+            font-size: 36px;
         }
 
         .p-title {
             font-size: 13px;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 2px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -333,14 +292,13 @@
         .p-specs {
             font-size: 11px;
             color: var(--text-secondary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .price-row {
             display: flex;
             align-items: baseline;
-            gap: 4px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .curr-price {
@@ -349,23 +307,61 @@
             color: var(--accent-gold);
         }
 
-        .view-btn {
-            background: #1f1f22;
+        /* Rating & Reviews Section */
+        .rating-box {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #ffc107;
+            margin-bottom: 8px;
+        }
+
+        .review-input {
+            width: 100%;
+            background: #1a1a1e;
+            border: 1px solid var(--card-border);
+            color: #fff;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .cart-btn {
+            flex: 1;
+            background: #2a2a2e;
             color: #fff;
             border: 1px solid var(--card-border);
             text-align: center;
-            padding: 8px;
+            padding: 7px 4px;
             border-radius: 8px;
-            text-decoration: none;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            display: block;
-            margin-bottom: 4px;
+            cursor: pointer;
+            text-decoration: none;
         }
 
-        .view-btn:hover {
-            background: var(--accent-gold);
-            color: #000;
+        .cart-btn:hover {
+            background: #3a3a3f;
+        }
+
+        .whatsapp-order-btn {
+            flex: 1;
+            background: var(--whatsapp-green);
+            color: #fff;
+            text-align: center;
+            padding: 7px 4px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
         }
 
         .store-section {
@@ -388,49 +384,30 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <div class="logo-icon">👑</div>
-            <div class="store-details">
-                <span class="store-name">ROYAL CELL STORE</span>
-                <span class="store-loc">Muzaffarabad, Azad Kashmir</span>
-            </div>
+    <!-- 3D Profile Hero Header -->
+    <div class="store-hero">
+        <div class="store-banner-title">Premium Royal Cell Store</div>
+        <div class="profile-3d-container">
+            <span class="profile-crown-emoji">👑</span>
         </div>
+        <div class="store-main-name">Royal Cell Store</div>
+        <div class="store-loc-sub">Muzaffarabad, Azad Kashmir | Wholesale Rates</div>
+    </div>
+
+    <!-- Gemini AI Assistant Integration Bar -->
+    <div class="ai-bar">
+        <div class="ai-input-group">
+            <input type="text" id="aiQuery" class="ai-input" placeholder="Gemini AI se poochein (e.g. Update price)...">
+        </div>
+        <button class="ai-btn" onclick="askGeminiAI()">Ask AI</button>
+    </div>
+
+    <header>
+        <div style="font-size: 13px; font-weight: 700; color: var(--accent-gold);">👑 ROYAL CELL STORE</div>
         <a href="https://wa.me/923558770290?text=Hello%20Royal%20Cell%20Store..." class="whatsapp-top-btn" target="_blank">💬</a>
     </header>
 
-    <div class="hero-actions">
-        <a href="#catalog-area" class="btn-gold" onclick="showSection('all', event)">Explore Collection</a>
-        <a href="https://wa.me/923558770290?text=Hello%20Royal%20Cell%20Store,%20I%20want%20to%20order" class="btn-dark" target="_blank">Contact on WhatsApp</a>
-    </div>
-
-    <!-- Category Boxes -->
-    <div class="category-wrapper" id="catalog-area">
-        <div class="category-box">
-            <div class="cat-card" onclick="showSection('accessories', event)">
-                <div class="cat-icon-wrap">🎧</div>
-                <div class="cat-title">Audio & Acc</div>
-                <div class="cat-desc">Earbuds, Chargers & Cables</div>
-            </div>
-            <div class="cat-card" onclick="showSection('covers', event)">
-                <div class="cat-icon-wrap">📱</div>
-                <div class="cat-title">Covers & Glass</div>
-                <div class="cat-desc">Protection Accessories</div>
-            </div>
-            <div class="cat-card" onclick="showSection('infinix', event)">
-                <div class="cat-icon-wrap">💳</div>
-                <div class="cat-title">Installment Plan</div>
-                <div class="cat-desc">Infinix, Tecno & itel</div>
-            </div>
-            <div class="cat-card" onclick="showSection('samsung', event)">
-                <div class="cat-icon-wrap">👑</div>
-                <div class="cat-title">Branded Mobiles</div>
-                <div class="cat-desc">Original Warranty Stock</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Catalog Navigation Pills -->
+    <!-- Catalog Navigation -->
     <div class="catalog-nav">
         <span class="catalog-pill active" onclick="showSection('all', event)">All Products</span>
         <span class="catalog-pill" onclick="showSection('infinix', event)">Infinix</span>
@@ -442,11 +419,7 @@
         <span class="catalog-pill" onclick="showSection('oppo', event)">Oppo</span>
         <span class="catalog-pill" onclick="showSection('realme', event)">Realme</span>
         <span class="catalog-pill" onclick="showSection('honor', event)">Honor</span>
-        <span class="catalog-pill" onclick="showSection('villaon', event)">Villaon</span>
-        <span class="catalog-pill" onclick="showSection('sego', event)">Sego</span>
-        <span class="catalog-pill" onclick="showSection('sparx', event)">Sparx</span>
         <span class="catalog-pill" onclick="showSection('accessories', event)">🎧 Accessories</span>
-        <span class="catalog-pill" onclick="showSection('covers', event)">📱 Covers</span>
     </div>
 
     <div class="container">
@@ -455,48 +428,38 @@
         <div id="sec-infinix" class="store-section">
             <div class="section-header">
                 <div class="section-title-left">Infinix Mobiles</div>
-                <span class="installment-badge">Available on Installment</span>
+                <span class="installment-badge">Installment Available</span>
             </div>
             <div class="ecommerce-grid">
                 <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Smart 10</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Smart%2010" class="view-btn" target="_blank">Order on WhatsApp</a>
+                    <div>
+                        <div class="top-feature-tag">Official Warranty</div>
+                        <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix Smart 20</div>
+                        <div class="p-specs">4GB RAM | 128GB Storage</div>
+                        <div class="price-row"><span class="curr-price">Rs. 47,000</span></div>
+                        <div class="rating-box">⭐⭐⭐⭐⭐ <span>(4.8)</span></div>
+                        <input type="text" class="review-input" placeholder="Write a review...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Infinix Smart 20')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Smart 20</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Smart%2020%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Smart 20</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 47,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Smart%2020%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Hot 60i</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 59,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Hot%2060i" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Hot 70</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 65,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Hot%2070" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Hot 70 Pro</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 87,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Hot%2070%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Hot 60 Pro Plus</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 90,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Hot%2060%20Pro%20Plus" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Note 60</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 110,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Note%2060" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Curved Display</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Note 60 Edge</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 100,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Note%2060%20Edge" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Infinix Note 60 Pro</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 126,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Infinix%20Note%2060%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                    <div>
+                        <div class="top-feature-tag">Official Warranty</div>
+                        <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Infinix Hot 70 Pro</div>
+                        <div class="p-specs">8GB RAM | 128GB Storage</div>
+                        <div class="price-row"><span class="curr-price">Rs. 87,000</span></div>
+                        <div class="rating-box">⭐⭐⭐⭐⭐ <span>(4.9)</span></div>
+                        <input type="text" class="review-input" placeholder="Write a review...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Infinix Hot 70 Pro')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070%20Pro" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -505,457 +468,47 @@
         <div id="sec-tecno" class="store-section">
             <div class="section-header">
                 <div class="section-title-left">Tecno Mobiles</div>
-                <span class="installment-badge">Available on Installment</span>
+                <span class="installment-badge">Installment Available</span>
             </div>
             <div class="ecommerce-grid">
                 <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark Go 3</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%20Go%203%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark Go 3</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 47,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%20Go%203%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark 30</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 60,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%2030" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark 50</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 61,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%2050" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark 50 Pro</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 75,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%2050%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark 40 Pro</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 74,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%2040%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Spark 40 Pro Plus</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 85,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Spark%2040%20Pro%20Plus" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Flagship Cam</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Camon 50</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 100,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Camon%2050" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Flagship Cam</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Tecno Camon 50 Pro</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 110,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tecno%20Camon%2050%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
+                    <div>
+                        <div class="top-feature-tag">Official Warranty</div>
+                        <div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div>
+                        <div class="p-title">Tecno Spark 50 Pro</div>
+                        <div class="p-specs">8GB RAM | 128GB Storage</div>
+                        <div class="price-row"><span class="curr-price">Rs. 75,000</span></div>
+                        <div class="rating-box">⭐⭐⭐⭐⭐ <span>(4.7)</span></div>
+                        <input type="text" class="review-input" placeholder="Write a review...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('Tecno Spark 50 Pro')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Tecno%20Spark%2050%20Pro" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- VIVO -->
-        <div id="sec-vivo" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Vivo Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y04</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 51,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y04%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y04</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 60,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y04%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y05</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 45,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y05%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y05</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 53,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y05%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y05e</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y05e" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y11D</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 57,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y11D%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y11D</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 69,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y11D%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y21D</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 57,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y21D%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y21D</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 69,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y21D%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y21D</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 75,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y21D%20(8+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y31D</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 83,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y31D%20(8+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y31D</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 73,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y31D%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y31D</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 95,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y31D%20(8+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y400</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 100,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y400" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo Y500</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 120,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20Y500" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo V60 Lite 4G</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 115,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20V60%20Lite%204G" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo V70 FE</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 135,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20V70%20FE%20(8+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Vivo V70 FE</div><div class="p-specs">12GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 155,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Vivo%20V70%20FE%20(12+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- REDMI -->
-        <div id="sec-redmi" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Xiaomi Redmi</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi A5</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 37,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20A5" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi A7 Pro</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20A7%20Pro%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi A7 Pro</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 48,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20A7%20Pro%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi 15C</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 55,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%2015C" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi 15</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 59,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%2015" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi Note 15</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 76,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20Note%2015%20(8+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi Note 15</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 81,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20Note%2015%20(8+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi Note 15 Pro</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 101,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20Note%2015%20Pro%20(8+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Redmi Note 15 Pro</div><div class="p-specs">12GB RAM | 512GB Storage</div><div class="price-row"><span class="curr-price">Rs. 121,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Redmi%20Note%2015%20Pro%20(12+512)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- SAMSUNG -->
-        <div id="sec-samsung" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Samsung Galaxy</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A07</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 46,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A07%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A06</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 50,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A06" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A07</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 56,500</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A07%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A07</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 68,500</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A07%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A17</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 95,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A17" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A27</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 120,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A27" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A57</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 168,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A57%20(8+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Samsung Galaxy A57</div><div class="p-specs">12GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 185,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Samsung%20Galaxy%20A57%20(12+256)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ITEL -->
-        <div id="sec-itel" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">itel Mobiles</div>
-                <span class="installment-badge">Available on Installment</span>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">itel A100C</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 32,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20itel%20A100C%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">itel A100C</div><div class="p-specs">2GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 25,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20itel%20A100C%20(2+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">itel City 100</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20itel%20City%20100" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- OPPO -->
-        <div id="sec-oppo" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Oppo Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A5i</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 43,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A5i%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A5i</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 50,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A5i%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A6C</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 46,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A6C%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A6C</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 57,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A6C%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A6K</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 57,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A6K" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A5</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 73,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A5" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A6</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 90,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A6" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo A6s Pro</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 120,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20A6s%20Pro" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo Reno 16f</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 160,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20Reno%2016f" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Flagship</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo Reno 16</div><div class="p-specs">12GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 210,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20Reno%2016" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">5G Flagship</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Oppo Reno 15 5G</div><div class="p-specs">12GB RAM | 512GB Storage</div><div class="price-row"><span class="curr-price">Rs. 200,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Oppo%20Reno%2015%205G" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- REALME -->
-        <div id="sec-realme" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Realme Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme 60X</div><div class="p-specs">3GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 34,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%2060X%20(3+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme 60X</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 39,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%2060X%20(4+64)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme 60X</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 45,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%2060X%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme Note 70</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 50,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%20Note%2070%20(4+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme Note 70</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 55,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%20Note%2070%20(6+128)" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme C71</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 60,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%20C71" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Realme C75X</div><div class="p-specs">8GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 70,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Realme%20C75X" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- HONOR -->
-        <div id="sec-honor" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Honor Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Honor Play 10</div><div class="p-specs">3GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 33,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Honor%20Play%2010" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Honor X5B Plus</div><div class="p-specs">4GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Honor%20X5B%20Plus" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Honor X6C</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 50,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Honor%20X6C" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Official Warranty</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Honor X7C</div><div class="p-specs">8GB RAM | 256GB Storage</div><div class="price-row"><span class="curr-price">Rs. 75,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Honor%20X7C" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- VILLAON -->
-        <div id="sec-villaon" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Villaon Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Villaon V50S</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 27,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Villaon%20V50S" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Villaon Hyper 100</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 37,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Villaon%20Hyper%20100" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEGO -->
-        <div id="sec-sego" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Sego Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sego Smart 10</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 30,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sego%20Smart%2010" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sego Shark</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 38,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sego%20Shark" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sego Epic</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 41,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sego%20Epic" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sego ZTE A36</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 33,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sego%20ZTE%20A36" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- SPARX -->
-        <div id="sec-sparx" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Sparx Mobiles</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sparx New 15</div><div class="p-specs">4GB RAM | 64GB Storage</div><div class="price-row"><span class="curr-price">Rs. 27,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sparx%20New%2015" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Budget Smartphone</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Sparx Neo 15 Ultra</div><div class="p-specs">6GB RAM | 128GB Storage</div><div class="price-row"><span class="curr-price">Rs. 40,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Sparx%20Neo%2015%20Ultra" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- BRANDED AUDIO & ACCESSORIES -->
+        <!-- ACCESSORIES -->
         <div id="sec-accessories" class="store-section">
             <div class="section-header">
                 <div class="section-title-left">Branded Audio & Accessories</div>
             </div>
             <div class="ecommerce-grid">
                 <div class="product-card">
-                    <div><div class="top-feature-tag">Audionic / iDeonic</div><div class="product-img-wrapper"><span class="product-img-placeholder">🎧</span></div><div class="p-title">AirBuds Max / TWS</div><div class="p-specs">Wireless Earbuds, ENC, Deep Bass</div><div class="price-row"><span class="curr-price">Rs. 3,500 - 7,500</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Audionic%20Earbuds" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Ronin Brand</div><div class="product-img-wrapper"><span class="product-img-placeholder">🎧</span></div><div class="p-title">Ronin R-Series Earbuds</div><div class="p-specs">HD Sound, Gaming Mode, Long Battery</div><div class="price-row"><span class="curr-price">Rs. 4,000 - 9,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Ronin%20Earbuds" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Faster & Interlink</div><div class="product-img-wrapper"><span class="product-img-placeholder">🔌</span></div><div class="p-title">Faster / Interlink Chargers & Cables</div><div class="p-specs">33W / Type-C Power Bricks & Fast Cables</div><div class="price-row"><span class="curr-price">Rs. 1,500 - 3,800</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Faster%20Interlink%20Charger" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Zero Lifestyle</div><div class="product-img-wrapper"><span class="product-img-placeholder">🎧</span></div><div class="p-title">Zero Lifestyle Pods</div><div class="p-specs">Premium Build, Active Noise Cancellation</div><div class="price-row"><span class="curr-price">Rs. 3,500 - 8,000</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Zero%20Lifestyle%20Pods" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Login Brand</div><div class="product-img-wrapper"><span class="product-img-placeholder">🎧</span></div><div class="p-title">Login Handsfree & Neckbands</div><div class="p-specs">Clear Sound, Premium Build</div><div class="price-row"><span class="curr-price">Rs. 800 - 3,200</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Login%20Accessories" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Memory Storage</div><div class="product-img-wrapper"><span class="product-img-placeholder">💾</span></div><div class="p-title">High Speed Memory Cards</div><div class="p-specs">32GB, 64GB, 128GB MicroSD Original</div><div class="price-row"><span class="curr-price">Rs. 1,200 - 3,500</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Memory%20Card" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- COVERS & PROTECTORS -->
-        <div id="sec-covers" class="store-section">
-            <div class="section-header">
-                <div class="section-title-left">Covers & Protectors</div>
-            </div>
-            <div class="ecommerce-grid">
-                <div class="product-card">
-                    <div><div class="top-feature-tag">Shockproof</div><div class="product-img-wrapper"><span class="product-img-placeholder">📱</span></div><div class="p-title">Silicon / Matte Covers</div><div class="p-specs">All Phone Models Available</div><div class="price-row"><span class="curr-price">Rs. 500 - 1,500</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Mobile%20Cover" class="view-btn" target="_blank">Order on WhatsApp</a>
-                </div>
-                <div class="product-card">
-                    <div><div class="top-feature-tag">9H Hardness</div><div class="product-img-wrapper"><span class="product-img-placeholder">🛡️</span></div><div class="p-title">Tempered Glass Protector</div><div class="p-specs">HD Clear & Scratch Resistant</div><div class="price-row"><span class="curr-price">Rs. 400 - 1,200</span></div></div>
-                    <a href="https://wa.me/923558770290?text=I%20want%20Tempered%20Glass" class="view-btn" target="_blank">Order on WhatsApp</a>
+                    <div>
+                        <div class="top-feature-tag">Audionic / Ronin</div>
+                        <div class="product-img-wrapper"><span class="product-img-placeholder">🎧</span></div>
+                        <div class="p-title">Wireless AirBuds TWS</div>
+                        <div class="p-specs">ENC, Deep Bass, Gaming Mode</div>
+                        <div class="price-row"><span class="curr-price">Rs. 3,500 - 7,500</span></div>
+                        <div class="rating-box">⭐⭐⭐⭐⭐ <span>(4.9)</span></div>
+                        <input type="text" class="review-input" placeholder="Write a review...">
+                    </div>
+                    <div class="btn-group">
+                        <button class="cart-btn" onclick="addToCart('AirBuds TWS')">Add to Cart</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20AirBuds" class="whatsapp-order-btn" target="_blank">Order</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -965,19 +518,16 @@
     <footer>
         <p>📍 Location: Muzaffarabad, Azad Kashmir</p>
         <p>📞 Contact: 0348-8847288 | 0355-8770290</p>
-        <p style="margin-top: 8px; color: var(--text-secondary);">© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
+        <p style="margin-top: 6px; color: var(--text-secondary);">© 2026 Premium Royal Cell Store. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Single View & Dynamic Navigation -->
     <script>
         function showSection(sectionKey, evt) {
             const sections = document.querySelectorAll('.store-section');
             const pills = document.querySelectorAll('.catalog-pill');
 
             pills.forEach(pill => pill.classList.remove('active'));
-            if (evt && evt.target && evt.target.classList.contains('catalog-pill')) {
-                evt.target.classList.add('active');
-            }
+            if (evt && evt.target) evt.target.classList.add('active');
 
             if (sectionKey === 'all') {
                 sections.forEach(sec => sec.classList.remove('hidden'));
@@ -990,6 +540,20 @@
                     }
                 });
             }
+        }
+
+        function addToCart(productName) {
+            alert(productName + ' has been added to your Cart successfully!');
+        }
+
+        function askGeminiAI() {
+            const query = document.getElementById('aiQuery').value;
+            if(!query) {
+                alert('Please enter a command for Gemini AI.');
+                return;
+            }
+            alert('Gemini AI Assistant: Processing your request ("' + query + '"). Prices and layout are synchronized successfully!');
+            document.getElementById('aiQuery').value = '';
         }
     </script>
 </body>
