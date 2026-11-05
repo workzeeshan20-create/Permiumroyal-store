@@ -422,22 +422,6 @@
         }
 
         .profile-crown-emoji { font-size: 40px; }
-        
-        .settings-badge {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: var(--ai-purple);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            border: 2px solid #09090b;
-        }
 
         .store-main-name { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
         .store-loc-sub { font-size: 13px; color: #94a3b8; margin-top: 6px; font-weight: 500; }
@@ -821,9 +805,8 @@
     </div>
 
     <div class="store-hero">
-        <div class="profile-3d-container" onclick="openSettingsModal()" title="Click to open settings">
+        <div class="profile-3d-container" title="Royal Store">
             <span class="profile-crown-emoji">👑</span>
-            <div class="settings-badge">⚙️</div>
         </div>
         <div class="store-main-name" id="storeMainHeaderName">PREMIUM ROYAL CELL STORE</div>
         <div class="store-loc-sub" id="storeSubText">100% Original Products | Cash & Installment | Contact: 03558770290</div>
@@ -1051,6 +1034,9 @@
                 <div class="product-card" onclick="openProductDetail('itel A100C', '4GB RAM + 64GB ROM', 'Rs. 32,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A100C</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 32,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A100C (4+64)')">Add</button><a href="https://wa.me/923558770290?text=itel%20A100C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
                 <div class="product-card" onclick="openProductDetail('itel A100 C', '2GB RAM + 64GB ROM', 'Rs. 25,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A100 C</div><div class="p-specs-text">2GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 25,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A100 C (2+64)')">Add</button><a href="https://wa.me/923558770290?text=itel%20A100C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
                 <div class="product-card" onclick="openProductDetail('itel City 100', '6GB RAM + 128GB ROM', 'Rs. 40,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel City 100</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 40,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel City 100')">Add</button><a href="https://wa.me/923558770290?text=itel%20City%20100" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel S25 Ultra', '8GB RAM + 256GB ROM', 'Rs. 37,999', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel S25 Ultra</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 37,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel S25 Ultra')">Add</button><a href="https://wa.me/923558770290?text=itel%20S25%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel P65', '4GB RAM + 128GB ROM', 'Rs. 26,500', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel P65</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 26,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel P65')">Add</button><a href="https://wa.me/923558770290?text=itel%20P65" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel A60s', '4GB RAM + 64GB ROM', 'Rs. 21,500', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A60s</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 21,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A60s')">Add</button><a href="https://wa.me/923558770290?text=itel%20A60s" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
             </div>
         </div>
 
@@ -1080,6 +1066,9 @@
                 <div class="product-card" onclick="openProductDetail('Honor X5B Plus', '4GB RAM + 128GB ROM', 'Rs. 40,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X5B Plus</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 40,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X5B Plus')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X5B%20Plus" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
                 <div class="product-card" onclick="openProductDetail('Honor X6C', '6GB RAM + 128GB ROM', 'Rs. 50,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X6C</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 50,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X6C')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X6C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
                 <div class="product-card" onclick="openProductDetail('Honor X7C', '8GB RAM + 256GB ROM', 'Rs. 75,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X7C</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 75,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X7C')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X7C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor 200 Lite', '8GB RAM + 256GB ROM', 'Rs. 79,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor 200 Lite</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 79,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor 200 Lite')">Add</button><a href="https://wa.me/923558770290?text=Honor%20200%20Lite" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor X9b', '12GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X9b</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X9b')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X9b" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor 200', '12GB RAM + 512GB ROM', 'Rs. 139,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor 200</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 139,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor 200')">Add</button><a href="https://wa.me/923558770290?text=Honor%20200" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
             </div>
         </div>
 
@@ -1373,10 +1362,13 @@
             { title: 'Samsung A57', specs: '8GB RAM + 256GB ROM', price: 'Rs. 168,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
             { title: 'Samsung A57', specs: '12GB RAM + 256GB ROM', price: 'Rs. 185,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
 
-            // Itel
+            // Itel (Added more new models)
             { title: 'itel A100C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel A100 C', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel City 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel S25 Ultra', specs: '8GB RAM + 256GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel P65', specs: '4GB RAM + 128GB ROM', price: 'Rs. 26,500', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel A60s', specs: '4GB RAM + 64GB ROM', price: 'Rs. 21,500', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
 
             // Oppo
             { title: 'Oppo A5i', specs: '4GB RAM + 64GB ROM', price: 'Rs. 43,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
@@ -1391,11 +1383,14 @@
             { title: 'Oppo Reno 16', specs: '12GB RAM + 256GB ROM', price: 'Rs. 210,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
             { title: 'Oppo Reno 15 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 200,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
 
-            // Honor
+            // Honor (Added more new models)
             { title: 'Honor Play 10', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X5B Plus', specs: '4GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X6C', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X7C', specs: '8GB RAM + 256GB ROM', price: 'Rs. 75,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor 200 Lite', specs: '8GB RAM + 256GB ROM', price: 'Rs. 79,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor X9b', specs: '12GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor 200', specs: '12GB RAM + 512GB ROM', price: 'Rs. 139,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
 
             // Villaon
             { title: 'Villaon V50S', specs: '4GB RAM + 64GB ROM', price: 'Rs. 27,000', oldPrice: '', emoji: '📱', category: 'Villaon', hasDiscount: false },
@@ -1483,7 +1478,6 @@
         function selectBrandFromSearch(brandKey) {
             closeSearchModal();
             showSection(brandKey, null);
-            // Scroll to catalog items smoothly
             window.scrollTo({ top: 350, behavior: 'smooth' });
         }
 
@@ -1509,7 +1503,6 @@
             const waMsg = encodeURIComponent(`I want to order ${title} (${specs}) for ${price}`);
             document.getElementById('detailWhatsAppBtn').href = `https://wa.me/92${currentPhone.replace(/^0+/, '')}?text=${waMsg}`;
 
-            // Related products: same category ke saare products show honge
             const relatedContainer = document.getElementById('relatedProductsContainer');
             const relatedItems = storeProducts.filter(p => p.category === category);
             
@@ -1586,7 +1579,6 @@
                 pills.forEach(pill => pill.classList.remove('active'));
                 evt.target.classList.add('active');
             } else {
-                // Agar function programmatic call ho (jaise search se) to corresponding pill select kar do
                 pills.forEach(pill => {
                     if (pill.getAttribute('onclick') && pill.getAttribute('onclick').includes(sectionKey)) {
                         pill.classList.add('active');
