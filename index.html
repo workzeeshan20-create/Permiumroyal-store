@@ -101,6 +101,37 @@
 
         .drawer-links li:hover { color: var(--accent-gold); }
 
+        /* Nested Catalog Menu Styles */
+        .catalog-toggle-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submenu-brands {
+            display: none;
+            list-style: none;
+            padding-left: 15px;
+            background: #09090b;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+
+        .submenu-brands.show {
+            display: block;
+        }
+
+        .submenu-brands li {
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #18181b;
+            color: #cbd5e1;
+        }
+
+        .submenu-brands li:last-child {
+            border-bottom: none;
+        }
+
         .drawer-overlay, .search-overlay, .detail-overlay {
             position: fixed;
             top: 0;
@@ -418,7 +449,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            cursor: pointer;
+            cursor: default;
         }
 
         .profile-crown-emoji { font-size: 40px; }
@@ -433,7 +464,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.7);
-            z-index: 3000;
+            z-index: 3500;
             display: none;
             align-items: center;
             justify-content: center;
@@ -779,19 +810,28 @@
         </div>
         <ul class="drawer-links">
             <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
-            <li onclick="toggleDrawer(); showSection('infinix', event)">📱 Infinix Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('tecno', event)">📱 Tecno Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('vivo', event)">📱 Vivo Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('redmi', event)">📱 Redmi & Xiaomi Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('realme', event)">📱 Realme Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('nubia', event)">📱 Nubia & ZTE Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('samsung', event)">📱 Samsung Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('itel', event)">📱 itel Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('oppo', event)">📱 Oppo Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('honor', event)">📱 Honor Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('villaon', event)">📱 Villaon Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('sego', event)">📱 Sego Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
+            
+            <!-- Collapsible Catalog Item -->
+            <li class="catalog-toggle-btn" onclick="toggleCatalogSubmenu(event)">
+                <span>📱 Brand Catalog (موبائل برانڈز)</span>
+                <span id="catalogArrow">▾</span>
+            </li>
+            <ul class="submenu-brands" id="catalogSubmenu">
+                <li onclick="toggleDrawer(); showSection('infinix', event)">📱 Infinix Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('tecno', event)">📱 Tecno Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('vivo', event)">📱 Vivo Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('redmi', event)">📱 Redmi & Xiaomi Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('realme', event)">📱 Realme Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('nubia', event)">📱 Nubia & ZTE Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('samsung', event)">📱 Samsung Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('itel', event)">📱 itel Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('oppo', event)">📱 Oppo Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('honor', event)">📱 Honor Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('villaon', event)">📱 Villaon Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('sego', event)">📱 Sego Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
+            </ul>
+
             <li onclick="toggleDrawer(); showSection('login', event)">🔌 Login Brand Accessories</li>
             <li onclick="toggleDrawer(); showSection('zero-lifestyle', event)">⌚ Zero Lifestyle</li>
             <li onclick="toggleDrawer(); showSection('faster', event)">🔌 Faster Brand Accessories</li>
@@ -799,7 +839,7 @@
             <li onclick="toggleDrawer(); showSection('ideonic', event)">🔌 iDeonic Accessories</li>
             <li onclick="toggleDrawer(); showSection('local-brand-accessories', event)">🎧 Local Brand Accessories</li>
             <li onclick="toggleDrawer(); showSection('covers-glass', event)">🛡️ Covers & Glass Protectors</li>
-            <li onclick="toggleDrawer(); openSettingsModal()">⚙️ Profile & Ownership Settings</li>
+            <li onclick="toggleDrawer(); openProtectedSettingsModal()">🔒 Admin / Owner Login</li>
             <li onclick="toggleDrawer(); alert('Helpline: 03558770290')">📞 Helpline Support</li>
         </ul>
     </div>
@@ -1260,6 +1300,7 @@
     <script>
         let currentOwnerEmail = "royalstore@gmail.com";
         let currentPhone = "03558770290";
+        const ownerPasswordDefault = "royal123"; // Owner Password for Security
 
         const storeProducts = [
             // Infinix
@@ -1362,7 +1403,7 @@
             { title: 'Samsung A57', specs: '8GB RAM + 256GB ROM', price: 'Rs. 168,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
             { title: 'Samsung A57', specs: '12GB RAM + 256GB ROM', price: 'Rs. 185,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
 
-            // Itel (Added more new models)
+            // Itel
             { title: 'itel A100C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel A100 C', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel City 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
@@ -1383,7 +1424,7 @@
             { title: 'Oppo Reno 16', specs: '12GB RAM + 256GB ROM', price: 'Rs. 210,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
             { title: 'Oppo Reno 15 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 200,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
 
-            // Honor (Added more new models)
+            // Honor
             { title: 'Honor Play 10', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X5B Plus', specs: '4GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X6C', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
@@ -1436,6 +1477,30 @@
         function toggleDrawer() {
             document.getElementById('sideDrawer').classList.toggle('open');
             document.getElementById('drawerOverlay').classList.toggle('active');
+        }
+
+        /* Toggle Menu Catalog Accordion */
+        function toggleCatalogSubmenu(e) {
+            e.stopPropagation();
+            const submenu = document.getElementById('catalogSubmenu');
+            const arrow = document.getElementById('catalogArrow');
+            if (submenu.classList.contains('show')) {
+                submenu.classList.remove('show');
+                arrow.innerText = '▾';
+            } else {
+                submenu.classList.add('show');
+                arrow.innerText = '▴';
+            }
+        }
+
+        /* Password Protected Admin/Owner Access */
+        function openProtectedSettingsModal() {
+            const enteredPass = prompt("🔑 Restricted Area for Website Owner Only!\nPlease enter Owner Password:", "");
+            if (enteredPass === ownerPasswordDefault) {
+                openSettingsModal();
+            } else if (enteredPass !== null) {
+                alert("❌ Access Denied! Incorrect Owner Password. Visitors cannot access store ownership settings.");
+            }
         }
 
         function openSearchModal() {
@@ -1603,4 +1668,4 @@
         }
     </script>
 </body>
-</html>۔
+</html>
