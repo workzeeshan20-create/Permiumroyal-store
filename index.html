@@ -158,7 +158,9 @@
             color: #0f172a;
         }
 
-        .search-body { padding: 16px; }
+        .search-body {
+            padding: 16px;
+        }
 
         .popular-tags {
             display: flex;
@@ -305,7 +307,10 @@
             margin-bottom: 16px;
         }
 
-        .color-selector { margin-bottom: 20px; }
+        .color-selector {
+            margin-bottom: 20px;
+        }
+
         .color-label {
             font-size: 12px;
             font-weight: 700;
@@ -314,7 +319,11 @@
             text-transform: uppercase;
         }
 
-        .color-options { display: flex; gap: 10px; }
+        .color-options {
+            display: flex;
+            gap: 10px;
+        }
+
         .color-dot {
             width: 36px;
             height: 36px;
@@ -532,19 +541,7 @@
             border-color: #0f172a;
         }
 
-        .container { width: 100%; margin: 0; padding: 0 16px; min-height: 300px; }
-
-        .welcome-banner {
-            text-align: center;
-            padding: 50px 20px;
-            color: var(--text-muted);
-        }
-
-        .welcome-banner h2 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-        }
+        .container { width: 100%; margin: 0; padding: 0 16px; }
 
         .section-header {
             font-size: 18px;
@@ -677,8 +674,8 @@
             justify-content: center;
         }
 
-        .store-section { display: none; width: 100%; }
-        .store-section.active { display: block; }
+        .store-section { display: block; width: 100%; }
+        .store-section.hidden { display: none; }
 
         footer {
             text-align: center;
@@ -781,6 +778,7 @@
             <button class="icon-btn" onclick="toggleDrawer()">✕</button>
         </div>
         <ul class="drawer-links">
+            <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
             <li onclick="toggleDrawer(); showSection('infinix', event)">📱 Infinix Mobiles</li>
             <li onclick="toggleDrawer(); showSection('tecno', event)">📱 Tecno Mobiles</li>
             <li onclick="toggleDrawer(); showSection('vivo', event)">📱 Vivo Mobiles</li>
@@ -842,6 +840,7 @@
     </div>
 
     <div class="catalog-nav" id="catalogNavContainer">
+        <span class="catalog-pill active" onclick="showSection('all', event)">All Stock</span>
         <span class="catalog-pill" onclick="showSection('infinix', event)">Infinix</span>
         <span class="catalog-pill" onclick="showSection('tecno', event)">Tecno</span>
         <span class="catalog-pill" onclick="showSection('vivo', event)">Vivo</span>
@@ -865,11 +864,6 @@
     </div>
 
     <div class="container">
-        <!-- Default Welcome Message -->
-        <div id="welcomeBanner" class="welcome-banner">
-            <h2>👑 خوش آمدید! Premium Royal Cell Store</h2>
-            <p>براہ کرم اوپر کیٹا لاگ (Catalog) سے کسی برانڈ کا انتخاب کریں یا اوپر سرچ آئکن پر کلک کر کے اپنا مطلوبہ ماڈل تلاش کریں۔</p>
-        </div>
 
         <!-- INFINIX SECTION -->
         <div id="sec-infinix" class="store-section">
@@ -1368,7 +1362,7 @@
             { title: 'Samsung A57', specs: '8GB RAM + 256GB ROM', price: 'Rs. 168,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
             { title: 'Samsung A57', specs: '12GB RAM + 256GB ROM', price: 'Rs. 185,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
 
-            // Itel
+            // Itel (Added more new models)
             { title: 'itel A100C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel A100 C', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
             { title: 'itel City 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
@@ -1389,7 +1383,7 @@
             { title: 'Oppo Reno 16', specs: '12GB RAM + 256GB ROM', price: 'Rs. 210,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
             { title: 'Oppo Reno 15 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 200,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
 
-            // Honor
+            // Honor (Added more new models)
             { title: 'Honor Play 10', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X5B Plus', specs: '4GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
             { title: 'Honor X6C', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
@@ -1580,10 +1574,6 @@
         function showSection(sectionKey, evt) {
             const sections = document.querySelectorAll('.store-section');
             const pills = document.querySelectorAll('.catalog-pill');
-            const welcomeBanner = document.getElementById('welcomeBanner');
-
-            // Hide welcome banner when any brand is selected
-            if (welcomeBanner) welcomeBanner.style.display = 'none';
 
             if (evt && evt.target) {
                 pills.forEach(pill => pill.classList.remove('active'));
@@ -1598,13 +1588,14 @@
                 });
             }
 
-            sections.forEach(sec => {
-                if (sec.id === 'sec-' + sectionKey) {
-                    sec.classList.add('active');
-                } else {
-                    sec.classList.remove('active');
-                }
-            });
+            if (sectionKey === 'all') {
+                sections.forEach(sec => sec.classList.remove('hidden'));
+            } else {
+                sections.forEach(sec => {
+                    if (sec.id === 'sec-' + sectionKey) sec.classList.remove('hidden');
+                    else sec.classList.add('hidden');
+                });
+            }
         }
 
         function addToCart(productName) {
@@ -1612,4 +1603,4 @@
         }
     </script>
 </body>
-</html>
+</html>۔
