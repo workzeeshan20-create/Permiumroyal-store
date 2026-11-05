@@ -724,14 +724,17 @@
         </div>
         <div class="search-body">
             <div class="popular-tags">
-                <span class="pop-tag" onclick="quickSearch('Infinix')">📱 Infinix</span>
-                <span class="pop-tag" onclick="quickSearch('Tecno')">📱 Tecno</span>
-                <span class="pop-tag" onclick="quickSearch('Vivo')">📱 Vivo</span>
-                <span class="pop-tag" onclick="quickSearch('Redmi')">📱 Redmi</span>
-                <span class="pop-tag" onclick="quickSearch('Realme')">📱 Realme</span>
-                <span class="pop-tag" onclick="quickSearch('Nubia')">📱 Nubia</span>
-                <span class="pop-tag" onclick="quickSearch('Samsung')">📱 Samsung</span>
-                <span class="pop-tag" onclick="quickSearch('Accessories')">🔌 Accessories</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('infinix')">📱 Infinix</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('tecno')">📱 Tecno</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('vivo')">📱 Vivo</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('redmi')">📱 Redmi</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('realme')">📱 Realme</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('nubia')">📱 Nubia</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('samsung')">📱 Samsung</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('oppo')">📱 Oppo</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('honor')">📱 Honor</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('itel')">📱 itel</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('local-brand-accessories')">🔌 Accessories</span>
             </div>
             <div class="search-results-title">🔥 LIVE STOCK SEARCH RESULTS</div>
             <div id="searchResultsList"></div>
@@ -797,7 +800,21 @@
             <li onclick="toggleDrawer(); showSection('vivo', event)">📱 Vivo Mobiles</li>
             <li onclick="toggleDrawer(); showSection('redmi', event)">📱 Redmi & Xiaomi Mobiles</li>
             <li onclick="toggleDrawer(); showSection('realme', event)">📱 Realme Mobiles</li>
-            <li onclick="toggleDrawer(); showSection('local-brand-accessories', event)">🔌 Local Brand Accessories</li>
+            <li onclick="toggleDrawer(); showSection('nubia', event)">📱 Nubia & ZTE Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('samsung', event)">📱 Samsung Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('itel', event)">📱 itel Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('oppo', event)">📱 Oppo Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('honor', event)">📱 Honor Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('villaon', event)">📱 Villaon Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('sego', event)">📱 Sego Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
+            <li onclick="toggleDrawer(); showSection('login', event)">🔌 Login Brand Accessories</li>
+            <li onclick="toggleDrawer(); showSection('zero-lifestyle', event)">⌚ Zero Lifestyle</li>
+            <li onclick="toggleDrawer(); showSection('faster', event)">🔌 Faster Brand Accessories</li>
+            <li onclick="toggleDrawer(); showSection('interlink', event)">🔌 Interlink Accessories</li>
+            <li onclick="toggleDrawer(); showSection('ideonic', event)">🔌 iDeonic Accessories</li>
+            <li onclick="toggleDrawer(); showSection('local-brand-accessories', event)">🎧 Local Brand Accessories</li>
+            <li onclick="toggleDrawer(); showSection('covers-glass', event)">🛡️ Covers & Glass Protectors</li>
             <li onclick="toggleDrawer(); openSettingsModal()">⚙️ Profile & Ownership Settings</li>
             <li onclick="toggleDrawer(); alert('Helpline: 03558770290')">📞 Helpline Support</li>
         </ul>
@@ -839,7 +856,7 @@
         </div>
     </div>
 
-    <div class="catalog-nav">
+    <div class="catalog-nav" id="catalogNavContainer">
         <span class="catalog-pill active" onclick="showSection('all', event)">All Stock</span>
         <span class="catalog-pill" onclick="showSection('infinix', event)">Infinix</span>
         <span class="catalog-pill" onclick="showSection('tecno', event)">Tecno</span>
@@ -870,121 +887,40 @@
             <div class="section-header">Infinix Mobiles</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Infinix Smart 20', '4GB RAM + 64GB ROM', 'Rs. 37,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Smart 20</div>
-                        <div class="p-specs-text">4GB RAM + 64GB ROM</div>
-                        <span class="p-price-text">Rs. 37,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+64)')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Smart 20</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 37,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+64)')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Smart 20', '4GB RAM + 128GB ROM', 'Rs. 44,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Smart 20</div>
-                        <div class="p-specs-text">4GB RAM + 128GB ROM</div>
-                        <span class="p-price-text">Rs. 44,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+128)')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Smart 20</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 44,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Hot 70', '6GB RAM + 128GB ROM', 'Rs. 64,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Hot 70</div>
-                        <div class="p-specs-text">6GB RAM + 128GB ROM</div>
-                        <span class="p-price-text">Rs. 64,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Hot 70')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Hot 70</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 64,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Hot 70')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Hot 70 Pro 5G', '8GB RAM + 128GB ROM', 'Rs. 86,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Hot 70 Pro 5G</div>
-                        <div class="p-specs-text">8GB RAM + 128GB ROM</div>
-                        <span class="p-price-text">Rs. 86,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Hot 70 Pro 5G')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Hot 70 Pro 5G</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 86,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Hot 70 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Note 60 5G', '8GB RAM + 256GB ROM', 'Rs. 114,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Note 60 5G</div>
-                        <div class="p-specs-text">8GB RAM + 256GB ROM</div>
-                        <span class="p-price-text">Rs. 114,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Note 60')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 114,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Note Edge 5G', '8GB RAM + 256GB ROM', 'Rs. 104,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Note Edge 5G</div>
-                        <div class="p-specs-text">8GB RAM + 256GB ROM</div>
-                        <span class="p-price-text">Rs. 104,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Note Edge 5G')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%20Edge" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note Edge 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 104,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note Edge 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%20Edge" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Note 60 Pro 5G', '8GB RAM + 256GB ROM', 'Rs. 130,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Note 60 Pro 5G</div>
-                        <div class="p-specs-text">8GB RAM + 256GB ROM</div>
-                        <span class="p-price-text">Rs. 130,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Note 60 Pro')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 Pro 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 130,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60 Pro')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix Note 60 Ultra 5G', '12GB RAM + 256GB ROM', 'Rs. 239,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix Note 60 Ultra 5G</div>
-                        <div class="p-specs-text">12GB RAM + 256GB ROM</div>
-                        <span class="p-price-text">Rs. 239,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix Note 60 Ultra 5G')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 Ultra 5G</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 239,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60 Ultra 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Infinix GT 50 Pro 5G', '12GB RAM + 256GB ROM', 'Rs. 189,999', '', '📱', 'Infinix', false)">
-                    <div>
-                        <div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div>
-                        <div class="product-img-box">📱</div>
-                        <div class="p-title-text">Infinix GT 50 Pro 5G</div>
-                        <div class="p-specs-text">12GB RAM + 256GB ROM</div>
-                        <span class="p-price-text">Rs. 189,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Infinix GT 50 Pro 5G')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20GT%2050%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix GT 50 Pro 5G</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 189,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix GT 50 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20GT%2050%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1180,56 +1116,20 @@
             <div class="section-header">Login Brand Accessories</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Login Charger', 'Fast Charging Adapter', 'Rs. 4,500', 'Rs. 8,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Original Brand</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Login Charger</div>
-                        <div class="p-specs-text">Fast Charging Adapter</div>
-                        <span class="p-price-text">Rs. 4,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Login Charger')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Login Charger</div><div class="p-specs-text">Fast Charging Adapter</div><span class="p-price-text">Rs. 4,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Login Fast Cable', 'High Speed Data Cable', 'Rs. 1,500', 'Rs. 2,500', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Original Brand</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Login Fast Cable</div>
-                        <div class="p-specs-text">High Speed Data Cable</div>
-                        <span class="p-price-text">Rs. 1,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Login Cable')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Login Fast Cable</div><div class="p-specs-text">High Speed Data Cable</div><span class="p-price-text">Rs. 1,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Login Earbuds', 'Wireless TWS Earbuds', 'Rs. 6,500', 'Rs. 10,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Original Brand</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Login Earbuds</div>
-                        <div class="p-specs-text">Wireless TWS Earbuds</div>
-                        <span class="p-price-text">Rs. 6,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Login Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Login Earbuds</div><div class="p-specs-text">Wireless TWS Earbuds</div><span class="p-price-text">Rs. 6,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Login Power Bank', 'Heavy Duty Battery', 'Rs. 9,000', 'Rs. 12,000', '🔋', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Original Brand</span></div>
-                        <div class="product-img-box">🔋</div>
-                        <div class="p-title-text">Login Power Bank</div>
-                        <div class="p-specs-text">Heavy Duty Battery</div>
-                        <span class="p-price-text">Rs. 9,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Login Power Bank')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔋</div><div class="p-title-text">Login Power Bank</div><div class="p-specs-text">Heavy Duty Battery</div><span class="p-price-text">Rs. 9,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Power Bank')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1239,30 +1139,12 @@
             <div class="section-header">Zero Lifestyle</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Zero Smart Watch', 'HD Display & Fitness Tracking', 'Rs. 8,999', 'Rs. 22,449', '⌚', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Premium Wearables</span></div>
-                        <div class="product-img-box">⌚</div>
-                        <div class="p-title-text">Zero Smart Watch</div>
-                        <div class="p-specs-text">HD Display & Fitness Tracking</div>
-                        <span class="p-price-text">Rs. 8,999</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Zero Smart Watch')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Smart%20Watch" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Premium Wearables</span></div><div class="product-img-box">⌚</div><div class="p-title-text">Zero Smart Watch</div><div class="p-specs-text">HD Display & Fitness Tracking</div><span class="p-price-text">Rs. 8,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Zero Smart Watch')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Smart%20Watch" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Zero Wireless Earbuds', 'ENC Noise Cancellation TWS', 'Rs. 4,499', 'Rs. 14,999', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Premium Sound</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Zero Wireless Earbuds</div>
-                        <div class="p-specs-text">ENC Noise Cancellation TWS</div>
-                        <span class="p-price-text">Rs. 4,499</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Zero Wireless Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Premium Sound</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Zero Wireless Earbuds</div><div class="p-specs-text">ENC Noise Cancellation TWS</div><span class="p-price-text">Rs. 4,499</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Zero Wireless Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1272,56 +1154,20 @@
             <div class="section-header">Faster Brand Accessories</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Faster Fast Charger', 'PD & QC Fast Adapter', 'Rs. 4,000', 'Rs. 6,500', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Fast Charging</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Faster Fast Charger</div>
-                        <div class="p-specs-text">PD & QC Fast Adapter</div>
-                        <span class="p-price-text">Rs. 4,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Faster Fast Charger')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Fast Charging</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Faster Fast Charger</div><div class="p-specs-text">PD & QC Fast Adapter</div><span class="p-price-text">Rs. 4,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Fast Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Faster Fast Cable', 'Braided High Speed Cable', 'Rs. 1,400', 'Rs. 2,200', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Durable Cable</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Faster Fast Cable</div>
-                        <div class="p-specs-text">Braided High Speed Cable</div>
-                        <span class="p-price-text">Rs. 1,400</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Faster Fast Cable')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Durable Cable</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Faster Fast Cable</div><div class="p-specs-text">Braided High Speed Cable</div><span class="p-price-text">Rs. 1,400</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Fast Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Faster Power Bank', '20000mAh Battery', 'Rs. 8,000', 'Rs. 11,000', '🔋', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Heavy Duty</span></div>
-                        <div class="product-img-box">🔋</div>
-                        <div class="p-title-text">Faster Power Bank</div>
-                        <div class="p-specs-text">10000mAh - 30000mAh</div>
-                        <span class="p-price-text">Rs. 8,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Faster Power Bank')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Heavy Duty</span></div><div class="product-img-box">🔋</div><div class="p-title-text">Faster Power Bank</div><div class="p-specs-text">10000mAh - 30000mAh</div><span class="p-price-text">Rs. 8,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Power Bank')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Faster TWS Earbuds', 'Low Latency Gaming Earbuds', 'Rs. 5,500', 'Rs. 8,500', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>High Bass</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Faster TWS Earbuds</div>
-                        <div class="p-specs-text">Low Latency Gaming Earbuds</div>
-                        <span class="p-price-text">Rs. 5,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Faster TWS Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>High Bass</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Faster TWS Earbuds</div><div class="p-specs-text">Low Latency Gaming Earbuds</div><span class="p-price-text">Rs. 5,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster TWS Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1331,56 +1177,20 @@
             <div class="section-header">Interlink Accessories</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Interlink Charger', 'Safe & Stable Charging', 'Rs. 3,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Reliable Quality</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Interlink Charger</div>
-                        <div class="p-specs-text">Safe & Stable Charging</div>
-                        <span class="p-price-text">Rs. 3,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Interlink Charger')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Reliable Quality</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Interlink Charger</div><div class="p-specs-text">Safe & Stable Charging</div><span class="p-price-text">Rs. 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Interlink Cable', 'Data & Charging Cable', 'Rs. 600', 'Rs. 1,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Fast Speed</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Interlink Cable</div>
-                        <div class="p-specs-text">Data & Charging Cable</div>
-                        <span class="p-price-text">Rs. 600</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Interlink Cable')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Fast Speed</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Interlink Cable</div><div class="p-specs-text">Data & Charging Cable</div><span class="p-price-text">Rs. 600</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Interlink Neckband', 'Wireless Earphones', 'Rs. 2,500', 'Rs. 4,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Long Battery</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Interlink Neckband</div>
-                        <div class="p-specs-text">Wireless Earphones</div>
-                        <span class="p-price-text">Rs. 2,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Interlink Neckband')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Long Battery</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Interlink Neckband</div><div class="p-specs-text">Wireless Earphones</div><span class="p-price-text">Rs. 2,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Neckband')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Interlink TWS Earbuds', 'Stereo Sound Earbuds', 'Rs. 4,500', 'Rs. 6,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Clear Sound</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Interlink TWS Earbuds</div>
-                        <div class="p-specs-text">Stereo Sound Earbuds</div>
-                        <span class="p-price-text">Rs. 4,500</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Interlink Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Clear Sound</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Interlink TWS Earbuds</div><div class="p-specs-text">Stereo Sound Earbuds</div><span class="p-price-text">Rs. 4,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1390,56 +1200,20 @@
             <div class="section-header">iDeonic Accessories</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('iDeonic Charger', 'Fast Charging Adapter', 'Rs. 3,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Fast Charging</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">iDeonic Charger</div>
-                        <div class="p-specs-text">Fast Charging Adapter</div>
-                        <span class="p-price-text">Rs. 3,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('iDeonic Charger')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Fast Charging</span></div><div class="product-img-box">🔌</div><div class="p-title-text">iDeonic Charger</div><div class="p-specs-text">Fast Charging Adapter</div><span class="p-price-text">Rs. 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('iDeonic Handsfree', 'Wired Handsfree With Mic', 'Rs. 1,200', 'Rs. 2,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Clear Audio</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">iDeonic Handsfree</div>
-                        <div class="p-specs-text">Wired Handsfree With Mic</div>
-                        <span class="p-price-text">Rs. 1,200</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('iDeonic Handsfree')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Clear Audio</span></div><div class="product-img-box">🎧</div><div class="p-title-text">iDeonic Handsfree</div><div class="p-specs-text">Wired Handsfree With Mic</div><span class="p-price-text">Rs. 1,200</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Handsfree')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('iDeonic Speaker', 'Wireless Bluetooth Speaker', 'Rs. 5,000', 'Rs. 8,500', '🔊', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Extra Bass</span></div>
-                        <div class="product-img-box">🔊</div>
-                        <div class="p-title-text">iDeonic Speaker</div>
-                        <div class="p-specs-text">Wireless Bluetooth Speaker</div>
-                        <span class="p-price-text">Rs. 5,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('iDeonic Speaker')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Speaker" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Extra Bass</span></div><div class="product-img-box">🔊</div><div class="p-title-text">iDeonic Speaker</div><div class="p-specs-text">Wireless Bluetooth Speaker</div><span class="p-price-text">Rs. 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Speaker')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Speaker" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('iDeonic Earbuds', 'Bluetooth Audio & Mic TWS', 'Rs. 6,000', 'Rs. 10,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Crisp Audio</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">iDeonic Earbuds</div>
-                        <div class="p-specs-text">Bluetooth Audio & Mic TWS</div>
-                        <span class="p-price-text">Rs. 6,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('iDeonic Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Crisp Audio</span></div><div class="product-img-box">🎧</div><div class="p-title-text">iDeonic Earbuds</div><div class="p-specs-text">Bluetooth Audio & Mic TWS</div><span class="p-price-text">Rs. 6,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1449,69 +1223,24 @@
             <div class="section-header">Local Brand Accessories</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Local Handsfree', 'Clear Sound Audio With Mic', 'Rs. 800', 'Rs. 2,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Budget Friendly</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Local Handsfree</div>
-                        <div class="p-specs-text">Rs. 800 - Rs. 2,000</div>
-                        <span class="p-price-text">Rs. 800 - 2,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Local Handsfree')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Handsfree</div><div class="p-specs-text">Rs. 800 - Rs. 2,000</div><span class="p-price-text">Rs. 800 - 2,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Handsfree')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Local Brand Earbuds', 'Wireless Bluetooth TWS', 'Rs. 3,000', 'Rs. 5,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Budget Friendly</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Local Brand Earbuds</div>
-                        <div class="p-specs-text">Rs. 3,000 - Rs. 5,000</div>
-                        <span class="p-price-text">Rs. 3,000 - 5,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Local Brand Earbuds')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Brand Earbuds</div><div class="p-specs-text">Rs. 3,000 - Rs. 5,000</div><span class="p-price-text">Rs. 3,000 - 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Brand Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Local Brand Cable', 'Data & Charging Cable', 'Rs. 300', 'Rs. 1,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Budget Friendly</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Local Brand Cable</div>
-                        <div class="p-specs-text">Rs. 300 - Rs. 1,000</div>
-                        <span class="p-price-text">Rs. 300 - 1,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Local Brand Cable')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Local Brand Cable</div><div class="p-specs-text">Rs. 300 - Rs. 1,000</div><span class="p-price-text">Rs. 300 - 1,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Brand Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Local Neckband', 'Wireless Neckband Earphones', 'Rs. 1,500', 'Rs. 3,000', '🎧', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Budget Friendly</span></div>
-                        <div class="product-img-box">🎧</div>
-                        <div class="p-title-text">Local Neckband</div>
-                        <div class="p-specs-text">Rs. 1,500 - Rs. 3,000</div>
-                        <span class="p-price-text">Rs. 1,500 - 3,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Local Neckband')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Neckband</div><div class="p-specs-text">Rs. 1,500 - Rs. 3,000</div><span class="p-price-text">Rs. 1,500 - 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Neckband')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Local Mobile Charger', 'Standard Charging Adapter', 'Rs. 1,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Budget Friendly</span></div>
-                        <div class="product-img-box">🔌</div>
-                        <div class="p-title-text">Local Mobile Charger</div>
-                        <div class="p-specs-text">Rs. 1,000 - Rs. 5,000</div>
-                        <span class="p-price-text">Rs. 1,000 - 5,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Local Charger')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Local Mobile Charger</div><div class="p-specs-text">Rs. 1,000 - Rs. 5,000</div><span class="p-price-text">Rs. 1,000 - 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1521,30 +1250,12 @@
             <div class="section-header">Covers & Glass Protectors</div>
             <div class="ecommerce-grid">
                 <div class="product-card" onclick="openProductDetail('Protective Glass', '9H Hardness Glass', 'Rs. 800', 'Rs. 1,500', '🛡️', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Premium Quality</span></div>
-                        <div class="product-img-box">🛡️</div>
-                        <div class="p-title-text">Protective Glass</div>
-                        <div class="p-specs-text">9H Hardness Glass</div>
-                        <span class="p-price-text">Rs. 800</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Protective Glass')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Glass%20Protector" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Premium Quality</span></div><div class="product-img-box">🛡️</div><div class="p-title-text">Protective Glass</div><div class="p-specs-text">9H Hardness Glass</div><span class="p-price-text">Rs. 800</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Protective Glass')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Glass%20Protector" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Mobile Back Cover', 'Fancy & Silicone Cases', 'Rs. 1,000', 'Rs. 2,000', '🖼️', 'Accessories', true)">
-                    <div>
-                        <div class="card-top-tag"><span>Premium Quality</span></div>
-                        <div class="product-img-box">🖼️</div>
-                        <div class="p-title-text">Mobile Back Cover</div>
-                        <div class="p-specs-text">Fancy & Silicone Cases</div>
-                        <span class="p-price-text">Rs. 1,000</span>
-                    </div>
-                    <div class="btn-group" onclick="event.stopPropagation()">
-                        <button class="cart-btn" onclick="addToCart('Mobile Cover')">Add</button>
-                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Mobile%20Cover" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                    </div>
+                    <div><div class="card-top-tag"><span>Premium Quality</span></div><div class="product-img-box">🖼️</div><div class="p-title-text">Mobile Back Cover</div><div class="p-specs-text">Fancy & Silicone Cases</div><span class="p-price-text">Rs. 1,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Mobile Cover')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Mobile%20Cover" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
                 </div>
             </div>
         </div>
@@ -1769,9 +1480,11 @@
             `).join('');
         }
 
-        function quickSearch(brandName) {
-            document.getElementById('searchInputField').value = brandName;
-            filterLiveSearch(brandName);
+        function selectBrandFromSearch(brandKey) {
+            closeSearchModal();
+            showSection(brandKey, null);
+            // Scroll to catalog items smoothly
+            window.scrollTo({ top: 350, behavior: 'smooth' });
         }
 
         function openProductDetail(title, specs, price, oldPrice, emoji, category, hasDiscount) {
@@ -1872,6 +1585,15 @@
             if (evt && evt.target) {
                 pills.forEach(pill => pill.classList.remove('active'));
                 evt.target.classList.add('active');
+            } else {
+                // Agar function programmatic call ho (jaise search se) to corresponding pill select kar do
+                pills.forEach(pill => {
+                    if (pill.getAttribute('onclick') && pill.getAttribute('onclick').includes(sectionKey)) {
+                        pill.classList.add('active');
+                    } else {
+                        pill.classList.remove('active');
+                    }
+                });
             }
 
             if (sectionKey === 'all') {
