@@ -733,7 +733,7 @@
         <div class="search-header-bar">
             <button class="icon-btn" style="color: #0f172a;" onclick="closeSearchModal()">←</button>
             <div class="search-input-box">
-                <input type="text" id="searchInputField" placeholder="Search mobile models or accessories..." oninput="filterLiveSearch(this.value)">
+                <input type="text" id="searchInputField" placeholder="Search mobile models or accessories..." oninput="filterLiveSearch(this.value)" onkeydown="handleSearchKeyPress(event)">
             </div>
             <button class="icon-btn" style="color: #0f172a;" onclick="closeSearchModal()">✕</button>
         </div>
@@ -811,7 +811,7 @@
         <ul class="drawer-links">
             <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
             
-            <!-- Collapsible Catalog Item -->
+            <!-- Collapsible Mobile Brand Catalog Item -->
             <li class="catalog-toggle-btn" onclick="toggleCatalogSubmenu(event)">
                 <span>📱 Brand Catalog (موبائل برانڈز)</span>
                 <span id="catalogArrow">▾</span>
@@ -832,13 +832,21 @@
                 <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
             </ul>
 
-            <li onclick="toggleDrawer(); showSection('login', event)">🔌 Login Brand Accessories</li>
-            <li onclick="toggleDrawer(); showSection('zero-lifestyle', event)">⌚ Zero Lifestyle</li>
-            <li onclick="toggleDrawer(); showSection('faster', event)">🔌 Faster Brand Accessories</li>
-            <li onclick="toggleDrawer(); showSection('interlink', event)">🔌 Interlink Accessories</li>
-            <li onclick="toggleDrawer(); showSection('ideonic', event)">🔌 iDeonic Accessories</li>
-            <li onclick="toggleDrawer(); showSection('local-brand-accessories', event)">🎧 Local Brand Accessories</li>
-            <li onclick="toggleDrawer(); showSection('covers-glass', event)">🛡️ Covers & Glass Protectors</li>
+            <!-- Collapsible Accessories Catalog Item -->
+            <li class="catalog-toggle-btn" onclick="toggleAccessoriesSubmenu(event)">
+                <span>🔌 Accessories Catalog (ایکسیسریز)</span>
+                <span id="accessoriesArrow">▾</span>
+            </li>
+            <ul class="submenu-brands" id="accessoriesSubmenu">
+                <li onclick="toggleDrawer(); showSection('login', event)">🔌 Login Brand Accessories</li>
+                <li onclick="toggleDrawer(); showSection('zero-lifestyle', event)">⌚ Zero Lifestyle</li>
+                <li onclick="toggleDrawer(); showSection('faster', event)">🔌 Faster Brand Accessories</li>
+                <li onclick="toggleDrawer(); showSection('interlink', event)">🔌 Interlink Accessories</li>
+                <li onclick="toggleDrawer(); showSection('ideonic', event)">🔌 iDeonic Accessories</li>
+                <li onclick="toggleDrawer(); showSection('local-brand-accessories', event)">🎧 Local Brand Accessories</li>
+                <li onclick="toggleDrawer(); showSection('covers-glass', event)">🛡️ Covers & Glass Protectors</li>
+            </ul>
+
             <li onclick="toggleDrawer(); openProtectedSettingsModal()">🔒 Admin / Owner Login</li>
             <li onclick="toggleDrawer(); alert('Helpline: 03558770290')">📞 Helpline Support</li>
         </ul>
@@ -1479,11 +1487,25 @@
             document.getElementById('drawerOverlay').classList.toggle('active');
         }
 
-        /* Toggle Menu Catalog Accordion */
+        /* Toggle Mobile Brands Accordion */
         function toggleCatalogSubmenu(e) {
             e.stopPropagation();
             const submenu = document.getElementById('catalogSubmenu');
             const arrow = document.getElementById('catalogArrow');
+            if (submenu.classList.contains('show')) {
+                submenu.classList.remove('show');
+                arrow.innerText = '▾';
+            } else {
+                submenu.classList.add('show');
+                arrow.innerText = '▴';
+            }
+        }
+
+        /* Toggle Accessories Accordion */
+        function toggleAccessoriesSubmenu(e) {
+            e.stopPropagation();
+            const submenu = document.getElementById('accessoriesSubmenu');
+            const arrow = document.getElementById('accessoriesArrow');
             if (submenu.classList.contains('show')) {
                 submenu.classList.remove('show');
                 arrow.innerText = '▾';
@@ -1505,6 +1527,7 @@
 
         function openSearchModal() {
             document.getElementById('searchModal').classList.add('active');
+            document.getElementById('searchInputField').value = '';
             document.getElementById('searchInputField').focus();
             renderSearchResults(storeProducts);
         }
@@ -1520,6 +1543,26 @@
                 item.category.toLowerCase().includes(query.toLowerCase())
             );
             renderSearchResults(filtered);
+        }
+
+        /* Keyboard Enter Press Direct Popup Open Feature */
+        function handleSearchKeyPress(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById('searchInputField').value.trim();
+                if (query === '') return;
+                const filtered = storeProducts.filter(item => 
+                    item.title.toLowerCase().includes(query.toLowerCase()) || 
+                    item.specs.toLowerCase().includes(query.toLowerCase()) ||
+                    item.category.toLowerCase().includes(query.toLowerCase())
+                );
+                if (filtered.length > 0) {
+                    // Open the first matching product detail popup directly
+                    const match = filtered[0];
+                    openProductDetail(match.title, match.specs, match.price, match.oldPrice, match.emoji, match.category, match.hasDiscount);
+                } else {
+                    alert('No matching model found for: ' + query);
+                }
+            }
         }
 
         function renderSearchResults(items) {
