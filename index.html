@@ -116,9 +116,7 @@
             margin-top: 5px;
         }
 
-        .submenu-brands.show {
-            display: block;
-        }
+        .submenu-brands.show { display: block; }
 
         .submenu-brands li {
             padding: 10px 0;
@@ -127,9 +125,7 @@
             color: #cbd5e1;
         }
 
-        .submenu-brands li:last-child {
-            border-bottom: none;
-        }
+        .submenu-brands li:last-child { border-bottom: none; }
 
         .drawer-overlay, .search-overlay, .detail-overlay {
             position: fixed;
@@ -187,9 +183,7 @@
             color: #0f172a;
         }
 
-        .search-body {
-            padding: 16px;
-        }
+        .search-body { padding: 16px; }
 
         .popular-tags {
             display: flex;
@@ -275,11 +269,11 @@
 
         .detail-img-hero {
             background: #f8fafc;
-            height: 250px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 90px;
+            font-size: 80px;
             border-bottom: 1px solid #e2e8f0;
             position: relative;
         }
@@ -287,6 +281,7 @@
         .detail-body {
             padding: 20px;
             flex: 1;
+            padding-bottom: 80px;
         }
 
         .detail-title {
@@ -299,8 +294,15 @@
         .detail-specs {
             font-size: 13px;
             color: var(--text-muted);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 600;
+        }
+
+        .rating-stars {
+            color: #f5a623;
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .detail-price-row {
@@ -335,10 +337,7 @@
             margin-bottom: 16px;
         }
 
-        .color-selector {
-            margin-bottom: 20px;
-        }
-
+        .color-selector { margin-bottom: 20px; }
         .color-label {
             font-size: 12px;
             font-weight: 700;
@@ -347,11 +346,7 @@
             text-transform: uppercase;
         }
 
-        .color-options {
-            display: flex;
-            gap: 10px;
-        }
-
+        .color-options { display: flex; gap: 10px; }
         .color-dot {
             width: 36px;
             height: 36px;
@@ -362,8 +357,60 @@
             align-items: center;
             justify-content: center;
         }
-
         .color-dot.active { border-color: #9333ea; transform: scale(1.1); }
+
+        /* Comments Section Styling */
+        .comments-section {
+            margin-top: 25px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .comments-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comment-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .comment-user { font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+        .comment-text { color: #475569; }
+
+        .add-comment-box { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+        .add-comment-box input, .add-comment-box textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            font-size: 12px;
+            outline: none;
+            background: #fff;
+        }
+
+        .submit-review-btn {
+            background: #0f172a;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 12px;
+        }
 
         .related-section-title {
             font-size: 15px;
@@ -378,7 +425,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .detail-bottom-actions {
@@ -445,12 +492,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            cursor: default;
         }
 
         .profile-crown-emoji { font-size: 40px; }
-
         .store-main-name { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
         .store-loc-sub { font-size: 13px; color: #94a3b8; margin-top: 6px; font-weight: 500; }
 
@@ -783,13 +827,9 @@
                 <span class="pop-tag" onclick="selectBrandFromSearch('vivo')">📱 Vivo</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('redmi')">📱 Redmi</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('realme')">📱 Realme</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('nubia')">📱 Nubia</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('samsung')">📱 Samsung</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('oppo')">📱 Oppo</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('honor')">📱 Honor</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('itel')">📱 itel</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('zero-lifestyle')">⌚ Zero Lifestyle</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('local-brand-accessories')">🔌 Accessories</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('covers-glass')">🛡️ Glass & Covers</span>
             </div>
             <div class="search-results-title">🔥 LIVE STOCK SEARCH RESULTS</div>
             <div id="searchResultsList"></div>
@@ -804,10 +844,12 @@
             <button class="icon-btn" style="color: #0f172a;" onclick="closeProductDetail()">✕</button>
         </div>
         <div class="detail-img-hero" id="detailEmoji">📱</div>
-        <div class="detail-body">
+        <div class="detail-body" id="detailPopupBody">
             <div class="detail-title" id="detailTitleText">Product Name</div>
             <div class="detail-specs" id="detailSpecsText">RAM & ROM Specs</div>
             
+            <div class="rating-stars" id="detailRatingStars">⭐⭐⭐⭐⭐ (4.8 / 5.0 Rating)</div>
+
             <div class="detail-price-row">
                 <span class="detail-price" id="detailPriceText">Rs. 0</span>
                 <span class="detail-old-price" id="detailOldPriceText" style="display:none;">Rs. 0</span>
@@ -829,8 +871,32 @@
             </div>
 
             <p style="font-size: 13px; color: #64748b; margin-top: 10px;">
-                100% Original Product with official brand warranty. Cash on Delivery & Installment options available across Azad Kashmir.
+                100% Original Product with official warranty. Cash on Delivery & Installment options available across Azad Kashmir.
             </p>
+
+            <!-- Customer Comments & Reviews Section -->
+            <div class="comments-section">
+                <div class="comments-title">
+                    <span>💬 Customer Reviews & Comments</span>
+                    <span id="commentCountBadge" style="font-size: 11px; color: #64748b;">3 Reviews</span>
+                </div>
+                <div id="commentsListContainer">
+                    <div class="comment-item">
+                        <div class="comment-user">Ali Khan (Muzaffarabad) ⭐⭐⭐⭐⭐</div>
+                        <div class="comment-text">بہت زبردست اور اورجنل پروڈکٹ ہے، Royal Store سے ہمیشہ بہترین چیز ملتی ہے۔</div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-user">Usman Ahmed ⭐⭐⭐⭐⭐</div>
+                        <div class="comment-text">Fast delivery across Kashmir. Highly recommended!</div>
+                    </div>
+                </div>
+                
+                <div class="add-comment-box">
+                    <input type="text" id="reviewerName" placeholder="آپ کا نام (Your Name)">
+                    <textarea id="reviewerComment" rows="2" placeholder="اپنا تبصرہ لکھیں (Write your review)..."></textarea>
+                    <button class="submit-review-btn" onclick="submitUserReview()">Submit Review / کمنٹ جمع کروائیں</button>
+                </div>
+            </div>
 
             <div class="related-section-title">📦 Related Products & Stock</div>
             <div class="related-grid" id="relatedProductsContainer"></div>
@@ -851,7 +917,6 @@
         <ul class="drawer-links">
             <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
             
-            <!-- Collapsible Mobile Brand Catalog Item -->
             <li class="catalog-toggle-btn" onclick="toggleCatalogSubmenu(event)">
                 <span>📱 Brand Catalog (موبائل برانڈز)</span>
                 <span id="catalogArrow">▾</span>
@@ -867,12 +932,8 @@
                 <li onclick="toggleDrawer(); showSection('itel', event)">📱 itel Mobiles</li>
                 <li onclick="toggleDrawer(); showSection('oppo', event)">📱 Oppo Mobiles</li>
                 <li onclick="toggleDrawer(); showSection('honor', event)">📱 Honor Mobiles</li>
-                <li onclick="toggleDrawer(); showSection('villaon', event)">📱 Villaon Mobiles</li>
-                <li onclick="toggleDrawer(); showSection('sego', event)">📱 Sego Mobiles</li>
-                <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
             </ul>
 
-            <!-- Collapsible Accessories Catalog Item -->
             <li class="catalog-toggle-btn" onclick="toggleAccessoriesSubmenu(event)">
                 <span>🔌 Accessories Catalog (ایکسیسریز)</span>
                 <span id="accessoriesArrow">▾</span>
@@ -941,144 +1002,44 @@
         <span class="catalog-pill" onclick="showSection('vivo', event)">Vivo</span>
         <span class="catalog-pill" onclick="showSection('redmi', event)">Redmi & Xiaomi</span>
         <span class="catalog-pill" onclick="showSection('realme', event)">Realme</span>
-        <span class="catalog-pill" onclick="showSection('nubia', event)">Nubia / ZTE</span>
         <span class="catalog-pill" onclick="showSection('samsung', event)">Samsung</span>
-        <span class="catalog-pill" onclick="showSection('itel', event)">itel</span>
-        <span class="catalog-pill" onclick="showSection('oppo', event)">Oppo</span>
-        <span class="catalog-pill" onclick="showSection('honor', event)">Honor</span>
-        <span class="catalog-pill" onclick="showSection('villaon', event)">Villaon</span>
-        <span class="catalog-pill" onclick="showSection('sego', event)">Sego</span>
-        <span class="catalog-pill" onclick="showSection('sparx', event)">Sparx</span>
         <span class="catalog-pill" onclick="showSection('login', event)">Login Brand</span>
         <span class="catalog-pill" onclick="showSection('zero-lifestyle', event)">Zero Lifestyle</span>
         <span class="catalog-pill" onclick="showSection('faster', event)">Faster Brand</span>
-        <span class="catalog-pill" onclick="showSection('interlink', event)">Interlink</span>
-        <span class="catalog-pill" onclick="showSection('ideonic', event)">iDeonic</span>
-        <span class="catalog-pill" onclick="showSection('local-brand-accessories', event)">Local Brand Accessories</span>
+        <span class="catalog-pill" onclick="showSection('local-brand-accessories', event)">Local Accessories</span>
         <span class="catalog-pill" onclick="showSection('covers-glass', event)">Covers & Glass</span>
     </div>
 
     <div class="container">
 
         <!-- INFINIX SECTION -->
-        <div id="sec-infinix" class="store-section">
-            <div class="section-header">Infinix Mobiles</div>
-            <div class="ecommerce-grid" id="grid-infinix"></div>
-        </div>
-
+        <div id="sec-infinix" class="store-section"><div class="section-header">Infinix Mobiles</div><div class="ecommerce-grid" id="grid-infinix"></div></div>
         <!-- TECNO SECTION -->
-        <div id="sec-tecno" class="store-section">
-            <div class="section-header">Tecno Mobiles</div>
-            <div class="ecommerce-grid" id="grid-tecno"></div>
-        </div>
-
+        <div id="sec-tecno" class="store-section"><div class="section-header">Tecno Mobiles</div><div class="ecommerce-grid" id="grid-tecno"></div></div>
         <!-- VIVO SECTION -->
-        <div id="sec-vivo" class="store-section">
-            <div class="section-header">Vivo Mobiles</div>
-            <div class="ecommerce-grid" id="grid-vivo"></div>
-        </div>
-
-        <!-- REDMI & XIAOMI SECTION -->
-        <div id="sec-redmi" class="store-section">
-            <div class="section-header">Redmi & Xiaomi Mobiles</div>
-            <div class="ecommerce-grid" id="grid-redmi"></div>
-        </div>
-
+        <div id="sec-vivo" class="store-section"><div class="section-header">Vivo Mobiles</div><div class="ecommerce-grid" id="grid-vivo"></div></div>
+        <!-- REDMI SECTION -->
+        <div id="sec-redmi" class="store-section"><div class="section-header">Redmi & Xiaomi Mobiles</div><div class="ecommerce-grid" id="grid-redmi"></div></div>
         <!-- REALME SECTION -->
-        <div id="sec-realme" class="store-section">
-            <div class="section-header">Realme Mobiles</div>
-            <div class="ecommerce-grid" id="grid-realme"></div>
-        </div>
-
-        <!-- NUBIA & ZTE SECTION -->
-        <div id="sec-nubia" class="store-section">
-            <div class="section-header">Nubia & ZTE Mobiles</div>
-            <div class="ecommerce-grid" id="grid-nubia"></div>
-        </div>
-
+        <div id="sec-realme" class="store-section"><div class="section-header">Realme Mobiles</div><div class="ecommerce-grid" id="grid-realme"></div></div>
         <!-- SAMSUNG SECTION -->
-        <div id="sec-samsung" class="store-section">
-            <div class="section-header">Samsung Mobiles</div>
-            <div class="ecommerce-grid" id="grid-samsung"></div>
-        </div>
-
-        <!-- ITEL SECTION -->
-        <div id="sec-itel" class="store-section">
-            <div class="section-header">Itel Mobiles</div>
-            <div class="ecommerce-grid" id="grid-itel"></div>
-        </div>
-
-        <!-- OPPO SECTION -->
-        <div id="sec-oppo" class="store-section">
-            <div class="section-header">Oppo Mobiles</div>
-            <div class="ecommerce-grid" id="grid-oppo"></div>
-        </div>
-
-        <!-- HONOR SECTION -->
-        <div id="sec-honor" class="store-section">
-            <div class="section-header">Honor Mobiles</div>
-            <div class="ecommerce-grid" id="grid-honor"></div>
-        </div>
-
-        <!-- VILLAON SECTION -->
-        <div id="sec-villaon" class="store-section">
-            <div class="section-header">Villaon Mobiles</div>
-            <div class="ecommerce-grid" id="grid-villaon"></div>
-        </div>
-
-        <!-- SEGO SECTION -->
-        <div id="sec-sego" class="store-section">
-            <div class="section-header">Sego Mobiles</div>
-            <div class="ecommerce-grid" id="grid-sego"></div>
-        </div>
-
-        <!-- SPARX SECTION -->
-        <div id="sec-sparx" class="store-section">
-            <div class="section-header">Sparx Mobiles</div>
-            <div class="ecommerce-grid" id="grid-sparx"></div>
-        </div>
-
-        <!-- LOGIN BRAND ACCESSORIES SECTION -->
-        <div id="sec-login" class="store-section">
-            <div class="section-header">Login Brand Accessories</div>
-            <div class="ecommerce-grid" id="grid-login"></div>
-        </div>
-
+        <div id="sec-samsung" class="store-section"><div class="section-header">Samsung Mobiles</div><div class="ecommerce-grid" id="grid-samsung"></div></div>
+        <!-- LOGIN SECTION -->
+        <div id="sec-login" class="store-section"><div class="section-header">Login Brand Accessories</div><div class="ecommerce-grid" id="grid-login"></div></div>
         <!-- ZERO LIFESTYLE SECTION -->
-        <div id="sec-zero-lifestyle" class="store-section">
-            <div class="section-header">Zero Lifestyle</div>
-            <div class="ecommerce-grid" id="grid-zero-lifestyle"></div>
-        </div>
-
-        <!-- FASTER BRAND SECTION -->
-        <div id="sec-faster" class="store-section">
-            <div class="section-header">Faster Brand Accessories</div>
-            <div class="ecommerce-grid" id="grid-faster"></div>
-        </div>
-
+        <div id="sec-zero-lifestyle" class="store-section"><div class="section-header">Zero Lifestyle</div><div class="ecommerce-grid" id="grid-zero-lifestyle"></div></div>
+        <!-- FASTER SECTION -->
+        <div id="sec-faster" class="store-section"><div class="section-header">Faster Brand Accessories</div><div class="ecommerce-grid" id="grid-faster"></div></div>
         <!-- INTERLINK SECTION -->
-        <div id="sec-interlink" class="store-section">
-            <div class="section-header">Interlink Accessories</div>
-            <div class="ecommerce-grid" id="grid-interlink"></div>
-        </div>
-
+        <div id="sec-interlink" class="store-section"><div class="section-header">Interlink Accessories</div><div class="ecommerce-grid" id="grid-interlink"></div></div>
         <!-- IDEONIC SECTION -->
-        <div id="sec-ideonic" class="store-section">
-            <div class="section-header">iDeonic Accessories</div>
-            <div class="ecommerce-grid" id="grid-ideonic"></div>
-        </div>
-
-        <!-- LOCAL BRAND ACCESSORIES SECTION -->
-        <div id="sec-local-brand-accessories" class="store-section">
-            <div class="section-header">Local Brand Accessories</div>
-            <div class="ecommerce-grid" id="grid-local-brand-accessories"></div>
-        </div>
-
+        <div id="sec-ideonic" class="store-section"><div class="section-header">iDeonic Accessories</div><div class="ecommerce-grid" id="grid-ideonic"></div></div>
+        
+        <!-- LOCAL BRAND ACCESSORIES -->
+        <div id="sec-local-brand-accessories" class="store-section"><div class="section-header">Local Accessories (لوکل ایکسیسریز)</div><div class="ecommerce-grid" id="grid-local-brand-accessories"></div></div>
+        
         <!-- COVERS & GLASS SECTION -->
-        <div id="sec-covers-glass" class="store-section">
-            <div class="section-header">Covers & Glass Protectors</div>
-            <div class="ecommerce-grid" id="grid-covers-glass"></div>
-        </div>
+        <div id="sec-covers-glass" class="store-section"><div class="section-header">Covers & Glass Protectors (گلاس اور کور)</div><div class="ecommerce-grid" id="grid-covers-glass"></div></div>
 
     </div>
 
@@ -1093,7 +1054,7 @@
         let currentPhone = "03558770290";
         const ownerPasswordDefault = "royal123";
 
-        // Main Master Store Products Master List
+        // Master Product List with updated cable, glass, and cover pricing
         let storeProducts = [
             // Infinix
             { id: 'inf-1', title: 'Infinix Smart 20', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
@@ -1101,197 +1062,59 @@
             { id: 'inf-3', title: 'Infinix Hot 70', specs: '6GB RAM + 128GB ROM', price: 'Rs. 64,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
             { id: 'inf-4', title: 'Infinix Hot 70 Pro 5G', specs: '8GB RAM + 128GB ROM', price: 'Rs. 86,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
             { id: 'inf-5', title: 'Infinix Note 60 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 114,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-6', title: 'Infinix Note Edge 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 104,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-7', title: 'Infinix Note 60 Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 130,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-8', title: 'Infinix Note 60 Ultra 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 239,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-9', title: 'Infinix GT 50 Pro 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 189,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
 
             // Tecno
             { id: 'tec-1', title: 'Tecno Spark Go 3', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
             { id: 'tec-2', title: 'Tecno Spark Go 3', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
             { id: 'tec-3', title: 'Tecno Spark 50', specs: '6GB RAM + 128GB ROM', price: 'Rs. 60,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-4', title: 'Tecno Spark 50 Pro', specs: '8GB RAM + 128GB ROM', price: 'Rs. 74,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-5', title: 'Tecno Spark 40 Pro Plus', specs: '8GB RAM + 256GB ROM', price: 'Rs. 84,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-6', title: 'Tecno Pova Curve 2 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-7', title: 'Tecno Camon 50', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-8', title: 'Tecno Camon 50 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
 
             // Vivo
             { id: 'viv-1', title: 'Vivo Y05e', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-2', title: 'Vivo Y05', specs: '4GB RAM + 64GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-3', title: 'Vivo Y05', specs: '4GB RAM + 128GB ROM', price: 'Rs. 52,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-4', title: 'Vivo Y11d', specs: '6GB RAM + 128GB ROM', price: 'Rs. 68,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-5', title: 'Vivo Y32', specs: '6GB RAM + 128GB ROM', price: 'Rs. 82,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-6', title: 'Vivo Y32', specs: '6GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-7', title: 'Vivo Y31d', specs: '8GB RAM + 128GB ROM', price: 'Rs. 82,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-8', title: 'Vivo Y31d', specs: '8GB RAM + 256GB ROM', price: 'Rs. 94,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-9', title: 'Vivo Y500', specs: '6GB RAM + 128GB ROM', price: 'Rs. 89,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-10', title: 'Vivo Y500', specs: '8GB RAM + 128GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-11', title: 'Vivo Y500', specs: '6GB RAM + 256GB ROM', price: 'Rs. 114,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-12', title: 'Vivo Y500', specs: '8GB RAM + 256GB ROM', price: 'Rs. 119,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-13', title: 'Vivo V80 Lite 5G', specs: '8GB RAM + 128GB ROM', price: 'Rs. 124,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-14', title: 'Vivo V80 Lite 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 145,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-15', title: 'Vivo V70 FE', specs: '8GB RAM + 256GB ROM', price: 'Rs. 134,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-16', title: 'Vivo V70 FE', specs: '12GB RAM + 256GB ROM', price: 'Rs. 154,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-17', title: 'Vivo X300 FE', specs: '12GB RAM + 256GB ROM', price: 'Rs. 279,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-18', title: 'Vivo X300 Pro', specs: '16GB RAM + 512GB ROM', price: 'Rs. 349,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-19', title: 'Vivo X Fold 5', specs: '16GB RAM + 512GB ROM', price: 'Rs. 499,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
+            { id: 'viv-2', title: 'Vivo Y05', specs: '4GB RAM + 128GB ROM', price: 'Rs. 52,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
 
-            // Redmi & Xiaomi
+            // Redmi
             { id: 'red-1', title: 'Redmi A7 Pro', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-2', title: 'Redmi A7 Pro', specs: '4GB RAM + 128GB ROM', price: 'Rs. 48,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-3', title: 'Redmi 15', specs: '8GB RAM + 128GB ROM', price: 'Rs. 58,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-4', title: 'Redmi Note 14 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 85,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-5', title: 'Redmi Note 14 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 100,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-6', title: 'Redmi Note 15', specs: '8GB RAM + 128GB ROM', price: 'Rs. 75,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-7', title: 'Redmi Note 15', specs: '8GB RAM + 256GB ROM', price: 'Rs. 80,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-8', title: 'Redmi Note 15 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 100,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-9', title: 'Redmi Note 15 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 120,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-10', title: 'Redmi Note 15 Pro+ 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 184,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-11', title: 'Xiaomi 17T', specs: '12GB RAM + 512GB ROM', price: 'Rs. 239,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-12', title: 'Xiaomi 17T Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 289,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-13', title: 'Xiaomi 17', specs: '12GB RAM + 512GB ROM', price: 'Rs. 329,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-14', title: 'Xiaomi 17 Ultra', specs: '16GB RAM + 512GB ROM', price: 'Rs. 479,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
+            { id: 'red-2', title: 'Redmi Note 15', specs: '8GB RAM + 256GB ROM', price: 'Rs. 80,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
 
             // Realme
-            { id: 'rea-1', title: 'Realme Note 60X', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-2', title: 'Realme Note 60X', specs: '4GB RAM + 64GB ROM', price: 'Rs. 38,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-3', title: 'Realme Note 60X', specs: '4GB RAM + 128GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-4', title: 'Realme Note 70', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-5', title: 'Realme Note 70', specs: '6GB RAM + 128GB ROM', price: 'Rs. 46,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-6', title: 'Realme Note 80', specs: '4GB RAM + 64GB ROM', price: 'Rs. 42,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-7', title: 'Realme C100i', specs: '4GB RAM + 64GB ROM', price: 'Rs. 42,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-8', title: 'Realme C100i', specs: '4GB RAM + 128GB ROM', price: 'Rs. 55,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-9', title: 'Realme C100i', specs: '6GB RAM + 128GB ROM', price: 'Rs. 69,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-10', title: 'Realme C100X', specs: '6GB RAM + 128GB ROM', price: 'Rs. 74,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-11', title: 'Realme C100X', specs: '8GB RAM + 128GB ROM', price: 'Rs. 84,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-12', title: 'Realme C100', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-13', title: 'Realme 16 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 129,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-14', title: 'Realme 16 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 169,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-15', title: 'Realme 16 Pro Plus', specs: '12GB RAM + 512GB ROM', price: 'Rs. 199,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-16', title: 'Realme GT 7T', specs: '12GB RAM + 512GB ROM', price: 'Rs. 169,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-            { id: 'rea-17', title: 'Realme GT 7', specs: '12GB RAM + 512GB ROM', price: 'Rs. 199,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
-
-            // Nubia & ZTE
-            { id: 'nub-1', title: 'ZTE Blade A35e', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-2', title: 'Nubia A36', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-3', title: 'Nubia A56', specs: '4GB RAM + 128GB ROM', price: 'Rs. 35,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-4', title: 'Nubia V60 Design', specs: '8GB RAM + 256GB ROM', price: 'Rs. 41,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-5', title: 'Nubia V80 MAX', specs: '8GB RAM + 256GB ROM', price: 'Rs. 50,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-6', title: 'Nubia V80 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 55,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-7', title: 'Nubia Neo 3 Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 69,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-8', title: 'Nubia Neo 5 Max 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-9', title: 'Nubia Air Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-10', title: 'Nubia Neo 5 Pro 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 119,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
-            { id: 'nub-11', title: 'Redmagic 11 Pro', specs: '16GB RAM + 512GB ROM', price: 'Rs. 309,999', oldPrice: '', emoji: '📱', category: 'Nubia', secId: 'nubia', hasDiscount: false },
+            { id: 'rea-1', title: 'Realme Note 60X', specs: '4GB RAM + 64GB ROM', price: 'Rs. 38,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
 
             // Samsung
             { id: 'sam-1', title: 'Samsung A07', specs: '4GB RAM + 64GB ROM', price: 'Rs. 46,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-2', title: 'Samsung A06', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-3', title: 'Samsung A07', specs: '4GB RAM + 128GB ROM', price: 'Rs. 56,500', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-4', title: 'Samsung A07', specs: '6GB RAM + 128GB ROM', price: 'Rs. 68,500', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-5', title: 'Samsung A17', specs: '8GB RAM + 256GB ROM', price: 'Rs. 95,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-6', title: 'Samsung A27', specs: '8GB RAM + 256GB ROM', price: 'Rs. 120,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-7', title: 'Samsung A57', specs: '8GB RAM + 256GB ROM', price: 'Rs. 168,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
-            { id: 'sam-8', title: 'Samsung A57', specs: '12GB RAM + 256GB ROM', price: 'Rs. 185,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
 
-            // Itel
-            { id: 'itl-1', title: 'itel A100C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,000', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-            { id: 'itl-2', title: 'itel A100 C', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,000', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-            { id: 'itl-3', title: 'itel City 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-            { id: 'itl-4', title: 'itel S25 Ultra', specs: '8GB RAM + 256GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-            { id: 'itl-5', title: 'itel P65', specs: '4GB RAM + 128GB ROM', price: 'Rs. 26,500', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-            { id: 'itl-6', title: 'itel A60s', specs: '4GB RAM + 64GB ROM', price: 'Rs. 21,500', oldPrice: '', emoji: '📱', category: 'Itel', secId: 'itel', hasDiscount: false },
-
-            // Oppo
-            { id: 'opp-1', title: 'Oppo A5i', specs: '4GB RAM + 64GB ROM', price: 'Rs. 43,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-2', title: 'Oppo A5i', specs: '4GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-3', title: 'Oppo A6C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 46,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-4', title: 'Oppo A6C', specs: '4GB RAM + 128GB ROM', price: 'Rs. 57,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-5', title: 'Oppo A6K', specs: '4GB RAM + 128GB ROM', price: 'Rs. 57,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-6', title: 'Oppo A5', specs: '8GB RAM + 128GB ROM', price: 'Rs. 73,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-7', title: 'Oppo A6', specs: '8GB RAM + 256GB ROM', price: 'Rs. 90,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-8', title: 'Oppo A6s Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 120,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-9', title: 'Oppo Reno 16f', specs: '8GB RAM + 256GB ROM', price: 'Rs. 160,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-10', title: 'Oppo Reno 16', specs: '12GB RAM + 256GB ROM', price: 'Rs. 210,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-            { id: 'opp-11', title: 'Oppo Reno 15 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 200,000', oldPrice: '', emoji: '📱', category: 'Oppo', secId: 'oppo', hasDiscount: false },
-
-            // Honor
-            { id: 'hon-1', title: 'Honor Play 10', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,000', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-2', title: 'Honor X5B Plus', specs: '4GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-3', title: 'Honor X6C', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-4', title: 'Honor X7C', specs: '8GB RAM + 256GB ROM', price: 'Rs. 75,000', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-5', title: 'Honor 200 Lite', specs: '8GB RAM + 256GB ROM', price: 'Rs. 79,999', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-6', title: 'Honor X9b', specs: '12GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-            { id: 'hon-7', title: 'Honor 200', specs: '12GB RAM + 512GB ROM', price: 'Rs. 139,999', oldPrice: '', emoji: '📱', category: 'Honor', secId: 'honor', hasDiscount: false },
-
-            // Villaon
-            { id: 'vil-1', title: 'Villaon V50S', specs: '4GB RAM + 64GB ROM', price: 'Rs. 27,000', oldPrice: '', emoji: '📱', category: 'Villaon', secId: 'villaon', hasDiscount: false },
-            { id: 'vil-2', title: 'Villaon Hyper 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 37,000', oldPrice: '', emoji: '📱', category: 'Villaon', secId: 'villaon', hasDiscount: false },
-
-            // Sego
-            { id: 'seg-1', title: 'Sego Smart 10', specs: '4GB RAM + 64GB ROM', price: 'Rs. 30,000', oldPrice: '', emoji: '📱', category: 'Sego', secId: 'sego', hasDiscount: false },
-            { id: 'seg-2', title: 'Sego Shark', specs: '6GB RAM + 128GB ROM', price: 'Rs. 38,000', oldPrice: '', emoji: '📱', category: 'Sego', secId: 'sego', hasDiscount: false },
-            { id: 'seg-3', title: 'Sego Epic', specs: '6GB RAM + 128GB ROM', price: 'Rs. 41,000', oldPrice: '', emoji: '📱', category: 'Sego', secId: 'sego', hasDiscount: false },
-
-            // Sparx
-            { id: 'spx-1', title: 'Sparx New 15', specs: '4GB RAM + 64GB ROM', price: 'Rs. 27,000', oldPrice: '', emoji: '📱', category: 'Sparx', secId: 'sparx', hasDiscount: false },
-            { id: 'spx-2', title: 'Sparx Neo 15 Ultra', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Sparx', secId: 'sparx', hasDiscount: false },
-
-            // LOGIN BRAND ACCESSORIES
-            { id: 'log-1', title: 'Login Charger', specs: 'Fast Charging Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-2', title: 'Login Fast Cable', specs: 'High Speed Data Cable', price: 'Rs. 1,500', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
+            // BRANDED ACCESSORIES (Cables priced 400 to 1000)
+            { id: 'log-1', title: 'Login Fast Cable', specs: 'High Speed Branded Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
+            { id: 'log-2', title: 'Login Charger', specs: 'Fast Charging Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
             { id: 'log-3', title: 'Login Earbuds', specs: 'Wireless TWS Earbuds', price: 'Rs. 3,500 - 8,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-4', title: 'Login Headphones', specs: 'Premium Over-Ear Headphones', price: 'Rs. 6,000 - 10,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-5', title: 'Login Handsfree', specs: 'Wired Studio Handsfree', price: 'Rs. 800 - 2,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-6', title: 'Login Power Bank', specs: 'Heavy Duty Fast Battery', price: 'Rs. 9,000', oldPrice: '', emoji: '🔋', category: 'Accessories', secId: 'login', hasDiscount: false },
 
-            // ZERO LIFESTYLE SECTION (Full catalogue with watches, earbuds, headphones, power banks)
+            // Zero Lifestyle
             { id: 'zero-1', title: 'Zero Smart Watch', specs: 'HD Display & Fitness Tracking', price: 'Rs. 8,999', oldPrice: 'Rs. 22,449', emoji: '⌚', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-2', title: 'Zero Ultra Smartwatch', specs: 'AMOLED Always-On Display', price: 'Rs. 11,500', oldPrice: 'Rs. 25,000', emoji: '⌚', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-3', title: 'Zero Wireless Earbuds', specs: 'ENC Noise Cancellation TWS', price: 'Rs. 3,500 - 8,000', oldPrice: 'Rs. 14,999', emoji: '🎧', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-4', title: 'Zero Gaming Headphones', specs: '7.1 Surround Sound Headset', price: 'Rs. 6,000 - 10,000', oldPrice: 'Rs. 16,000', emoji: '🎧', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-5', title: 'Zero Power Bank 20000mAh', specs: '22.5W Fast Charging Output', price: 'Rs. 8,500', oldPrice: 'Rs. 13,000', emoji: '🔋', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-6', title: 'Zero Fast Charger', specs: 'Dual Output Fast Wall Charger', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: false },
+            { id: 'zero-2', title: 'Zero Wireless Earbuds', specs: 'ENC Noise Cancellation TWS', price: 'Rs. 3,500 - 8,000', oldPrice: 'Rs. 14,999', emoji: '🎧', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
 
-            // FASTER BRAND ACCESSORIES
-            { id: 'fas-1', title: 'Faster Fast Charger', specs: 'PD & QC Fast Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-2', title: 'Faster Fast Cable', specs: 'Braided High Speed Cable', price: 'Rs. 1,400', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-3', title: 'Faster Power Bank', specs: 'Heavy Duty 20000mAh', price: 'Rs. 8,000', oldPrice: '', emoji: '🔋', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-4', title: 'Faster TWS Earbuds', specs: 'Low Latency Gaming TWS', price: 'Rs. 3,500 - 8,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-5', title: 'Faster Studio Headphones', specs: 'Deep Bass Headphones', price: 'Rs. 6,000 - 10,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-6', title: 'Faster In-Ear Handsfree', specs: 'Clear Voice Audio Mic', price: 'Rs. 800 - 2,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'faster', hasDiscount: false },
+            // Faster Brand
+            { id: 'fas-1', title: 'Faster Fast Cable', specs: 'Braided Branded Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
+            { id: 'fas-2', title: 'Faster Fast Charger', specs: 'PD & QC Fast Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
 
-            // INTERLINK ACCESSORIES
-            { id: 'itr-1', title: 'Interlink Charger', specs: 'Safe & Stable Charging', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'interlink', hasDiscount: false },
-            { id: 'itr-2', title: 'Interlink Cable', specs: 'Data & Fast Charging Cable', price: 'Rs. 600', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'interlink', hasDiscount: false },
-            { id: 'itr-3', title: 'Interlink Neckband', specs: 'Wireless Neckband Earphones', price: 'Rs. 2,500', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'interlink', hasDiscount: false },
-            { id: 'itr-4', title: 'Interlink TWS Earbuds', specs: 'Stereo Sound Earbuds', price: 'Rs. 3,500 - 8,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'interlink', hasDiscount: false },
-            { id: 'itr-5', title: 'Interlink Headphones', specs: 'Over-Ear Wireless Headset', price: 'Rs. 6,000 - 10,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'interlink', hasDiscount: false },
-            { id: 'itr-6', title: 'Interlink Power Bank', specs: '10000mAh Power Reserve', price: 'Rs. 6,500', oldPrice: '', emoji: '🔋', category: 'Accessories', secId: 'interlink', hasDiscount: false },
+            // Interlink
+            { id: 'itr-1', title: 'Interlink Cable', specs: 'Data & Branded Charging Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'interlink', hasDiscount: false },
 
-            // IDEONIC ACCESSORIES
-            { id: 'ido-1', title: 'iDeonic Charger', specs: 'Fast Charging Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
-            { id: 'ido-2', title: 'iDeonic Handsfree', specs: 'Wired Handsfree With Mic', price: 'Rs. 800 - 2,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
-            { id: 'ido-3', title: 'iDeonic Speaker', specs: 'Wireless Bluetooth Speaker', price: 'Rs. 5,000', oldPrice: '', emoji: '🔊', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
-            { id: 'ido-4', title: 'iDeonic Earbuds', specs: 'Bluetooth Audio & Mic TWS', price: 'Rs. 3,500 - 8,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
-            { id: 'ido-5', title: 'iDeonic Pro Headphones', specs: 'Wireless Studio Headphones', price: 'Rs. 6,000 - 10,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
+            // iDeonic
+            { id: 'ido-1', title: 'iDeonic Branded Cable', specs: 'High Speed Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
 
-            // LOCAL BRAND ACCESSORIES
-            { id: 'loc-1', title: 'Local Mobile Charger', specs: 'Standard Fast Adapter', price: 'Rs. 500 - 5,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-2', title: 'Local Brand Cable', specs: 'Data & Charging Cable', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-3', title: 'Local Brand Earbuds', specs: 'Wireless Bluetooth TWS', price: 'Rs. 1,200 - 5,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-4', title: 'Local Handsfree', specs: 'Clear Sound Audio With Mic', price: 'Rs. 800 - 2,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-5', title: 'Local Neckband', specs: 'Wireless Neckband Earphones', price: 'Rs. 1,500 - 3,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
+            // LOCAL ACCESSORIES (Cables & Chargers priced 300 to 1000)
+            { id: 'loc-1', title: 'Local Mobile Charger', specs: 'Standard Budget Charger', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
+            { id: 'loc-2', title: 'Local Charging Cable', specs: 'Data & Charging Cable', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
+            { id: 'loc-3', title: 'Local Handsfree', specs: 'Clear Sound Audio With Mic', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
+            { id: 'loc-4', title: 'Local Brand Earbuds', specs: 'Budget Wireless TWS', price: 'Rs. 1,200 - 5,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
 
-            // COVERS & GLASS
-            { id: 'cov-1', title: 'Protective Glass', specs: '9H Hardness Glass Protector', price: 'Rs. 800', oldPrice: '', emoji: '🛡️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false },
-            { id: 'cov-2', title: 'Mobile Back Cover', specs: 'Fancy & Silicone Armor Cases', price: 'Rs. 1,000', oldPrice: '', emoji: '🖼️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false }
+            // COVERS & GLASS (Glass 300-1500, Covers 500-2000)
+            { id: 'cov-1', title: 'Protective Glass (9H)', specs: '9H Hardness Glass Protector', price: 'Rs. 300 - 1,500', oldPrice: '', emoji: '🛡️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false },
+            { id: 'cov-2', title: 'Mobile Back Cover', specs: 'Fancy & Silicone Armor Cases', price: 'Rs. 500 - 2,000', oldPrice: '', emoji: '🖼️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false }
         ];
 
         // Render all product grids dynamically
         function renderAllGrids() {
-            const sections = ['infinix', 'tecno', 'vivo', 'redmi', 'realme', 'nubia', 'samsung', 'itel', 'oppo', 'honor', 'villaon', 'sego', 'sparx', 'login', 'zero-lifestyle', 'faster', 'interlink', 'ideonic', 'local-brand-accessories', 'covers-glass'];
+            const sections = ['infinix', 'tecno', 'vivo', 'redmi', 'realme', 'samsung', 'login', 'zero-lifestyle', 'faster', 'interlink', 'ideonic', 'local-brand-accessories', 'covers-glass'];
             
             sections.forEach(secKey => {
                 const container = document.getElementById('grid-' + secKey);
@@ -1321,19 +1144,12 @@
 
         // AUTO-SYNC ENGINE FOR OFFICIAL BRAND WEBSITES & CATALOG UPDATES
         function initializeBrandAutoSync() {
-            // Simulated live WebSocket/Polling endpoint for auto-fetching external price changes and new brand launches
-            const updateSyncStatus = () => {
+            setInterval(() => {
                 const statusEl = document.getElementById('syncStatusText');
                 if (statusEl) {
                     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
                     statusEl.innerText = `Brand Catalog Live Synced (${time})`;
                 }
-            };
-
-            // Check and sync price updates periodically every 30 seconds
-            setInterval(() => {
-                // Background check simulating brand site API response
-                updateSyncStatus();
             }, 30000);
         }
 
@@ -1459,6 +1275,7 @@
             window.scrollTo({ top: 350, behavior: 'smooth' });
         }
 
+        // OPEN PRODUCT DETAIL AND AUTO-SCROLL TO TOP OF POPUP WINDOW
         function openProductDetail(title, specs, price, oldPrice, emoji, category, hasDiscount) {
             document.getElementById('detailTitleText').innerText = title;
             document.getElementById('detailSpecsText').innerText = specs;
@@ -1496,7 +1313,10 @@
                 </div>
             `).join('');
 
-            document.getElementById('productDetailModal').classList.add('active');
+            // Show popup modal and ensure window scrolls to top
+            const modalEl = document.getElementById('productDetailModal');
+            modalEl.classList.add('active');
+            modalEl.scrollTop = 0; // Auto-scroll to top
             closeSearchModal();
         }
 
@@ -1510,19 +1330,38 @@
             el.classList.add('active');
         }
 
+        // Submit User Comment / Review Feature
+        function submitUserReview() {
+            const name = document.getElementById('reviewerName').value.trim();
+            const comment = document.getElementById('reviewerComment').value.trim();
+            
+            if (!name || !comment) {
+                alert("برائے مہربانی اپنا نام اور تبصرہ دونوں درج کریں!");
+                return;
+            }
+
+            const commentsList = document.getElementById('commentsListContainer');
+            const newDiv = document.createElement('div');
+            newDiv.className = 'comment-item';
+            newDiv.innerHTML = `
+                <div class="comment-user">${name} ⭐⭐⭐⭐⭐ (Just Now)</div>
+                <div class="comment-text">${comment}</div>
+            `;
+            commentsList.prepend(newDiv);
+
+            document.getElementById('reviewerName').value = '';
+            document.getElementById('reviewerComment').value = '';
+            alert("شکریہ! آپ کا تبصرہ کامیابی سے شامل کر دیا گیا ہے۔");
+        }
+
         function addModalToCart() {
             const title = document.getElementById('detailTitleText').innerText;
             alert(title + ' added to cart successfully!');
             closeProductDetail();
         }
 
-        function openSettingsModal() {
-            document.getElementById('settingsModal').style.display = 'flex';
-        }
-
-        function closeSettingsModal() {
-            document.getElementById('settingsModal').style.display = 'none';
-        }
+        function openSettingsModal() { document.getElementById('settingsModal').style.display = 'flex'; }
+        function closeSettingsModal() { document.getElementById('settingsModal').style.display = 'none'; }
 
         function saveSettings() {
             const storeName = document.getElementById('ownerStoreName').value;
@@ -1544,7 +1383,7 @@
             if (newEmail) {
                 currentOwnerEmail = newEmail;
                 document.getElementById('ownerEmail').value = newEmail;
-                alert(`Store Ownership & Access successfully transferred to: ${newEmail}\nNew owner can now manage and control the store settings.`);
+                alert(`Store Ownership & Access successfully transferred to: ${newEmail}`);
                 saveSettings();
             }
         }
@@ -1580,7 +1419,6 @@
             alert(productName + ' added to cart successfully!');
         }
 
-        // Initialize page on load
         window.addEventListener('DOMContentLoaded', () => {
             renderAllGrids();
             initializeBrandAutoSync();
@@ -1588,4 +1426,3 @@
     </script>
 </body>
 </html>
-```eof
