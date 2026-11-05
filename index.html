@@ -101,7 +101,7 @@
 
         .drawer-links li:hover { color: var(--accent-gold); }
 
-        .drawer-overlay, .search-overlay, .detail-overlay {
+        .drawer-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -112,9 +112,9 @@
             display: none;
         }
 
-        .drawer-overlay.active, .search-overlay.active, .detail-overlay.active { display: block; }
+        .drawer-overlay.active { display: block; }
 
-        /* Search Popup Modal */
+        /* Search Popup Modal Layout (Like provided screenshot) */
         .search-modal {
             position: fixed;
             top: 0;
@@ -190,34 +190,35 @@
             gap: 6px;
         }
 
+        /* Column style search items like image */
         .search-result-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #f1f5f9;
             cursor: pointer;
         }
 
         .search-result-img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: #f8fafc;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
             border: 1px solid #e2e8f0;
             flex-shrink: 0;
         }
 
         .search-result-info { flex: 1; }
-        .sr-title { font-size: 13px; font-weight: 700; color: #0f172a; }
-        .sr-price { font-size: 13px; font-weight: 800; color: #b45309; margin-top: 2px; }
+        .sr-title { font-size: 14px; font-weight: 700; color: #0f172a; }
+        .sr-price { font-size: 14px; font-weight: 800; color: #b45309; margin-top: 2px; }
         .sr-off { font-size: 11px; background: #dcfce7; color: #166534; padding: 1px 6px; border-radius: 4px; font-weight: 600; display: inline-block; margin-top: 2px; }
 
-        /* Product Detail Modal */
+        /* Product Detail Modal with bottom related models */
         .product-detail-modal {
             position: fixed;
             top: 0;
@@ -337,6 +338,7 @@
 
         .color-dot.active { border-color: #9333ea; transform: scale(1.1); }
 
+        /* Bottom Action Buttons for Detail View */
         .detail-bottom-actions {
             position: fixed;
             bottom: 0;
@@ -377,6 +379,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        /* Related models container at the bottom of detail page */
+        .related-models-section {
+            margin-top: 30px;
+            border-top: 2px solid #f1f5f9;
+            padding-top: 20px;
+            padding-bottom: 80px; /* space for fixed buttons */
         }
 
         .store-hero {
@@ -577,6 +587,7 @@
             white-space: nowrap;
         }
 
+        /* Catalog Navigation Pills for ALL Brands */
         .catalog-nav {
             display: flex;
             gap: 10px;
@@ -760,7 +771,7 @@
         <button class="icon-btn" onclick="openSearchModal()">🔍</button>
     </div>
 
-    <!-- Search Modal -->
+    <!-- Search Modal with Column List Layout (Like provided screenshot) -->
     <div class="search-modal" id="searchModal">
         <div class="search-header-bar">
             <button class="icon-btn" style="color: #0f172a;" onclick="closeSearchModal()">←</button>
@@ -772,21 +783,21 @@
         <div class="search-body">
             <div class="popular-tags">
                 <span class="pop-tag" onclick="quickSearch('Local')">🔌 Local Brand</span>
-                <span class="pop-tag" onclick="quickSearch('Infinix')">📱 Infinix</span>
-                <span class="pop-tag" onclick="quickSearch('Tecno')">📱 Tecno</span>
-                <span class="pop-tag" onclick="quickSearch('Vivo')">📱 Vivo</span>
+                <span class="pop-tag" onclick="quickSearch('Zero')">⌚ Zero Lifestyle</span>
+                <span class="pop-tag" onclick="quickSearch('Faster')">⚡ Faster Brand</span>
+                <span class="pop-tag" onclick="quickSearch('Interlink')">🔗 Interlink</span>
             </div>
-            <div class="search-results-title">🔥 POPULAR SEARCHES / STOCK RESULTS</div>
+            <div class="search-results-title">🔥 BESTSELLER FOR YOU / ALL MODELS</div>
             <div id="searchResultsList">
-                <div class="search-result-item" onclick="openProductDetail('Local Brand Cable', 'Data & Charging Cable', 'Rs. 300 - 1,000', 'Rs. 1,500', '🔌')">
-                    <div class="search-result-img">🔌</div>
+                <div class="search-result-item" onclick="openProductDetail('Zero Armour Smartwatch', 'Voice Assistant | Sports Mode', 'Rs. 8,999', 'Rs. 22,449', '⌚')">
+                    <div class="search-result-img">⌚</div>
                     <div class="search-result-info">
-                        <div class="sr-title">Local Brand Cable</div>
-                        <div class="sr-price">Rs. 300 - 1,000</div>
-                        <span class="sr-off">Fast Speed</span>
+                        <div class="sr-title">Zero Armour Smartwatch</div>
+                        <div class="sr-price">Rs. 8,999</div>
+                        <span class="sr-off">60% OFF</span>
                     </div>
                 </div>
-                <div class="search-result-item" onclick="openProductDetail('Local Brand Charger', 'Fast Wall Charger', 'Rs. 1,000 - 5,000', 'Rs. 6,500', '🔌')">
+                <div class="search-result-item" onclick="openProductDetail('Local Brand Charger', 'Fast Wall Charging Adapter', 'Rs. 1,000 - 5,000', 'Rs. 6,500', '🔌')">
                     <div class="search-result-img">🔌</div>
                     <div class="search-result-info">
                         <div class="sr-title">Local Brand Charger</div>
@@ -794,11 +805,27 @@
                         <span class="sr-off">Safe Charging</span>
                     </div>
                 </div>
+                <div class="search-result-item" onclick="openProductDetail('Interlink TWS Earbuds', 'Stereo Sound Earbuds', 'Rs. 4,500', 'Rs. 6,000', '🎧')">
+                    <div class="search-result-img">🎧</div>
+                    <div class="search-result-info">
+                        <div class="sr-title">Interlink TWS Earbuds</div>
+                        <div class="sr-price">Rs. 4,500</div>
+                        <span class="sr-off">Clear Sound</span>
+                    </div>
+                </div>
+                <div class="search-result-item" onclick="openProductDetail('Faster Power Bank', '20000mAh Heavy Duty', 'Rs. 8,000', 'Rs. 11,000', '🔋')">
+                    <div class="search-result-img">🔋</div>
+                    <div class="search-result-info">
+                        <div class="sr-title">Faster Power Bank</div>
+                        <div class="sr-price">Rs. 8,000</div>
+                        <span class="sr-off">High Capacity</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Product Detail Modal -->
+    <!-- Product Detail Modal with Bottom Related Models -->
     <div class="product-detail-modal" id="productDetailModal">
         <div class="detail-top-bar">
             <button class="icon-btn" style="color: #0f172a;" onclick="closeProductDetail()">←</button>
@@ -833,6 +860,32 @@
             <p style="font-size: 13px; color: #64748b; margin-top: 10px;">
                 100% Guaranteed stock available at Premium Royal Cell Store, Muzaffarabad.
             </p>
+
+            <!-- Bottom Related Models Section -->
+            <div class="related-models-section">
+                <div class="section-header" style="margin-top:0;">Other Popular Models</div>
+                <div class="ecommerce-grid">
+                    <div class="product-card" onclick="openProductDetail('Local Brand Cable', 'Fast Charging Cable', 'Rs. 300 - 1,000', 'Rs. 1,500', '🔌')">
+                        <div>
+                            <div class="card-top-tag"><span>Fast Speed</span></div>
+                            <div class="product-img-box">🔌</div>
+                            <div class="p-title-text">Local Brand Cable</div>
+                            <div class="p-specs-text">Fast Charging Cable</div>
+                            <span class="p-price-text">Rs. 300 - 1,000</span>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('Zero Wireless Earbuds', 'ENC Noise Cancellation', 'Rs. 4,499', 'Rs. 14,999', '🎧')">
+                        <div>
+                            <div class="card-top-tag"><span>Premium Sound</span></div>
+                            <div class="product-img-box">🎧</div>
+                            <div class="p-title-text">Zero Wireless Earbuds</div>
+                            <div class="p-specs-text">ENC Noise Cancellation</div>
+                            <span class="p-price-text">Rs. 4,499</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="detail-bottom-actions">
@@ -850,6 +903,12 @@
         <ul class="drawer-links">
             <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
             <li onclick="toggleDrawer(); showSection('local', event)">🔌 Local Brand Accessories</li>
+            <li onclick="toggleDrawer(); showSection('login', event)">📱 Login Brand</li>
+            <li onclick="toggleDrawer(); showSection('zero-lifestyle', event)">⌚ Zero Lifestyle</li>
+            <li onclick="toggleDrawer(); showSection('faster', event)">⚡ Faster Brand</li>
+            <li onclick="toggleDrawer(); showSection('interlink', event)">🔗 Interlink</li>
+            <li onclick="toggleDrawer(); showSection('ideonic', event)">🔊 iDeonic</li>
+            <li onclick="toggleDrawer(); showSection('covers-glass', event)">🛡️ Covers & Glass</li>
             <li onclick="toggleDrawer(); showSection('local-accessories', event)">🎧 General Local Accessories</li>
             <li onclick="toggleDrawer(); openSettingsModal()">⚙️ Profile & Ownership Settings</li>
             <li onclick="toggleDrawer(); alert('Helpline: 03558770290')">📞 Helpline Support</li>
@@ -903,6 +962,7 @@
         </div>
     </div>
 
+    <!-- Catalog Navigation Bar showing ALL listed brands clearly -->
     <div class="catalog-nav">
         <span class="catalog-pill active" onclick="showSection('all', event)">All Stock</span>
         <span class="catalog-pill" onclick="showSection('local', event)">Local Brand</span>
@@ -917,12 +977,10 @@
 
     <div class="container">
 
-        <!-- LOCAL BRAND SECTION (Fully Updated with Requested Items & Prices) -->
+        <!-- LOCAL BRAND SECTION -->
         <div id="sec-local" class="store-section">
             <div class="section-header">Local Brand Accessories</div>
             <div class="ecommerce-grid">
-                
-                <!-- Cable Section -->
                 <div class="product-card" onclick="openProductDetail('Local Brand Cable', 'Data & Fast Charging Cable', 'Rs. 300 - 1,000', 'Rs. 1,500', '🔌')">
                     <div>
                         <div class="card-top-tag"><span>Fast Speed</span></div>
@@ -937,7 +995,6 @@
                     </div>
                 </div>
 
-                <!-- Charger Section -->
                 <div class="product-card" onclick="openProductDetail('Local Brand Charger', 'Fast Wall Charging Adapter', 'Rs. 1,000 - 5,000', 'Rs. 6,500', '🔌')">
                     <div>
                         <div class="card-top-tag"><span>Safe Charging</span></div>
@@ -952,7 +1009,6 @@
                     </div>
                 </div>
 
-                <!-- Earbuds Section -->
                 <div class="product-card" onclick="openProductDetail('Local Brand Earbuds', 'Wireless TWS Earbuds', 'Rs. 3,000 - 6,000', 'Rs. 7,500', '🎧')">
                     <div>
                         <div class="card-top-tag"><span>Clear Sound</span></div>
@@ -967,7 +1023,6 @@
                     </div>
                 </div>
 
-                <!-- Neckband Section -->
                 <div class="product-card" onclick="openProductDetail('Local Brand Neckband', 'Wireless Neckband Earphones', 'Rs. 1,500 - 5,000', 'Rs. 6,000', '🎧')">
                     <div>
                         <div class="card-top-tag"><span>Long Battery</span></div>
@@ -982,7 +1037,6 @@
                     </div>
                 </div>
 
-                <!-- Power Bank Section (Newly Added) -->
                 <div class="product-card" onclick="openProductDetail('Local Brand Power Bank', 'High Capacity Battery Backup', 'Rs. 6,000 - 10,000', 'Rs. 12,000', '🔋')">
                     <div>
                         <div class="card-top-tag"><span>Heavy Duty</span></div>
@@ -996,7 +1050,6 @@
                         <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Brand%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -1408,6 +1461,7 @@
 
             document.getElementById('productDetailModal').classList.add('active');
             closeSearchModal();
+            window.scrollTo(0, 0);
         }
 
         function closeProductDetail() {
