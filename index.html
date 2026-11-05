@@ -101,6 +101,7 @@
 
         .drawer-links li:hover { color: var(--accent-gold); }
 
+        /* Nested Catalog Menu Styles */
         .catalog-toggle-btn {
             display: flex;
             justify-content: space-between;
@@ -116,7 +117,9 @@
             margin-top: 5px;
         }
 
-        .submenu-brands.show { display: block; }
+        .submenu-brands.show {
+            display: block;
+        }
 
         .submenu-brands li {
             padding: 10px 0;
@@ -125,7 +128,9 @@
             color: #cbd5e1;
         }
 
-        .submenu-brands li:last-child { border-bottom: none; }
+        .submenu-brands li:last-child {
+            border-bottom: none;
+        }
 
         .drawer-overlay, .search-overlay, .detail-overlay {
             position: fixed;
@@ -140,6 +145,7 @@
 
         .drawer-overlay.active, .search-overlay.active, .detail-overlay.active { display: block; }
 
+        /* Search Popup Modal */
         .search-modal {
             position: fixed;
             top: 0;
@@ -183,7 +189,9 @@
             color: #0f172a;
         }
 
-        .search-body { padding: 16px; }
+        .search-body {
+            padding: 16px;
+        }
 
         .popular-tags {
             display: flex;
@@ -240,6 +248,7 @@
         .sr-price { font-size: 13px; font-weight: 800; color: #b45309; margin-top: 2px; }
         .sr-off { font-size: 11px; background: #dcfce7; color: #166534; padding: 1px 6px; border-radius: 4px; font-weight: 600; display: inline-block; margin-top: 2px; }
 
+        /* Product Detail Modal */
         .product-detail-modal {
             position: fixed;
             top: 0;
@@ -269,11 +278,11 @@
 
         .detail-img-hero {
             background: #f8fafc;
-            height: 220px;
+            height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
+            font-size: 90px;
             border-bottom: 1px solid #e2e8f0;
             position: relative;
         }
@@ -281,7 +290,6 @@
         .detail-body {
             padding: 20px;
             flex: 1;
-            padding-bottom: 80px;
         }
 
         .detail-title {
@@ -294,15 +302,8 @@
         .detail-specs {
             font-size: 13px;
             color: var(--text-muted);
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .rating-stars {
-            color: #f5a623;
-            font-size: 15px;
             margin-bottom: 12px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .detail-price-row {
@@ -337,7 +338,10 @@
             margin-bottom: 16px;
         }
 
-        .color-selector { margin-bottom: 20px; }
+        .color-selector {
+            margin-bottom: 20px;
+        }
+
         .color-label {
             font-size: 12px;
             font-weight: 700;
@@ -346,7 +350,11 @@
             text-transform: uppercase;
         }
 
-        .color-options { display: flex; gap: 10px; }
+        .color-options {
+            display: flex;
+            gap: 10px;
+        }
+
         .color-dot {
             width: 36px;
             height: 36px;
@@ -357,60 +365,8 @@
             align-items: center;
             justify-content: center;
         }
+
         .color-dot.active { border-color: #9333ea; transform: scale(1.1); }
-
-        /* Comments Section Styling */
-        .comments-section {
-            margin-top: 25px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 16px;
-        }
-
-        .comments-title {
-            font-size: 14px;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .comment-item {
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #cbd5e1;
-            margin-bottom: 8px;
-            font-size: 12px;
-        }
-
-        .comment-user { font-weight: 700; color: #0f172a; margin-bottom: 2px; }
-        .comment-text { color: #475569; }
-
-        .add-comment-box { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
-        .add-comment-box input, .add-comment-box textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border-radius: 6px;
-            border: 1px solid #cbd5e1;
-            font-size: 12px;
-            outline: none;
-            background: #fff;
-        }
-
-        .submit-review-btn {
-            background: #0f172a;
-            color: #fff;
-            border: none;
-            padding: 8px;
-            border-radius: 6px;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 12px;
-        }
 
         .related-section-title {
             font-size: 15px;
@@ -425,7 +381,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .detail-bottom-actions {
@@ -492,41 +448,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            cursor: default;
         }
 
         .profile-crown-emoji { font-size: 40px; }
+
         .store-main-name { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
         .store-loc-sub { font-size: 13px; color: #94a3b8; margin-top: 6px; font-weight: 500; }
-
-        .sync-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(34, 197, 94, 0.15);
-            color: #4ade80;
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        .sync-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 8px #22c55e;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.4; transform: scale(0.9); }
-            50% { opacity: 1; transform: scale(1.1); }
-            100% { opacity: 0.4; transform: scale(0.9); }
-        }
 
         .modal-backdrop {
             position: fixed;
@@ -593,18 +522,6 @@
             font-weight: 700;
             cursor: pointer;
             margin-top: 10px;
-        }
-
-        .sync-btn-admin {
-            background: #2563eb;
-            color: white;
-            border: none;
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 8px;
         }
 
         .transfer-ownership-btn {
@@ -752,7 +669,7 @@
         }
 
         .p-price-text {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             color: #b45309;
             margin-bottom: 6px;
@@ -827,9 +744,12 @@
                 <span class="pop-tag" onclick="selectBrandFromSearch('vivo')">📱 Vivo</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('redmi')">📱 Redmi</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('realme')">📱 Realme</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('nubia')">📱 Nubia</span>
                 <span class="pop-tag" onclick="selectBrandFromSearch('samsung')">📱 Samsung</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('zero-lifestyle')">⌚ Zero Lifestyle</span>
-                <span class="pop-tag" onclick="selectBrandFromSearch('covers-glass')">🛡️ Glass & Covers</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('oppo')">📱 Oppo</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('honor')">📱 Honor</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('itel')">📱 itel</span>
+                <span class="pop-tag" onclick="selectBrandFromSearch('local-brand-accessories')">🔌 Accessories</span>
             </div>
             <div class="search-results-title">🔥 LIVE STOCK SEARCH RESULTS</div>
             <div id="searchResultsList"></div>
@@ -844,19 +764,17 @@
             <button class="icon-btn" style="color: #0f172a;" onclick="closeProductDetail()">✕</button>
         </div>
         <div class="detail-img-hero" id="detailEmoji">📱</div>
-        <div class="detail-body" id="detailPopupBody">
+        <div class="detail-body">
             <div class="detail-title" id="detailTitleText">Product Name</div>
             <div class="detail-specs" id="detailSpecsText">RAM & ROM Specs</div>
             
-            <div class="rating-stars" id="detailRatingStars">⭐⭐⭐⭐⭐ (4.8 / 5.0 Rating)</div>
-
             <div class="detail-price-row">
                 <span class="detail-price" id="detailPriceText">Rs. 0</span>
                 <span class="detail-old-price" id="detailOldPriceText" style="display:none;">Rs. 0</span>
             </div>
 
             <div class="discount-badge-box" id="detailDiscountBox" style="display:none;">
-                <span>⚡ Official Brand Guarantee</span>
+                <span>⚡ 60% OFF / Official Warranty</span>
                 <span>In Stock Muzaffarabad</span>
             </div>
 
@@ -871,32 +789,8 @@
             </div>
 
             <p style="font-size: 13px; color: #64748b; margin-top: 10px;">
-                100% Original Product with official warranty. Cash on Delivery & Installment options available across Azad Kashmir.
+                100% Original Product with official brand warranty. Cash on Delivery & Installment options available across Azad Kashmir.
             </p>
-
-            <!-- Customer Comments & Reviews Section -->
-            <div class="comments-section">
-                <div class="comments-title">
-                    <span>💬 Customer Reviews & Comments</span>
-                    <span id="commentCountBadge" style="font-size: 11px; color: #64748b;">3 Reviews</span>
-                </div>
-                <div id="commentsListContainer">
-                    <div class="comment-item">
-                        <div class="comment-user">Ali Khan (Muzaffarabad) ⭐⭐⭐⭐⭐</div>
-                        <div class="comment-text">بہت زبردست اور اورجنل پروڈکٹ ہے، Royal Store سے ہمیشہ بہترین چیز ملتی ہے۔</div>
-                    </div>
-                    <div class="comment-item">
-                        <div class="comment-user">Usman Ahmed ⭐⭐⭐⭐⭐</div>
-                        <div class="comment-text">Fast delivery across Kashmir. Highly recommended!</div>
-                    </div>
-                </div>
-                
-                <div class="add-comment-box">
-                    <input type="text" id="reviewerName" placeholder="آپ کا نام (Your Name)">
-                    <textarea id="reviewerComment" rows="2" placeholder="اپنا تبصرہ لکھیں (Write your review)..."></textarea>
-                    <button class="submit-review-btn" onclick="submitUserReview()">Submit Review / کمنٹ جمع کروائیں</button>
-                </div>
-            </div>
 
             <div class="related-section-title">📦 Related Products & Stock</div>
             <div class="related-grid" id="relatedProductsContainer"></div>
@@ -917,6 +811,7 @@
         <ul class="drawer-links">
             <li onclick="toggleDrawer(); showSection('all', event)">🏠 All Stock Catalog</li>
             
+            <!-- Collapsible Mobile Brand Catalog Item -->
             <li class="catalog-toggle-btn" onclick="toggleCatalogSubmenu(event)">
                 <span>📱 Brand Catalog (موبائل برانڈز)</span>
                 <span id="catalogArrow">▾</span>
@@ -932,8 +827,12 @@
                 <li onclick="toggleDrawer(); showSection('itel', event)">📱 itel Mobiles</li>
                 <li onclick="toggleDrawer(); showSection('oppo', event)">📱 Oppo Mobiles</li>
                 <li onclick="toggleDrawer(); showSection('honor', event)">📱 Honor Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('villaon', event)">📱 Villaon Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('sego', event)">📱 Sego Mobiles</li>
+                <li onclick="toggleDrawer(); showSection('sparx', event)">📱 Sparx Mobiles</li>
             </ul>
 
+            <!-- Collapsible Accessories Catalog Item -->
             <li class="catalog-toggle-btn" onclick="toggleAccessoriesSubmenu(event)">
                 <span>🔌 Accessories Catalog (ایکسیسریز)</span>
                 <span id="accessoriesArrow">▾</span>
@@ -959,12 +858,6 @@
         </div>
         <div class="store-main-name" id="storeMainHeaderName">PREMIUM ROYAL CELL STORE</div>
         <div class="store-loc-sub" id="storeSubText">100% Original Products | Cash & Installment | Contact: 03558770290</div>
-        <div>
-            <span class="sync-badge">
-                <span class="sync-dot"></span>
-                <span id="syncStatusText">Brand Sync System Active</span>
-            </span>
-        </div>
     </div>
 
     <div class="modal-backdrop" id="settingsModal">
@@ -990,7 +883,6 @@
                 <input type="text" id="ownerBio" class="form-control" value="100% Original Products | Cash & Installment">
             </div>
             <button class="save-btn" onclick="saveSettings()">Save Changes</button>
-            <button class="sync-btn-admin" onclick="triggerManualSync()">🔄 Force Brand Price & Catalog Auto-Sync</button>
             <button class="transfer-ownership-btn" onclick="transferOwnership()">🔄 Transfer Ownership & New Email</button>
         </div>
     </div>
@@ -1002,44 +894,408 @@
         <span class="catalog-pill" onclick="showSection('vivo', event)">Vivo</span>
         <span class="catalog-pill" onclick="showSection('redmi', event)">Redmi & Xiaomi</span>
         <span class="catalog-pill" onclick="showSection('realme', event)">Realme</span>
+        <span class="catalog-pill" onclick="showSection('nubia', event)">Nubia / ZTE</span>
         <span class="catalog-pill" onclick="showSection('samsung', event)">Samsung</span>
+        <span class="catalog-pill" onclick="showSection('itel', event)">itel</span>
+        <span class="catalog-pill" onclick="showSection('oppo', event)">Oppo</span>
+        <span class="catalog-pill" onclick="showSection('honor', event)">Honor</span>
+        <span class="catalog-pill" onclick="showSection('villaon', event)">Villaon</span>
+        <span class="catalog-pill" onclick="showSection('sego', event)">Sego</span>
+        <span class="catalog-pill" onclick="showSection('sparx', event)">Sparx</span>
         <span class="catalog-pill" onclick="showSection('login', event)">Login Brand</span>
         <span class="catalog-pill" onclick="showSection('zero-lifestyle', event)">Zero Lifestyle</span>
         <span class="catalog-pill" onclick="showSection('faster', event)">Faster Brand</span>
-        <span class="catalog-pill" onclick="showSection('local-brand-accessories', event)">Local Accessories</span>
+        <span class="catalog-pill" onclick="showSection('interlink', event)">Interlink</span>
+        <span class="catalog-pill" onclick="showSection('ideonic', event)">iDeonic</span>
+        <span class="catalog-pill" onclick="showSection('local-brand-accessories', event)">Local Brand Accessories</span>
         <span class="catalog-pill" onclick="showSection('covers-glass', event)">Covers & Glass</span>
     </div>
 
     <div class="container">
 
         <!-- INFINIX SECTION -->
-        <div id="sec-infinix" class="store-section"><div class="section-header">Infinix Mobiles</div><div class="ecommerce-grid" id="grid-infinix"></div></div>
+        <div id="sec-infinix" class="store-section">
+            <div class="section-header">Infinix Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Infinix Smart 20', '4GB RAM + 64GB ROM', 'Rs. 37,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Smart 20</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 37,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+64)')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Smart 20', '4GB RAM + 128GB ROM', 'Rs. 44,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Smart 20</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 44,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Smart 20 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Smart%2020" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Hot 70', '6GB RAM + 128GB ROM', 'Rs. 64,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Hot 70</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 64,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Hot 70')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Hot 70 Pro 5G', '8GB RAM + 128GB ROM', 'Rs. 86,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Hot 70 Pro 5G</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 86,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Hot 70 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Hot%2070%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Note 60 5G', '8GB RAM + 256GB ROM', 'Rs. 114,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 114,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Note Edge 5G', '8GB RAM + 256GB ROM', 'Rs. 104,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note Edge 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 104,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note Edge 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%20Edge" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Note 60 Pro 5G', '8GB RAM + 256GB ROM', 'Rs. 130,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 Pro 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 130,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60 Pro')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix Note 60 Ultra 5G', '12GB RAM + 256GB ROM', 'Rs. 239,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix Note 60 Ultra 5G</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 239,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix Note 60 Ultra 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20Note%2060%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Infinix GT 50 Pro 5G', '12GB RAM + 256GB ROM', 'Rs. 189,999', '', '📱', 'Infinix', false)">
+                    <div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Infinix GT 50 Pro 5G</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 189,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Infinix GT 50 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20order%20Infinix%20GT%2050%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
         <!-- TECNO SECTION -->
-        <div id="sec-tecno" class="store-section"><div class="section-header">Tecno Mobiles</div><div class="ecommerce-grid" id="grid-tecno"></div></div>
+        <div id="sec-tecno" class="store-section">
+            <div class="section-header">Tecno Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Tecno Spark Go 3', '4GB RAM + 64GB ROM', 'Rs. 37,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Spark Go 3</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 37,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Spark Go 3 (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Spark%20Go%203" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Spark Go 3', '4GB RAM + 128GB ROM', 'Rs. 44,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Spark Go 3</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 44,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Spark Go 3 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Spark%20Go%203" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Spark 50', '6GB RAM + 128GB ROM', 'Rs. 60,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Spark 50</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 60,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Spark 50')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Spark%2050" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Spark 50 Pro', '8GB RAM + 128GB ROM', 'Rs. 74,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Spark 50 Pro</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 74,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Spark 50 Pro')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Spark%2050%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Spark 40 Pro Plus', '8GB RAM + 256GB ROM', 'Rs. 84,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Spark 40 Pro Plus</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 84,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Spark 40 Pro Plus')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Spark%2040%20Pro%20Plus" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Pova Curve 2 5G', '8GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Pova Curve 2 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Pova Curve 2 5G')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Pova%20Curve%202" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Camon 50', '8GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Camon 50</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Camon 50')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Camon%2050" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Tecno Camon 50 Pro', '8GB RAM + 256GB ROM', 'Rs. 109,999', '', '📱', 'Tecno', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">Tecno Camon 50 Pro</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 109,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Tecno Camon 50 Pro')">Add</button><a href="https://wa.me/923558770290?text=Tecno%20Camon%2050%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
         <!-- VIVO SECTION -->
-        <div id="sec-vivo" class="store-section"><div class="section-header">Vivo Mobiles</div><div class="ecommerce-grid" id="grid-vivo"></div></div>
-        <!-- REDMI SECTION -->
-        <div id="sec-redmi" class="store-section"><div class="section-header">Redmi & Xiaomi Mobiles</div><div class="ecommerce-grid" id="grid-redmi"></div></div>
+        <div id="sec-vivo" class="store-section">
+            <div class="section-header">Vivo Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Vivo Y05e', '4GB RAM + 64GB ROM', 'Rs. 39,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y05e</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 39,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y05e')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y05e" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y05', '4GB RAM + 64GB ROM', 'Rs. 44,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y05</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 44,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y05 (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y05" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y05', '4GB RAM + 128GB ROM', 'Rs. 52,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y05</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 52,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y05 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y05" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y11d', '6GB RAM + 128GB ROM', 'Rs. 68,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y11d</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 68,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y11d')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y11d" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y32', '6GB RAM + 128GB ROM', 'Rs. 82,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y32</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 82,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y32 (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y32" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y32', '6GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y32</div><div class="p-specs-text">6GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y32 (6+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y32" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y31d', '8GB RAM + 128GB ROM', 'Rs. 82,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y31d</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 82,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y31d (8+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y31d" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y31d', '8GB RAM + 256GB ROM', 'Rs. 94,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y31d</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 94,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y31d (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y31d" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y500', '6GB RAM + 128GB ROM', 'Rs. 89,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y500</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 89,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y500 (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y500" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y500', '8GB RAM + 128GB ROM', 'Rs. 109,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y500</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 109,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y500 (8+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y500" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y500', '6GB RAM + 256GB ROM', 'Rs. 114,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y500</div><div class="p-specs-text">6GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 114,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y500 (6+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y500" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo Y500', '8GB RAM + 256GB ROM', 'Rs. 119,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo Y500</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 119,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo Y500 (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20Y500" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo V80 Lite 5G', '8GB RAM + 128GB ROM', 'Rs. 124,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo V80 Lite 5G</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 124,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo V80 Lite (8+128)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20V80%20Lite" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo V80 Lite 5G', '8GB RAM + 256GB ROM', 'Rs. 145,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo V80 Lite 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 145,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo V80 Lite (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20V80%20Lite" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo V70 FE', '8GB RAM + 256GB ROM', 'Rs. 134,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo V70 FE</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 134,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo V70 FE (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20V70%20FE" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo V70 FE', '12GB RAM + 256GB ROM', 'Rs. 154,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo V70 FE</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 154,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo V70 FE (12+256)')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20V70%20FE" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo X300 FE', '12GB RAM + 256GB ROM', 'Rs. 279,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo X300 FE</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 279,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo X300 FE')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20X300%20FE" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo X300 Pro', '16GB RAM + 512GB ROM', 'Rs. 349,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo X300 Pro</div><div class="p-specs-text">16GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 349,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo X300 Pro')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20X300%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Vivo X Fold 5', '16GB RAM + 512GB ROM', 'Rs. 499,999', '', '📱', 'Vivo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Vivo X Fold 5</div><div class="p-specs-text">16GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 499,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Vivo X Fold 5')">Add</button><a href="https://wa.me/923558770290?text=Vivo%20X%20Fold%205" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- REDMI & XIAOMI SECTION -->
+        <div id="sec-redmi" class="store-section">
+            <div class="section-header">Redmi & Xiaomi Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Redmi A7 Pro', '4GB RAM + 64GB ROM', 'Rs. 39,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi A7 Pro</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 39,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi A7 Pro (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20A7%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi A7 Pro', '4GB RAM + 128GB ROM', 'Rs. 48,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi A7 Pro</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 48,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi A7 Pro (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20A7%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi 15', '8GB RAM + 128GB ROM', 'Rs. 58,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi 15</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 58,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi 15')">Add</button><a href="https://wa.me/923558770290?text=Redmi%2015" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 14 Pro', '8GB RAM + 256GB ROM', 'Rs. 85,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 14 Pro</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 85,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 14 Pro (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2014%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 14 Pro', '12GB RAM + 512GB ROM', 'Rs. 100,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 14 Pro</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 100,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 14 Pro (12+512)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2014%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 15', '8GB RAM + 128GB ROM', 'Rs. 75,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 15</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 75,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 15 (8+128)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2015" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 15', '8GB RAM + 256GB ROM', 'Rs. 80,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 15</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 80,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 15 (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2015" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 15 Pro', '8GB RAM + 256GB ROM', 'Rs. 100,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 15 Pro</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 100,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 15 Pro (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2015%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 15 Pro', '12GB RAM + 512GB ROM', 'Rs. 120,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 15 Pro</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 120,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 15 Pro (12+512)')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2015%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmi Note 15 Pro+ 5G', '12GB RAM + 512GB ROM', 'Rs. 184,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmi Note 15 Pro+ 5G</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 184,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmi Note 15 Pro Plus')">Add</button><a href="https://wa.me/923558770290?text=Redmi%20Note%2015%20Pro%20Plus" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Xiaomi 17T', '12GB RAM + 512GB ROM', 'Rs. 239,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Xiaomi 17T</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 239,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Xiaomi 17T')">Add</button><a href="https://wa.me/923558770290?text=Xiaomi%2017T" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Xiaomi 17T Pro', '12GB RAM + 512GB ROM', 'Rs. 289,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Xiaomi 17T Pro</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 289,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Xiaomi 17T Pro')">Add</button><a href="https://wa.me/923558770290?text=Xiaomi%2017T%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Xiaomi 17', '12GB RAM + 512GB ROM', 'Rs. 329,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Xiaomi 17</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 329,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Xiaomi 17')">Add</button><a href="https://wa.me/923558770290?text=Xiaomi%2017" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Xiaomi 17 Ultra', '16GB RAM + 512GB ROM', 'Rs. 479,999', '', '📱', 'Redmi', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Xiaomi 17 Ultra</div><div class="p-specs-text">16GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 479,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Xiaomi 17 Ultra')">Add</button><a href="https://wa.me/923558770290?text=Xiaomi%2017%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
         <!-- REALME SECTION -->
-        <div id="sec-realme" class="store-section"><div class="section-header">Realme Mobiles</div><div class="ecommerce-grid" id="grid-realme"></div></div>
+        <div id="sec-realme" class="store-section">
+            <div class="section-header">Realme Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Realme Note 60X', '3GB RAM + 64GB ROM', 'Rs. 33,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 60X</div><div class="p-specs-text">3GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 33,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 60X (3+64)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2060X" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme Note 60X', '4GB RAM + 64GB ROM', 'Rs. 38,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 60X</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 38,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 60X (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2060X" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme Note 60X', '4GB RAM + 128GB ROM', 'Rs. 39,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 60X</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 39,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 60X (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2060X" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme Note 70', '4GB RAM + 128GB ROM', 'Rs. 44,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 70</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 44,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 70 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2070" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme Note 70', '6GB RAM + 128GB ROM', 'Rs. 46,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 70</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 46,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 70 (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2070" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme Note 80', '4GB RAM + 64GB ROM', 'Rs. 42,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme Note 80</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 42,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme Note 80')">Add</button><a href="https://wa.me/923558770290?text=Realme%20Note%2080" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100i', '4GB RAM + 64GB ROM', 'Rs. 42,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100i</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 42,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100i (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100i" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100i', '4GB RAM + 128GB ROM', 'Rs. 55,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100i</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 55,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100i (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100i" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100i', '6GB RAM + 128GB ROM', 'Rs. 69,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100i</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 69,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100i (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100i" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100X', '6GB RAM + 128GB ROM', 'Rs. 74,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100X</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 74,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100X (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100X" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100X', '8GB RAM + 128GB ROM', 'Rs. 84,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100X</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 84,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100X (8+128)')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100X" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme C100', '8GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme C100</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme C100')">Add</button><a href="https://wa.me/923558770290?text=Realme%20C100" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme 16 5G', '8GB RAM + 256GB ROM', 'Rs. 129,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme 16 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 129,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme 16 5G')">Add</button><a href="https://wa.me/923558770290?text=Realme%2016%205G" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme 16 Pro', '12GB RAM + 512GB ROM', 'Rs. 169,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme 16 Pro</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 169,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme 16 Pro')">Add</button><a href="https://wa.me/923558770290?text=Realme%2016%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme 16 Pro Plus', '12GB RAM + 512GB ROM', 'Rs. 199,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme 16 Pro Plus</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 199,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme 16 Pro Plus')">Add</button><a href="https://wa.me/923558770290?text=Realme%2016%20Pro%20Plus" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme GT 7T', '12GB RAM + 512GB ROM', 'Rs. 169,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme GT 7T</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 169,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme GT 7T')">Add</button><a href="https://wa.me/923558770290?text=Realme%20GT%207T" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Realme GT 7', '12GB RAM + 512GB ROM', 'Rs. 199,999', '', '📱', 'Realme', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Realme GT 7</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 199,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Realme GT 7')">Add</button><a href="https://wa.me/923558770290?text=Realme%20GT%207" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- NUBIA & ZTE SECTION -->
+        <div id="sec-nubia" class="store-section">
+            <div class="section-header">Nubia & ZTE Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('ZTE Blade A35e', '2GB RAM + 64GB ROM', 'Rs. 25,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">ZTE Blade A35e</div><div class="p-specs-text">2GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 25,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('ZTE Blade A35e')">Add</button><a href="https://wa.me/923558770290?text=ZTE%20Blade%20A35e" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia A36', '4GB RAM + 64GB ROM', 'Rs. 32,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia A36</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 32,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia A36')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20A36" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia A56', '4GB RAM + 128GB ROM', 'Rs. 35,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia A56</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 35,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia A56')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20A56" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia V60 Design', '8GB RAM + 256GB ROM', 'Rs. 41,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia V60 Design</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 41,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia V60 Design')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20V60%20Design" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia V80 MAX', '8GB RAM + 256GB ROM', 'Rs. 50,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia V80 MAX</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 50,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia V80 MAX')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20V80%20MAX" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia V80 Pro', '8GB RAM + 256GB ROM', 'Rs. 55,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia V80 Pro</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 55,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia V80 Pro')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20V80%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia Neo 3 Pro 5G', '8GB RAM + 256GB ROM', 'Rs. 69,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia Neo 3 Pro 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 69,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia Neo 3 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20Neo%203%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia Neo 5 Max 5G', '8GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia Neo 5 Max 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia Neo 5 Max 5G')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20Neo%205%20Max" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia Air Pro 5G', '8GB RAM + 256GB ROM', 'Rs. 109,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia Air Pro 5G</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 109,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia Air Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20Air%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Nubia Neo 5 Pro 5G', '12GB RAM + 256GB ROM', 'Rs. 119,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Nubia Neo 5 Pro 5G</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 119,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Nubia Neo 5 Pro 5G')">Add</button><a href="https://wa.me/923558770290?text=Nubia%20Neo%205%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Redmagic 11 Pro', '16GB RAM + 512GB ROM', 'Rs. 309,999', '', '📱', 'Nubia', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Redmagic 11 Pro</div><div class="p-specs-text">16GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 309,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Redmagic 11 Pro')">Add</button><a href="https://wa.me/923558770290?text=Redmagic%2011%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
         <!-- SAMSUNG SECTION -->
-        <div id="sec-samsung" class="store-section"><div class="section-header">Samsung Mobiles</div><div class="ecommerce-grid" id="grid-samsung"></div></div>
-        <!-- LOGIN SECTION -->
-        <div id="sec-login" class="store-section"><div class="section-header">Login Brand Accessories</div><div class="ecommerce-grid" id="grid-login"></div></div>
+        <div id="sec-samsung" class="store-section">
+            <div class="section-header">Samsung Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Samsung A07', '4GB RAM + 64GB ROM', 'Rs. 46,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A07</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 46,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A07 (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A07" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A06', '6GB RAM + 128GB ROM', 'Rs. 50,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A06</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 50,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A06')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A06" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A07', '4GB RAM + 128GB ROM', 'Rs. 56,500', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A07</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 56,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A07 (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A07" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A07', '6GB RAM + 128GB ROM', 'Rs. 68,500', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A07</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 68,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A07 (6+128)')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A07" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A17', '8GB RAM + 256GB ROM', 'Rs. 95,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A17</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 95,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A17')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A17" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A27', '8GB RAM + 256GB ROM', 'Rs. 120,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A27</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 120,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A27')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A27" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A57', '8GB RAM + 256GB ROM', 'Rs. 168,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A57</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 168,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A57 (8+256)')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A57" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Samsung A57', '12GB RAM + 256GB ROM', 'Rs. 185,000', '', '📱', 'Samsung', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Samsung A57</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 185,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Samsung A57 (12+256)')">Add</button><a href="https://wa.me/923558770290?text=Samsung%20A57" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- ITEL SECTION -->
+        <div id="sec-itel" class="store-section">
+            <div class="section-header">Itel Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('itel A100C', '4GB RAM + 64GB ROM', 'Rs. 32,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A100C</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 32,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A100C (4+64)')">Add</button><a href="https://wa.me/923558770290?text=itel%20A100C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel A100 C', '2GB RAM + 64GB ROM', 'Rs. 25,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A100 C</div><div class="p-specs-text">2GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 25,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A100 C (2+64)')">Add</button><a href="https://wa.me/923558770290?text=itel%20A100C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel City 100', '6GB RAM + 128GB ROM', 'Rs. 40,000', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel City 100</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 40,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel City 100')">Add</button><a href="https://wa.me/923558770290?text=itel%20City%20100" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel S25 Ultra', '8GB RAM + 256GB ROM', 'Rs. 37,999', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel S25 Ultra</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 37,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel S25 Ultra')">Add</button><a href="https://wa.me/923558770290?text=itel%20S25%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel P65', '4GB RAM + 128GB ROM', 'Rs. 26,500', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel P65</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 26,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel P65')">Add</button><a href="https://wa.me/923558770290?text=itel%20P65" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('itel A60s', '4GB RAM + 64GB ROM', 'Rs. 21,500', '', '📱', 'Itel', false)"><div><div class="card-top-tag"><span>100% Original Product</span><span class="installment-badge">Installment</span></div><div class="product-img-box">📱</div><div class="p-title-text">itel A60s</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 21,500</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('itel A60s')">Add</button><a href="https://wa.me/923558770290?text=itel%20A60s" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- OPPO SECTION -->
+        <div id="sec-oppo" class="store-section">
+            <div class="section-header">Oppo Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Oppo A5i', '4GB RAM + 64GB ROM', 'Rs. 43,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A5i</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 43,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A5i (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A5i" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A5i', '4GB RAM + 128GB ROM', 'Rs. 50,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A5i</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 50,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A5i (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A5i" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A6C', '4GB RAM + 64GB ROM', 'Rs. 46,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A6C</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 46,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A6C (4+64)')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A6C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A6C', '4GB RAM + 128GB ROM', 'Rs. 57,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A6C</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 57,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A6C (4+128)')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A6C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A6K', '4GB RAM + 128GB ROM', 'Rs. 57,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A6K</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 57,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A6K')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A6K" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A5', '8GB RAM + 128GB ROM', 'Rs. 73,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A5</div><div class="p-specs-text">8GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 73,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A5')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A5" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A6', '8GB RAM + 256GB ROM', 'Rs. 90,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A6</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 90,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A6')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A6" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo A6s Pro', '8GB RAM + 256GB ROM', 'Rs. 120,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo A6s Pro</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 120,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo A6s Pro')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20A6s%20Pro" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo Reno 16f', '8GB RAM + 256GB ROM', 'Rs. 160,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo Reno 16f</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 160,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo Reno 16f')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20Reno%2016f" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo Reno 16', '12GB RAM + 256GB ROM', 'Rs. 210,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo Reno 16</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 210,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo Reno 16')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20Reno%2016" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Oppo Reno 15 5G', '12GB RAM + 512GB ROM', 'Rs. 200,000', '', '📱', 'Oppo', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Oppo Reno 15 5G</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 200,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Oppo Reno 15 5G')">Add</button><a href="https://wa.me/923558770290?text=Oppo%20Reno%2015%205G" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- HONOR SECTION -->
+        <div id="sec-honor" class="store-section">
+            <div class="section-header">Honor Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Honor Play 10', '3GB RAM + 64GB ROM', 'Rs. 33,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor Play 10</div><div class="p-specs-text">3GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 33,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor Play 10')">Add</button><a href="https://wa.me/923558770290?text=Honor%20Play%2010" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor X5B Plus', '4GB RAM + 128GB ROM', 'Rs. 40,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X5B Plus</div><div class="p-specs-text">4GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 40,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X5B Plus')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X5B%20Plus" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor X6C', '6GB RAM + 128GB ROM', 'Rs. 50,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X6C</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 50,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X6C')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X6C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor X7C', '8GB RAM + 256GB ROM', 'Rs. 75,000', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X7C</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 75,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X7C')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X7C" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor 200 Lite', '8GB RAM + 256GB ROM', 'Rs. 79,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor 200 Lite</div><div class="p-specs-text">8GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 79,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor 200 Lite')">Add</button><a href="https://wa.me/923558770290?text=Honor%20200%20Lite" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor X9b', '12GB RAM + 256GB ROM', 'Rs. 99,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor X9b</div><div class="p-specs-text">12GB RAM + 256GB ROM</div><span class="p-price-text">Rs. 99,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor X9b')">Add</button><a href="https://wa.me/923558770290?text=Honor%20X9b" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Honor 200', '12GB RAM + 512GB ROM', 'Rs. 139,999', '', '📱', 'Honor', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Honor 200</div><div class="p-specs-text">12GB RAM + 512GB ROM</div><span class="p-price-text">Rs. 139,999</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Honor 200')">Add</button><a href="https://wa.me/923558770290?text=Honor%20200" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- VILLAON SECTION -->
+        <div id="sec-villaon" class="store-section">
+            <div class="section-header">Villaon Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Villaon V50S', '4GB RAM + 64GB ROM', 'Rs. 27,000', '', '📱', 'Villaon', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Villaon V50S</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 27,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Villaon V50S')">Add</button><a href="https://wa.me/923558770290?text=Villaon%20V50S" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Villaon Hyper 100', '6GB RAM + 128GB ROM', 'Rs. 37,000', '', '📱', 'Villaon', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Villaon Hyper 100</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 37,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Villaon Hyper 100')">Add</button><a href="https://wa.me/923558770290?text=Villaon%20Hyper%20100" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- SEGO SECTION -->
+        <div id="sec-sego" class="store-section">
+            <div class="section-header">Sego Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Sego Smart 10', '4GB RAM + 64GB ROM', 'Rs. 30,000', '', '📱', 'Sego', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Sego Smart 10</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 30,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Sego Smart 10')">Add</button><a href="https://wa.me/923558770290?text=Sego%20Smart%2010" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Sego Shark', '6GB RAM + 128GB ROM', 'Rs. 38,000', '', '📱', 'Sego', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Sego Shark</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 38,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Sego Shark')">Add</button><a href="https://wa.me/923558770290?text=Sego%20Shark" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Sego Epic', '6GB RAM + 128GB ROM', 'Rs. 41,000', '', '📱', 'Sego', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Sego Epic</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 41,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Sego Epic')">Add</button><a href="https://wa.me/923558770290?text=Sego%20Epic" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- SPARX SECTION -->
+        <div id="sec-sparx" class="store-section">
+            <div class="section-header">Sparx Mobiles</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Sparx New 15', '4GB RAM + 64GB ROM', 'Rs. 27,000', '', '📱', 'Sparx', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Sparx New 15</div><div class="p-specs-text">4GB RAM + 64GB ROM</div><span class="p-price-text">Rs. 27,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Sparx New 15')">Add</button><a href="https://wa.me/923558770290?text=Sparx%20New%2015" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+                <div class="product-card" onclick="openProductDetail('Sparx Neo 15 Ultra', '6GB RAM + 128GB ROM', 'Rs. 40,000', '', '📱', 'Sparx', false)"><div><div class="card-top-tag">100% Original Product</div><div class="product-img-box">📱</div><div class="p-title-text">Sparx Neo 15 Ultra</div><div class="p-specs-text">6GB RAM + 128GB ROM</div><span class="p-price-text">Rs. 40,000</span></div><div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Sparx Neo 15 Ultra')">Add</button><a href="https://wa.me/923558770290?text=Sparx%20Neo%2015%20Ultra" class="whatsapp-order-btn" target="_blank">Buy Now</a></div></div>
+            </div>
+        </div>
+
+        <!-- LOGIN BRAND ACCESSORIES SECTION -->
+        <div id="sec-login" class="store-section">
+            <div class="section-header">Login Brand Accessories</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Login Charger', 'Fast Charging Adapter', 'Rs. 4,500', 'Rs. 8,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Login Charger</div><div class="p-specs-text">Fast Charging Adapter</div><span class="p-price-text">Rs. 4,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Login Fast Cable', 'High Speed Data Cable', 'Rs. 1,500', 'Rs. 2,500', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Login Fast Cable</div><div class="p-specs-text">High Speed Data Cable</div><span class="p-price-text">Rs. 1,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Login Earbuds', 'Wireless TWS Earbuds', 'Rs. 6,500', 'Rs. 10,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Login Earbuds</div><div class="p-specs-text">Wireless TWS Earbuds</div><span class="p-price-text">Rs. 6,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Login Power Bank', 'Heavy Duty Battery', 'Rs. 9,000', 'Rs. 12,000', '🔋', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Original Brand</span></div><div class="product-img-box">🔋</div><div class="p-title-text">Login Power Bank</div><div class="p-specs-text">Heavy Duty Battery</div><span class="p-price-text">Rs. 9,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Login Power Bank')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Login%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
         <!-- ZERO LIFESTYLE SECTION -->
-        <div id="sec-zero-lifestyle" class="store-section"><div class="section-header">Zero Lifestyle</div><div class="ecommerce-grid" id="grid-zero-lifestyle"></div></div>
-        <!-- FASTER SECTION -->
-        <div id="sec-faster" class="store-section"><div class="section-header">Faster Brand Accessories</div><div class="ecommerce-grid" id="grid-faster"></div></div>
+        <div id="sec-zero-lifestyle" class="store-section">
+            <div class="section-header">Zero Lifestyle</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Zero Smart Watch', 'HD Display & Fitness Tracking', 'Rs. 8,999', 'Rs. 22,449', '⌚', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Premium Wearables</span></div><div class="product-img-box">⌚</div><div class="p-title-text">Zero Smart Watch</div><div class="p-specs-text">HD Display & Fitness Tracking</div><span class="p-price-text">Rs. 8,999</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Zero Smart Watch')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Smart%20Watch" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Zero Wireless Earbuds', 'ENC Noise Cancellation TWS', 'Rs. 4,499', 'Rs. 14,999', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Premium Sound</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Zero Wireless Earbuds</div><div class="p-specs-text">ENC Noise Cancellation TWS</div><span class="p-price-text">Rs. 4,499</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Zero Wireless Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Zero%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FASTER BRAND SECTION -->
+        <div id="sec-faster" class="store-section">
+            <div class="section-header">Faster Brand Accessories</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Faster Fast Charger', 'PD & QC Fast Adapter', 'Rs. 4,000', 'Rs. 6,500', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Fast Charging</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Faster Fast Charger</div><div class="p-specs-text">PD & QC Fast Adapter</div><span class="p-price-text">Rs. 4,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Fast Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Faster Fast Cable', 'Braided High Speed Cable', 'Rs. 1,400', 'Rs. 2,200', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Durable Cable</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Faster Fast Cable</div><div class="p-specs-text">Braided High Speed Cable</div><span class="p-price-text">Rs. 1,400</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Fast Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Faster Power Bank', '20000mAh Battery', 'Rs. 8,000', 'Rs. 11,000', '🔋', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Heavy Duty</span></div><div class="product-img-box">🔋</div><div class="p-title-text">Faster Power Bank</div><div class="p-specs-text">10000mAh - 30000mAh</div><span class="p-price-text">Rs. 8,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster Power Bank')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Faster TWS Earbuds', 'Low Latency Gaming Earbuds', 'Rs. 5,500', 'Rs. 8,500', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>High Bass</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Faster TWS Earbuds</div><div class="p-specs-text">Low Latency Gaming Earbuds</div><span class="p-price-text">Rs. 5,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Faster TWS Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Faster%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
         <!-- INTERLINK SECTION -->
-        <div id="sec-interlink" class="store-section"><div class="section-header">Interlink Accessories</div><div class="ecommerce-grid" id="grid-interlink"></div></div>
+        <div id="sec-interlink" class="store-section">
+            <div class="section-header">Interlink Accessories</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Interlink Charger', 'Safe & Stable Charging', 'Rs. 3,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Reliable Quality</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Interlink Charger</div><div class="p-specs-text">Safe & Stable Charging</div><span class="p-price-text">Rs. 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Interlink Cable', 'Data & Charging Cable', 'Rs. 600', 'Rs. 1,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Fast Speed</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Interlink Cable</div><div class="p-specs-text">Data & Charging Cable</div><span class="p-price-text">Rs. 600</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Interlink Neckband', 'Wireless Earphones', 'Rs. 2,500', 'Rs. 4,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Long Battery</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Interlink Neckband</div><div class="p-specs-text">Wireless Earphones</div><span class="p-price-text">Rs. 2,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Neckband')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Interlink TWS Earbuds', 'Stereo Sound Earbuds', 'Rs. 4,500', 'Rs. 6,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Clear Sound</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Interlink TWS Earbuds</div><div class="p-specs-text">Stereo Sound Earbuds</div><span class="p-price-text">Rs. 4,500</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Interlink Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Interlink%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
         <!-- IDEONIC SECTION -->
-        <div id="sec-ideonic" class="store-section"><div class="section-header">iDeonic Accessories</div><div class="ecommerce-grid" id="grid-ideonic"></div></div>
-        
-        <!-- LOCAL BRAND ACCESSORIES -->
-        <div id="sec-local-brand-accessories" class="store-section"><div class="section-header">Local Accessories (لوکل ایکسیسریز)</div><div class="ecommerce-grid" id="grid-local-brand-accessories"></div></div>
-        
+        <div id="sec-ideonic" class="store-section">
+            <div class="section-header">iDeonic Accessories</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('iDeonic Charger', 'Fast Charging Adapter', 'Rs. 3,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Fast Charging</span></div><div class="product-img-box">🔌</div><div class="p-title-text">iDeonic Charger</div><div class="p-specs-text">Fast Charging Adapter</div><span class="p-price-text">Rs. 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('iDeonic Handsfree', 'Wired Handsfree With Mic', 'Rs. 1,200', 'Rs. 2,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Clear Audio</span></div><div class="product-img-box">🎧</div><div class="p-title-text">iDeonic Handsfree</div><div class="p-specs-text">Wired Handsfree With Mic</div><span class="p-price-text">Rs. 1,200</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Handsfree')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('iDeonic Speaker', 'Wireless Bluetooth Speaker', 'Rs. 5,000', 'Rs. 8,500', '🔊', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Extra Bass</span></div><div class="product-img-box">🔊</div><div class="p-title-text">iDeonic Speaker</div><div class="p-specs-text">Wireless Bluetooth Speaker</div><span class="p-price-text">Rs. 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Speaker')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Speaker" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('iDeonic Earbuds', 'Bluetooth Audio & Mic TWS', 'Rs. 6,000', 'Rs. 10,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Crisp Audio</span></div><div class="product-img-box">🎧</div><div class="p-title-text">iDeonic Earbuds</div><div class="p-specs-text">Bluetooth Audio & Mic TWS</div><span class="p-price-text">Rs. 6,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('iDeonic Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20iDeonic%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOCAL BRAND ACCESSORIES SECTION -->
+        <div id="sec-local-brand-accessories" class="store-section">
+            <div class="section-header">Local Brand Accessories</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Local Handsfree', 'Clear Sound Audio With Mic', 'Rs. 800', 'Rs. 2,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Handsfree</div><div class="p-specs-text">Rs. 800 - Rs. 2,000</div><span class="p-price-text">Rs. 800 - 2,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Handsfree')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Handsfree" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Brand Earbuds', 'Wireless Bluetooth TWS', 'Rs. 3,000', 'Rs. 5,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Brand Earbuds</div><div class="p-specs-text">Rs. 3,000 - Rs. 5,000</div><span class="p-price-text">Rs. 3,000 - 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Brand Earbuds')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Brand Cable', 'Data & Charging Cable', 'Rs. 300', 'Rs. 1,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Local Brand Cable</div><div class="p-specs-text">Rs. 300 - Rs. 1,000</div><span class="p-price-text">Rs. 300 - 1,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Brand Cable')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Neckband', 'Wireless Neckband Earphones', 'Rs. 1,500', 'Rs. 3,000', '🎧', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🎧</div><div class="p-title-text">Local Neckband</div><div class="p-specs-text">Rs. 1,500 - Rs. 3,000</div><span class="p-price-text">Rs. 1,500 - 3,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Neckband')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Mobile Charger', 'Standard Charging Adapter', 'Rs. 1,000', 'Rs. 5,000', '🔌', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Budget Friendly</span></div><div class="product-img-box">🔌</div><div class="p-title-text">Local Mobile Charger</div><div class="p-specs-text">Rs. 1,000 - Rs. 5,000</div><span class="p-price-text">Rs. 1,000 - 5,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Local Charger')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
+
         <!-- COVERS & GLASS SECTION -->
-        <div id="sec-covers-glass" class="store-section"><div class="section-header">Covers & Glass Protectors (گلاس اور کور)</div><div class="ecommerce-grid" id="grid-covers-glass"></div></div>
+        <div id="sec-covers-glass" class="store-section">
+            <div class="section-header">Covers & Glass Protectors</div>
+            <div class="ecommerce-grid">
+                <div class="product-card" onclick="openProductDetail('Protective Glass', '9H Hardness Glass', 'Rs. 800', 'Rs. 1,500', '🛡️', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Premium Quality</span></div><div class="product-img-box">🛡️</div><div class="p-title-text">Protective Glass</div><div class="p-specs-text">9H Hardness Glass</div><span class="p-price-text">Rs. 800</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Protective Glass')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Glass%20Protector" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Mobile Back Cover', 'Fancy & Silicone Cases', 'Rs. 1,000', 'Rs. 2,000', '🖼️', 'Accessories', true)">
+                    <div><div class="card-top-tag"><span>Premium Quality</span></div><div class="product-img-box">🖼️</div><div class="p-title-text">Mobile Back Cover</div><div class="p-specs-text">Fancy & Silicone Cases</div><span class="p-price-text">Rs. 1,000</span></div>
+                    <div class="btn-group" onclick="event.stopPropagation()"><button class="cart-btn" onclick="addToCart('Mobile Cover')">Add</button><a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Mobile%20Cover" class="whatsapp-order-btn" target="_blank">Buy Now</a></div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -1052,132 +1308,186 @@
     <script>
         let currentOwnerEmail = "royalstore@gmail.com";
         let currentPhone = "03558770290";
-        const ownerPasswordDefault = "royal123";
+        const ownerPasswordDefault = "royal123"; // Owner Password for Security
 
-        // Master Product List with updated cable, glass, and cover pricing
-        let storeProducts = [
+        const storeProducts = [
             // Infinix
-            { id: 'inf-1', title: 'Infinix Smart 20', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-2', title: 'Infinix Smart 20', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-3', title: 'Infinix Hot 70', specs: '6GB RAM + 128GB ROM', price: 'Rs. 64,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-4', title: 'Infinix Hot 70 Pro 5G', specs: '8GB RAM + 128GB ROM', price: 'Rs. 86,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
-            { id: 'inf-5', title: 'Infinix Note 60 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 114,999', oldPrice: '', emoji: '📱', category: 'Infinix', secId: 'infinix', hasDiscount: false },
+            { title: 'Infinix Smart 20', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Smart 20', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Hot 70', specs: '6GB RAM + 128GB ROM', price: 'Rs. 64,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Hot 70 Pro 5G', specs: '8GB RAM + 128GB ROM', price: 'Rs. 86,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Note 60 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 114,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Note Edge 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 104,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Note 60 Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 130,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix Note 60 Ultra 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 239,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
+            { title: 'Infinix GT 50 Pro 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 189,999', oldPrice: '', emoji: '📱', category: 'Infinix', hasDiscount: false },
 
             // Tecno
-            { id: 'tec-1', title: 'Tecno Spark Go 3', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-2', title: 'Tecno Spark Go 3', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
-            { id: 'tec-3', title: 'Tecno Spark 50', specs: '6GB RAM + 128GB ROM', price: 'Rs. 60,999', oldPrice: '', emoji: '📱', category: 'Tecno', secId: 'tecno', hasDiscount: false },
+            { title: 'Tecno Spark Go 3', specs: '4GB RAM + 64GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Spark Go 3', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Spark 50', specs: '6GB RAM + 128GB ROM', price: 'Rs. 60,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Spark 50 Pro', specs: '8GB RAM + 128GB ROM', price: 'Rs. 74,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Spark 40 Pro Plus', specs: '8GB RAM + 256GB ROM', price: 'Rs. 84,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Pova Curve 2 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Camon 50', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
+            { title: 'Tecno Camon 50 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Tecno', hasDiscount: false },
 
             // Vivo
-            { id: 'viv-1', title: 'Vivo Y05e', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
-            { id: 'viv-2', title: 'Vivo Y05', specs: '4GB RAM + 128GB ROM', price: 'Rs. 52,999', oldPrice: '', emoji: '📱', category: 'Vivo', secId: 'vivo', hasDiscount: false },
+            { title: 'Vivo Y05e', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y05', specs: '4GB RAM + 64GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y05', specs: '4GB RAM + 128GB ROM', price: 'Rs. 52,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y11d', specs: '6GB RAM + 128GB ROM', price: 'Rs. 68,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y32', specs: '6GB RAM + 128GB ROM', price: 'Rs. 82,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y32', specs: '6GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y31d', specs: '8GB RAM + 128GB ROM', price: 'Rs. 82,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y31d', specs: '8GB RAM + 256GB ROM', price: 'Rs. 94,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y500', specs: '6GB RAM + 128GB ROM', price: 'Rs. 89,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y500', specs: '8GB RAM + 128GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y500', specs: '6GB RAM + 256GB ROM', price: 'Rs. 114,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo Y500', specs: '8GB RAM + 256GB ROM', price: 'Rs. 119,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo V80 Lite 5G', specs: '8GB RAM + 128GB ROM', price: 'Rs. 124,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo V80 Lite 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 145,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo V70 FE', specs: '8GB RAM + 256GB ROM', price: 'Rs. 134,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo V70 FE', specs: '12GB RAM + 256GB ROM', price: 'Rs. 154,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo X300 FE', specs: '12GB RAM + 256GB ROM', price: 'Rs. 279,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo X300 Pro', specs: '16GB RAM + 512GB ROM', price: 'Rs. 349,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
+            { title: 'Vivo X Fold 5', specs: '16GB RAM + 512GB ROM', price: 'Rs. 499,999', oldPrice: '', emoji: '📱', category: 'Vivo', hasDiscount: false },
 
-            // Redmi
-            { id: 'red-1', title: 'Redmi A7 Pro', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
-            { id: 'red-2', title: 'Redmi Note 15', specs: '8GB RAM + 256GB ROM', price: 'Rs. 80,999', oldPrice: '', emoji: '📱', category: 'Redmi', secId: 'redmi', hasDiscount: false },
+            // Redmi & Xiaomi
+            { title: 'Redmi A7 Pro', specs: '4GB RAM + 64GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi A7 Pro', specs: '4GB RAM + 128GB ROM', price: 'Rs. 48,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi 15', specs: '8GB RAM + 128GB ROM', price: 'Rs. 58,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 14 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 85,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 14 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 100,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 15', specs: '8GB RAM + 128GB ROM', price: 'Rs. 75,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 15', specs: '8GB RAM + 256GB ROM', price: 'Rs. 80,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 15 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 100,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 15 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 120,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Redmi Note 15 Pro+ 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 184,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Xiaomi 17T', specs: '12GB RAM + 512GB ROM', price: 'Rs. 239,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Xiaomi 17T Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 289,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Xiaomi 17', specs: '12GB RAM + 512GB ROM', price: 'Rs. 329,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
+            { title: 'Xiaomi 17 Ultra', specs: '16GB RAM + 512GB ROM', price: 'Rs. 479,999', oldPrice: '', emoji: '📱', category: 'Redmi', hasDiscount: false },
 
             // Realme
-            { id: 'rea-1', title: 'Realme Note 60X', specs: '4GB RAM + 64GB ROM', price: 'Rs. 38,999', oldPrice: '', emoji: '📱', category: 'Realme', secId: 'realme', hasDiscount: false },
+            { title: 'Realme Note 60X', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme Note 60X', specs: '4GB RAM + 64GB ROM', price: 'Rs. 38,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme Note 60X', specs: '4GB RAM + 128GB ROM', price: 'Rs. 39,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme Note 70', specs: '4GB RAM + 128GB ROM', price: 'Rs. 44,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme Note 70', specs: '6GB RAM + 128GB ROM', price: 'Rs. 46,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme Note 80', specs: '4GB RAM + 64GB ROM', price: 'Rs. 42,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100i', specs: '4GB RAM + 64GB ROM', price: 'Rs. 42,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100i', specs: '4GB RAM + 128GB ROM', price: 'Rs. 55,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100i', specs: '6GB RAM + 128GB ROM', price: 'Rs. 69,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100X', specs: '6GB RAM + 128GB ROM', price: 'Rs. 74,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100X', specs: '8GB RAM + 128GB ROM', price: 'Rs. 84,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme C100', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme 16 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 129,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme 16 Pro', specs: '12GB RAM + 512GB ROM', price: 'Rs. 169,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme 16 Pro Plus', specs: '12GB RAM + 512GB ROM', price: 'Rs. 199,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme GT 7T', specs: '12GB RAM + 512GB ROM', price: 'Rs. 169,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+            { title: 'Realme GT 7', specs: '12GB RAM + 512GB ROM', price: 'Rs. 199,999', oldPrice: '', emoji: '📱', category: 'Realme', hasDiscount: false },
+
+            // Nubia & ZTE
+            { title: 'ZTE Blade A35e', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia A36', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia A56', specs: '4GB RAM + 128GB ROM', price: 'Rs. 35,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia V60 Design', specs: '8GB RAM + 256GB ROM', price: 'Rs. 41,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia V80 MAX', specs: '8GB RAM + 256GB ROM', price: 'Rs. 50,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia V80 Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 55,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia Neo 3 Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 69,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia Neo 5 Max 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia Air Pro 5G', specs: '8GB RAM + 256GB ROM', price: 'Rs. 109,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Nubia Neo 5 Pro 5G', specs: '12GB RAM + 256GB ROM', price: 'Rs. 119,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
+            { title: 'Redmagic 11 Pro', specs: '16GB RAM + 512GB ROM', price: 'Rs. 309,999', oldPrice: '', emoji: '📱', category: 'Nubia', hasDiscount: false },
 
             // Samsung
-            { id: 'sam-1', title: 'Samsung A07', specs: '4GB RAM + 64GB ROM', price: 'Rs. 46,000', oldPrice: '', emoji: '📱', category: 'Samsung', secId: 'samsung', hasDiscount: false },
+            { title: 'Samsung A07', specs: '4GB RAM + 64GB ROM', price: 'Rs. 46,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A06', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A07', specs: '4GB RAM + 128GB ROM', price: 'Rs. 56,500', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A07', specs: '6GB RAM + 128GB ROM', price: 'Rs. 68,500', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A17', specs: '8GB RAM + 256GB ROM', price: 'Rs. 95,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A27', specs: '8GB RAM + 256GB ROM', price: 'Rs. 120,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A57', specs: '8GB RAM + 256GB ROM', price: 'Rs. 168,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
+            { title: 'Samsung A57', specs: '12GB RAM + 256GB ROM', price: 'Rs. 185,000', oldPrice: '', emoji: '📱', category: 'Samsung', hasDiscount: false },
 
-            // BRANDED ACCESSORIES (Cables priced 400 to 1000)
-            { id: 'log-1', title: 'Login Fast Cable', specs: 'High Speed Branded Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-2', title: 'Login Charger', specs: 'Fast Charging Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'login', hasDiscount: false },
-            { id: 'log-3', title: 'Login Earbuds', specs: 'Wireless TWS Earbuds', price: 'Rs. 3,500 - 8,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'login', hasDiscount: false },
+            // Itel
+            { title: 'itel A100C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 32,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel A100 C', specs: '2GB RAM + 64GB ROM', price: 'Rs. 25,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel City 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel S25 Ultra', specs: '8GB RAM + 256GB ROM', price: 'Rs. 37,999', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel P65', specs: '4GB RAM + 128GB ROM', price: 'Rs. 26,500', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
+            { title: 'itel A60s', specs: '4GB RAM + 64GB ROM', price: 'Rs. 21,500', oldPrice: '', emoji: '📱', category: 'Itel', hasDiscount: false },
 
-            // Zero Lifestyle
-            { id: 'zero-1', title: 'Zero Smart Watch', specs: 'HD Display & Fitness Tracking', price: 'Rs. 8,999', oldPrice: 'Rs. 22,449', emoji: '⌚', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
-            { id: 'zero-2', title: 'Zero Wireless Earbuds', specs: 'ENC Noise Cancellation TWS', price: 'Rs. 3,500 - 8,000', oldPrice: 'Rs. 14,999', emoji: '🎧', category: 'Accessories', secId: 'zero-lifestyle', hasDiscount: true },
+            // Oppo
+            { title: 'Oppo A5i', specs: '4GB RAM + 64GB ROM', price: 'Rs. 43,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A5i', specs: '4GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A6C', specs: '4GB RAM + 64GB ROM', price: 'Rs. 46,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A6C', specs: '4GB RAM + 128GB ROM', price: 'Rs. 57,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A6K', specs: '4GB RAM + 128GB ROM', price: 'Rs. 57,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A5', specs: '8GB RAM + 128GB ROM', price: 'Rs. 73,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A6', specs: '8GB RAM + 256GB ROM', price: 'Rs. 90,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo A6s Pro', specs: '8GB RAM + 256GB ROM', price: 'Rs. 120,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo Reno 16f', specs: '8GB RAM + 256GB ROM', price: 'Rs. 160,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo Reno 16', specs: '12GB RAM + 256GB ROM', price: 'Rs. 210,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
+            { title: 'Oppo Reno 15 5G', specs: '12GB RAM + 512GB ROM', price: 'Rs. 200,000', oldPrice: '', emoji: '📱', category: 'Oppo', hasDiscount: false },
 
-            // Faster Brand
-            { id: 'fas-1', title: 'Faster Fast Cable', specs: 'Braided Branded Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
-            { id: 'fas-2', title: 'Faster Fast Charger', specs: 'PD & QC Fast Adapter', price: 'Rs. 3,000 - 6,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'faster', hasDiscount: false },
+            // Honor
+            { title: 'Honor Play 10', specs: '3GB RAM + 64GB ROM', price: 'Rs. 33,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor X5B Plus', specs: '4GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor X6C', specs: '6GB RAM + 128GB ROM', price: 'Rs. 50,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor X7C', specs: '8GB RAM + 256GB ROM', price: 'Rs. 75,000', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor 200 Lite', specs: '8GB RAM + 256GB ROM', price: 'Rs. 79,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor X9b', specs: '12GB RAM + 256GB ROM', price: 'Rs. 99,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
+            { title: 'Honor 200', specs: '12GB RAM + 512GB ROM', price: 'Rs. 139,999', oldPrice: '', emoji: '📱', category: 'Honor', hasDiscount: false },
 
-            // Interlink
-            { id: 'itr-1', title: 'Interlink Cable', specs: 'Data & Branded Charging Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'interlink', hasDiscount: false },
+            // Villaon
+            { title: 'Villaon V50S', specs: '4GB RAM + 64GB ROM', price: 'Rs. 27,000', oldPrice: '', emoji: '📱', category: 'Villaon', hasDiscount: false },
+            { title: 'Villaon Hyper 100', specs: '6GB RAM + 128GB ROM', price: 'Rs. 37,000', oldPrice: '', emoji: '📱', category: 'Villaon', hasDiscount: false },
 
-            // iDeonic
-            { id: 'ido-1', title: 'iDeonic Branded Cable', specs: 'High Speed Cable', price: 'Rs. 400 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'ideonic', hasDiscount: false },
+            // Sego
+            { title: 'Sego Smart 10', specs: '4GB RAM + 64GB ROM', price: 'Rs. 30,000', oldPrice: '', emoji: '📱', category: 'Sego', hasDiscount: false },
+            { title: 'Sego Shark', specs: '6GB RAM + 128GB ROM', price: 'Rs. 38,000', oldPrice: '', emoji: '📱', category: 'Sego', hasDiscount: false },
+            { title: 'Sego Epic', specs: '6GB RAM + 128GB ROM', price: 'Rs. 41,000', oldPrice: '', emoji: '📱', category: 'Sego', hasDiscount: false },
 
-            // LOCAL ACCESSORIES (Cables & Chargers priced 300 to 1000)
-            { id: 'loc-1', title: 'Local Mobile Charger', specs: 'Standard Budget Charger', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-2', title: 'Local Charging Cable', specs: 'Data & Charging Cable', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🔌', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-3', title: 'Local Handsfree', specs: 'Clear Sound Audio With Mic', price: 'Rs. 300 - 1,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
-            { id: 'loc-4', title: 'Local Brand Earbuds', specs: 'Budget Wireless TWS', price: 'Rs. 1,200 - 5,000', oldPrice: '', emoji: '🎧', category: 'Accessories', secId: 'local-brand-accessories', hasDiscount: false },
+            // Sparx
+            { title: 'Sparx New 15', specs: '4GB RAM + 64GB ROM', price: 'Rs. 27,000', oldPrice: '', emoji: '📱', category: 'Sparx', hasDiscount: false },
+            { title: 'Sparx Neo 15 Ultra', specs: '6GB RAM + 128GB ROM', price: 'Rs. 40,000', oldPrice: '', emoji: '📱', category: 'Sparx', hasDiscount: false },
 
-            // COVERS & GLASS (Glass 300-1500, Covers 500-2000)
-            { id: 'cov-1', title: 'Protective Glass (9H)', specs: '9H Hardness Glass Protector', price: 'Rs. 300 - 1,500', oldPrice: '', emoji: '🛡️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false },
-            { id: 'cov-2', title: 'Mobile Back Cover', specs: 'Fancy & Silicone Armor Cases', price: 'Rs. 500 - 2,000', oldPrice: '', emoji: '🖼️', category: 'Accessories', secId: 'covers-glass', hasDiscount: false }
+            // Accessories
+            { title: 'Login Charger', specs: 'Fast Charging Adapter', price: 'Rs. 4,500', oldPrice: 'Rs. 8,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Login Fast Cable', specs: 'High Speed Data Cable', price: 'Rs. 1,500', oldPrice: 'Rs. 2,500', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Login Earbuds', specs: 'Wireless TWS Earbuds', price: 'Rs. 6,500', oldPrice: 'Rs. 10,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Login Power Bank', specs: 'Heavy Duty Battery', price: 'Rs. 9,000', oldPrice: 'Rs. 12,000', emoji: '🔋', category: 'Accessories', hasDiscount: true },
+            { title: 'Zero Smart Watch', specs: 'HD Display & Fitness Tracking', price: 'Rs. 8,999', oldPrice: 'Rs. 22,449', emoji: '⌚', category: 'Accessories', hasDiscount: true },
+            { title: 'Zero Wireless Earbuds', specs: 'ENC Noise Cancellation TWS', price: 'Rs. 4,499', oldPrice: 'Rs. 14,999', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Faster Fast Charger', specs: 'PD & QC Fast Adapter', price: 'Rs. 4,000', oldPrice: 'Rs. 6,500', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Faster Fast Cable', specs: 'Braided High Speed Cable', price: 'Rs. 1,400', oldPrice: 'Rs. 2,200', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Faster Power Bank', specs: '20000mAh Battery', price: 'Rs. 8,000', oldPrice: 'Rs. 11,000', emoji: '🔋', category: 'Accessories', hasDiscount: true },
+            { title: 'Faster TWS Earbuds', specs: 'Low Latency Gaming Earbuds', price: 'Rs. 5,500', oldPrice: 'Rs. 8,500', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Interlink Charger', specs: 'Safe & Stable Charging', price: 'Rs. 3,000', oldPrice: 'Rs. 5,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Interlink Cable', specs: 'Data & Charging Cable', price: 'Rs. 600', oldPrice: 'Rs. 1,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Interlink Neckband', specs: 'Wireless Earphones', price: 'Rs. 2,500', oldPrice: 'Rs. 4,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Interlink TWS Earbuds', specs: 'Stereo Sound Earbuds', price: 'Rs. 4,500', oldPrice: 'Rs. 6,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'iDeonic Charger', specs: 'Fast Charging Adapter', price: 'Rs. 3,000', oldPrice: 'Rs. 5,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'iDeonic Handsfree', specs: 'Wired Handsfree With Mic', price: 'Rs. 1,200', oldPrice: 'Rs. 2,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'iDeonic Speaker', specs: 'Wireless Bluetooth Speaker', price: 'Rs. 5,000', oldPrice: 'Rs. 8,500', emoji: '🔊', category: 'Accessories', hasDiscount: true },
+            { title: 'iDeonic Earbuds', specs: 'Bluetooth Audio & Mic TWS', price: 'Rs. 6,000', oldPrice: 'Rs. 10,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Local Handsfree', specs: 'Clear Sound Audio With Mic', price: 'Rs. 800', oldPrice: 'Rs. 2,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Local Brand Earbuds', specs: 'Wireless Bluetooth TWS', price: 'Rs. 3,000', oldPrice: 'Rs. 5,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Local Brand Cable', specs: 'Data & Charging Cable', price: 'Rs. 300', oldPrice: 'Rs. 1,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Local Neckband', specs: 'Wireless Neckband Earphones', price: 'Rs. 1,500', oldPrice: 'Rs. 3,000', emoji: '🎧', category: 'Accessories', hasDiscount: true },
+            { title: 'Local Mobile Charger', specs: 'Standard Charging Adapter', price: 'Rs. 1,000', oldPrice: 'Rs. 5,000', emoji: '🔌', category: 'Accessories', hasDiscount: true },
+            { title: 'Protective Glass', specs: '9H Hardness Glass', price: 'Rs. 800', oldPrice: 'Rs. 1,500', emoji: '🛡️', category: 'Accessories', hasDiscount: true },
+            { title: 'Mobile Back Cover', specs: 'Fancy & Silicone Cases', price: 'Rs. 1,000', oldPrice: 'Rs. 2,000', emoji: '🖼️', category: 'Accessories', hasDiscount: true }
         ];
-
-        // Render all product grids dynamically
-        function renderAllGrids() {
-            const sections = ['infinix', 'tecno', 'vivo', 'redmi', 'realme', 'samsung', 'login', 'zero-lifestyle', 'faster', 'interlink', 'ideonic', 'local-brand-accessories', 'covers-glass'];
-            
-            sections.forEach(secKey => {
-                const container = document.getElementById('grid-' + secKey);
-                if (!container) return;
-                const items = storeProducts.filter(p => p.secId === secKey);
-                
-                container.innerHTML = items.map(item => `
-                    <div class="product-card" onclick="openProductDetail('${item.title}', '${item.specs}', '${item.price}', '${item.oldPrice}', '${item.emoji}', '${item.category}', ${item.hasDiscount})">
-                        <div>
-                            <div class="card-top-tag">
-                                <span>100% Original</span>
-                                <span class="installment-badge">Installment</span>
-                            </div>
-                            <div class="product-img-box">${item.emoji}</div>
-                            <div class="p-title-text">${item.title}</div>
-                            <div class="p-specs-text">${item.specs}</div>
-                            <span class="p-price-text">${item.price}</span>
-                        </div>
-                        <div class="btn-group" onclick="event.stopPropagation()">
-                            <button class="cart-btn" onclick="addToCart('${item.title}')">Add</button>
-                            <a href="https://wa.me/92${currentPhone.replace(/^0+/, '')}?text=I%20want%20to%20order%20${encodeURIComponent(item.title)}" class="whatsapp-order-btn" target="_blank">Buy Now</a>
-                        </div>
-                    </div>
-                `).join('');
-            });
-        }
-
-        // AUTO-SYNC ENGINE FOR OFFICIAL BRAND WEBSITES & CATALOG UPDATES
-        function initializeBrandAutoSync() {
-            setInterval(() => {
-                const statusEl = document.getElementById('syncStatusText');
-                if (statusEl) {
-                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                    statusEl.innerText = `Brand Catalog Live Synced (${time})`;
-                }
-            }, 30000);
-        }
-
-        function triggerManualSync() {
-            const statusEl = document.getElementById('syncStatusText');
-            if (statusEl) statusEl.innerText = "Syncing with Brand Servers...";
-            
-            setTimeout(() => {
-                renderAllGrids();
-                updateSyncStatusText();
-                alert("✅ Official Brand Catalog & Price Sync Completed Successfully!\nAll latest prices, accessories and phone models are up to date.");
-                closeSettingsModal();
-            }, 1200);
-        }
-
-        function updateSyncStatusText() {
-            const statusEl = document.getElementById('syncStatusText');
-            if (statusEl) {
-                const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                statusEl.innerText = `Brand Catalog Synced (${time})`;
-            }
-        }
 
         function toggleDrawer() {
             document.getElementById('sideDrawer').classList.toggle('open');
             document.getElementById('drawerOverlay').classList.toggle('active');
         }
 
+        /* Toggle Mobile Brands Accordion */
         function toggleCatalogSubmenu(e) {
             e.stopPropagation();
             const submenu = document.getElementById('catalogSubmenu');
@@ -1191,6 +1501,7 @@
             }
         }
 
+        /* Toggle Accessories Accordion */
         function toggleAccessoriesSubmenu(e) {
             e.stopPropagation();
             const submenu = document.getElementById('accessoriesSubmenu');
@@ -1204,6 +1515,7 @@
             }
         }
 
+        /* Password Protected Admin/Owner Access */
         function openProtectedSettingsModal() {
             const enteredPass = prompt("🔑 Restricted Area for Website Owner Only!\nPlease enter Owner Password:", "");
             if (enteredPass === ownerPasswordDefault) {
@@ -1233,6 +1545,7 @@
             renderSearchResults(filtered);
         }
 
+        /* Keyboard Enter Press Direct Popup Open Feature */
         function handleSearchKeyPress(event) {
             if (event.key === 'Enter') {
                 const query = document.getElementById('searchInputField').value.trim();
@@ -1243,6 +1556,7 @@
                     item.category.toLowerCase().includes(query.toLowerCase())
                 );
                 if (filtered.length > 0) {
+                    // Open the first matching product detail popup directly
                     const match = filtered[0];
                     openProductDetail(match.title, match.specs, match.price, match.oldPrice, match.emoji, match.category, match.hasDiscount);
                 } else {
@@ -1275,7 +1589,6 @@
             window.scrollTo({ top: 350, behavior: 'smooth' });
         }
 
-        // OPEN PRODUCT DETAIL AND AUTO-SCROLL TO TOP OF POPUP WINDOW
         function openProductDetail(title, specs, price, oldPrice, emoji, category, hasDiscount) {
             document.getElementById('detailTitleText').innerText = title;
             document.getElementById('detailSpecsText').innerText = specs;
@@ -1313,10 +1626,7 @@
                 </div>
             `).join('');
 
-            // Show popup modal and ensure window scrolls to top
-            const modalEl = document.getElementById('productDetailModal');
-            modalEl.classList.add('active');
-            modalEl.scrollTop = 0; // Auto-scroll to top
+            document.getElementById('productDetailModal').classList.add('active');
             closeSearchModal();
         }
 
@@ -1330,38 +1640,19 @@
             el.classList.add('active');
         }
 
-        // Submit User Comment / Review Feature
-        function submitUserReview() {
-            const name = document.getElementById('reviewerName').value.trim();
-            const comment = document.getElementById('reviewerComment').value.trim();
-            
-            if (!name || !comment) {
-                alert("برائے مہربانی اپنا نام اور تبصرہ دونوں درج کریں!");
-                return;
-            }
-
-            const commentsList = document.getElementById('commentsListContainer');
-            const newDiv = document.createElement('div');
-            newDiv.className = 'comment-item';
-            newDiv.innerHTML = `
-                <div class="comment-user">${name} ⭐⭐⭐⭐⭐ (Just Now)</div>
-                <div class="comment-text">${comment}</div>
-            `;
-            commentsList.prepend(newDiv);
-
-            document.getElementById('reviewerName').value = '';
-            document.getElementById('reviewerComment').value = '';
-            alert("شکریہ! آپ کا تبصرہ کامیابی سے شامل کر دیا گیا ہے۔");
-        }
-
         function addModalToCart() {
             const title = document.getElementById('detailTitleText').innerText;
             alert(title + ' added to cart successfully!');
             closeProductDetail();
         }
 
-        function openSettingsModal() { document.getElementById('settingsModal').style.display = 'flex'; }
-        function closeSettingsModal() { document.getElementById('settingsModal').style.display = 'none'; }
+        function openSettingsModal() {
+            document.getElementById('settingsModal').style.display = 'flex';
+        }
+
+        function closeSettingsModal() {
+            document.getElementById('settingsModal').style.display = 'none';
+        }
 
         function saveSettings() {
             const storeName = document.getElementById('ownerStoreName').value;
@@ -1383,7 +1674,7 @@
             if (newEmail) {
                 currentOwnerEmail = newEmail;
                 document.getElementById('ownerEmail').value = newEmail;
-                alert(`Store Ownership & Access successfully transferred to: ${newEmail}`);
+                alert(`Store Ownership & Access successfully transferred to: ${newEmail}\nNew owner can now manage and control the store settings.`);
                 saveSettings();
             }
         }
@@ -1418,11 +1709,6 @@
         function addToCart(productName) {
             alert(productName + ' added to cart successfully!');
         }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            renderAllGrids();
-            initializeBrandAutoSync();
-        });
     </script>
 </body>
 </html>
