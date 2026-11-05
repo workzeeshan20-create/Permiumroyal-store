@@ -114,7 +114,7 @@
 
         .drawer-overlay.active, .search-overlay.active, .detail-overlay.active { display: block; }
 
-        /* Search Popup Modal (Image 1 & 2 Style) */
+        /* Search Popup Modal */
         .search-modal {
             position: fixed;
             top: 0;
@@ -217,7 +217,7 @@
         .sr-price { font-size: 13px; font-weight: 800; color: #b45309; margin-top: 2px; }
         .sr-off { font-size: 11px; background: #dcfce7; color: #166534; padding: 1px 6px; border-radius: 4px; font-weight: 600; display: inline-block; margin-top: 2px; }
 
-        /* Product Detail Modal (Image 3 Style) */
+        /* Product Detail Modal */
         .product-detail-modal {
             position: fixed;
             top: 0;
@@ -769,7 +769,7 @@
         <button class="icon-btn" onclick="openSearchModal()">🔍</button>
     </div>
 
-    <!-- Search Modal (Image 1 & 2 Style) -->
+    <!-- Search Modal -->
     <div class="search-modal" id="searchModal">
         <div class="search-header-bar">
             <button class="icon-btn" style="color: #0f172a;" onclick="closeSearchModal()">←</button>
@@ -784,11 +784,23 @@
                 <span class="pop-tag" onclick="quickSearch('Tecno')">📱 Tecno</span>
                 <span class="pop-tag" onclick="quickSearch('Vivo')">📱 Vivo</span>
                 <span class="pop-tag" onclick="quickSearch('Redmi')">📱 Redmi</span>
+                <span class="pop-tag" onclick="quickSearch('Realme')">📱 Realme</span>
+                <span class="pop-tag" onclick="quickSearch('Nubia')">📱 Nubia</span>
                 <span class="pop-tag" onclick="quickSearch('Samsung')">📱 Samsung</span>
+                <span class="pop-tag" onclick="quickSearch('Itel')">📱 Itel</span>
+                <span class="pop-tag" onclick="quickSearch('Oppo')">📱 Oppo</span>
+                <span class="pop-tag" onclick="quickSearch('Honor')">📱 Honor</span>
+                <span class="pop-tag" onclick="quickSearch('Villaon')">📱 Villaon</span>
+                <span class="pop-tag" onclick="quickSearch('Sego')">📱 Sego</span>
+                <span class="pop-tag" onclick="quickSearch('Sparx')">📱 Sparx</span>
+                <span class="pop-tag" onclick="quickSearch('Login')">🔌 Login</span>
+                <span class="pop-tag" onclick="quickSearch('Zero-Lifestyle')">⌚ Zero Lifestyle</span>
+                <span class="pop-tag" onclick="quickSearch('Faster')">🔌 Faster</span>
+                <span class="pop-tag" onclick="quickSearch('Interlink')">🔌 Interlink</span>
+                <span class="pop-tag" onclick="quickSearch('Ideonic')">🔌 iDeonic</span>
             </div>
             <div class="search-results-title">🔥 POPULAR SEARCHES / STOCK RESULTS</div>
             <div id="searchResultsList">
-                <!-- Dynamically populated or static popular list -->
                 <div class="search-result-item" onclick="openProductDetail('Infinix Note 60 5G', '8GB RAM + 256GB ROM', 'Rs. 114,999', 'Rs. 139,999', '📱')">
                     <div class="search-result-img">📱</div>
                     <div class="search-result-info">
@@ -817,7 +829,7 @@
         </div>
     </div>
 
-    <!-- Product Detail Modal (Image 3 Style) -->
+    <!-- Product Detail Modal -->
     <div class="product-detail-modal" id="productDetailModal">
         <div class="detail-top-bar">
             <button class="icon-btn" style="color: #0f172a;" onclick="closeProductDetail()">←</button>
@@ -1564,7 +1576,7 @@
             </div>
         </div>
 
-        <!-- LOCAL ACCESSORIES SECTION -->
+        <!-- LOCAL ACCESSORIES SECTION (UPDATED) -->
         <div id="sec-local-accessories" class="store-section">
             <div class="section-header">Local & Chinese Accessories</div>
             <div class="ecommerce-grid">
@@ -1573,12 +1585,77 @@
                         <div class="card-top-tag"><span>Budget Friendly</span></div>
                         <div class="product-img-box">🔌</div>
                         <div class="p-title-text">Local Mobile Charger</div>
-                        <div class="p-specs-text">Standard Charging</div>
+                        <div class="p-specs-text">Standard Charging (1,500 - 3,000)</div>
                         <span class="p-price-text">Rs. 1,500</span>
                     </div>
                     <div class="btn-group" onclick="event.stopPropagation()">
                         <button class="cart-btn" onclick="addToCart('Local Charger')">Add</button>
                         <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Charger" class="whatsapp-order-btn" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Cable', 'Data & Charging Cable', 'Rs. 300', 'Rs. 800', '🔌')">
+                    <div>
+                        <div class="card-top-tag"><span>Budget Friendly</span></div>
+                        <div class="product-img-box">🔌</div>
+                        <div class="p-title-text">Local Cable</div>
+                        <div class="p-specs-text">Data & Charging Cable</div>
+                        <span class="p-price-text">Rs. 300 - 800</span>
+                    </div>
+                    <div class="btn-group" onclick="event.stopPropagation()">
+                        <button class="cart-btn" onclick="addToCart('Local Cable')">Add</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Brand Cable', 'High Quality Cable', 'Rs. 400', 'Rs. 1,000', '🔌')">
+                    <div>
+                        <div class="card-top-tag"><span>Budget Friendly</span></div>
+                        <div class="product-img-box">🔌</div>
+                        <div class="p-title-text">Local Brand Cable</div>
+                        <div class="p-specs-text">High Quality Cable</div>
+                        <span class="p-price-text">Rs. 400 - 1,000</span>
+                    </div>
+                    <div class="btn-group" onclick="event.stopPropagation()">
+                        <button class="cart-btn" onclick="addToCart('Local Brand Cable')">Add</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Brand%20Cable" class="whatsapp-order-btn" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Power Bank', 'Backup Power Bank', 'Rs. 5,000', 'Rs. 10,000', '🔋')">
+                    <div>
+                        <div class="card-top-tag"><span>Budget Friendly</span></div>
+                        <div class="product-img-box">🔋</div>
+                        <div class="p-title-text">Power Bank</div>
+                        <div class="p-specs-text">Backup Power Bank</div>
+                        <span class="p-price-text">Rs. 5,000 - 10,000</span>
+                    </div>
+                    <div class="btn-group" onclick="event.stopPropagation()">
+                        <button class="cart-btn" onclick="addToCart('Power Bank')">Add</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Power%20Bank" class="whatsapp-order-btn" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Neckband', 'Wireless Neckband Earphones', 'Rs. 1,000', 'Rs. 5,000', '🎧')">
+                    <div>
+                        <div class="card-top-tag"><span>Budget Friendly</span></div>
+                        <div class="product-img-box">🎧</div>
+                        <div class="p-title-text">Neckband</div>
+                        <div class="p-specs-text">Wireless Neckband Earphones</div>
+                        <span class="p-price-text">Rs. 1,000 - 5,000</span>
+                    </div>
+                    <div class="btn-group" onclick="event.stopPropagation()">
+                        <button class="cart-btn" onclick="addToCart('Neckband')">Add</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Neckband" class="whatsapp-order-btn" target="_blank">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product-card" onclick="openProductDetail('Local Brand Earbuds', 'Wireless Earbuds', 'Rs. 3,000', 'Rs. 5,000', '🎧')">
+                    <div>
+                        <div class="card-top-tag"><span>Budget Friendly</span></div>
+                        <div class="product-img-box">🎧</div>
+                        <div class="p-title-text">Local Brand Earbuds</div>
+                        <div class="p-specs-text">Wireless Earbuds</div>
+                        <span class="p-price-text">Rs. 3,000 - 5,000</span>
+                    </div>
+                    <div class="btn-group" onclick="event.stopPropagation()">
+                        <button class="cart-btn" onclick="addToCart('Local Brand Earbuds')">Add</button>
+                        <a href="https://wa.me/923558770290?text=I%20want%20to%20buy%20Local%20Brand%20Earbuds" class="whatsapp-order-btn" target="_blank">Buy Now</a>
                     </div>
                 </div>
                 <div class="product-card" onclick="openProductDetail('Handsfree Wired', 'Clear Sound Audio', 'Rs. 600', 'Rs. 1,200', '🎧')">
